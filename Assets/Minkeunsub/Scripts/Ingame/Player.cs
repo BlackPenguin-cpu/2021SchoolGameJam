@@ -33,6 +33,8 @@ public class Player : Entity
     protected override void Start()
     {
         base.Start();
+        MaxHp = GameManager.Instance.PlayerHp;
+        _hp = MaxHp;
         anim = GetComponent<Animator>();
         shockWave.Stop();
         shockWaveCollider.SetActive(false);
@@ -119,7 +121,7 @@ public class Player : Entity
 
     void ShockWaveAttack()
     {
-        if (attackAble && shockCurDelay >= shockWaveDelay)
+        if (attackAble)
         {
             shockWave.Play();
             shockWaveCollider.SetActive(true);
@@ -166,7 +168,7 @@ public class Player : Entity
             entityState = EntityState.ATTACK;
             playerSkill = PlayerAttackState.COMMONATTACK;
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) && shockCurDelay >= shockWaveDelay)
         {
             entityState = EntityState.ATTACK;
             playerSkill = PlayerAttackState.SHOCKWAVE;
