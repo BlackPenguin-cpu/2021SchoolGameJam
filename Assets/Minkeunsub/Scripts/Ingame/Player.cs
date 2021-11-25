@@ -6,6 +6,10 @@ public class Player : Entity
 {
 
     Animator anim;
+    bool attackAble = true;
+
+    public GameObject[] attackCollider = new GameObject[3];
+
     protected override void Die()
     {
     }
@@ -13,6 +17,10 @@ public class Player : Entity
     protected override void Start()
     {
         anim = GetComponent<Animator>();
+        foreach (var item in attackCollider)
+        {
+            item.SetActive(false);
+        }
     }
 
     protected override void Update()
@@ -40,12 +48,31 @@ public class Player : Entity
 
     void PlayerAttack()
     {
-        int attack_index = Random.Range(0, 4);
-        anim.SetInteger("AttackIndex", attack_index);
+        if(attackAble)
+        {
+            int attack_index = Random.Range(0, 3);
+            anim.SetInteger("AttackIndex", attack_index);
+            attackAble = false;
+        }
+    }
+
+    public void AttackColliderActive(int n)
+    {
+        attackCollider[n].SetActive(true);
+    }
+
+    public void EndAttack()
+    {
+        entityState = EntityState.IDLE;
+        foreach (var item in attackCollider)
+        {
+            item.SetActive(false);
+        }
     }
 
     void IdleController()
     {
+        attackAble = true;
         if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
             entityState = EntityState.MOVING;
@@ -72,5 +99,10 @@ public class Player : Entity
         {
             entityState = EntityState.IDLE; 
         }
+    }
+
+    protected override void Hit()
+    {
+
     }
 }
