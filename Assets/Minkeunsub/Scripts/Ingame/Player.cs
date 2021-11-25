@@ -205,7 +205,7 @@ public class Player : Entity
     IEnumerator Wait(float duration)
     {
         waiting = true;
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSecondsRealtime(duration);
         Time.timeScale = 1;
         waiting = false;
         entityState = EntityState.IDLE;
