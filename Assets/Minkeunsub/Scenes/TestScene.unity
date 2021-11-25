@@ -273,6 +273,7 @@ MonoBehaviour:
   - {fileID: 1619631760}
   shockWaveCollider: {fileID: 93778213}
   shockWave: {fileID: 2031851928}
+  shockWaveDelay: 4
 --- !u!95 &32392071
 Animator:
   serializedVersion: 3

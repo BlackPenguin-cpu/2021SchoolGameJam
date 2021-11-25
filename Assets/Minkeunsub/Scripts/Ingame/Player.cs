@@ -19,6 +19,12 @@ public class Player : Entity
     public GameObject shockWaveCollider;
 
     public ParticleSystem shockWave;
+    public float shockWaveDelay;
+    float shockCurDelay;
+
+    float StunSpeed;
+    bool restoreTime;
+    Coroutine timeDelayCoroutine;
 
     protected override void Die()
     {
@@ -30,6 +36,7 @@ public class Player : Entity
         anim = GetComponent<Animator>();
         shockWave.Stop();
         shockWaveCollider.SetActive(false);
+        restoreTime = false;
         foreach (var item in attackCollider)
         {
             item.SetActive(false);
@@ -40,6 +47,7 @@ public class Player : Entity
     {
         base.Update();
         anim.SetInteger("PlayerState", (int)entityState);
+        shockCurDelay += Time.deltaTime;
         switch (entityState)
         {
             case EntityState.IDLE:
@@ -71,6 +79,22 @@ public class Player : Entity
         }
     }
 
+    void OnDamagedTime()
+    {
+        if(restoreTime)
+        {
+            if(Time.timeScale < 1)
+            {
+                Time.timeScale += Time.deltaTime * Speed;
+            }
+            else
+            {
+                Time.timeScale = 1;
+                restoreTime = false;
+            }
+        }
+    }
+
     private void FixedUpdate()
     {
         switch (entityState)
@@ -94,13 +118,14 @@ public class Player : Entity
 
     void ShockWaveAttack()
     {
-        if (attackAble)
+        if (attackAble && shockCurDelay >= shockWaveDelay)
         {
             shockWave.Play();
             shockWaveCollider.SetActive(true);
             attackAble = false;
             anim.SetInteger("AttackIndex", 3); // 3 == shockwave attack
             entityState = EntityState.IDLE;
+            shockCurDelay = 0;
         }
     }
 
@@ -167,6 +192,27 @@ public class Player : Entity
 
     protected override void Hit()
     {
+        StopTime(0.05f, 10, 0.1f);
+    }
 
+    public void StopTime(float changeTime, int RestorSpeed, float Delay)
+    {
+        Speed = RestorSpeed;
+        if(Delay > 0)
+        {
+            StopCoroutine(timeDelayCoroutine);
+            timeDelayCoroutine = StartCoroutine(StartTimeAgain(Delay));
+        }
+        else
+        {
+            restoreTime = true;
+        }
+        Time.timeScale = changeTime;
+    }
+
+    IEnumerator StartTimeAgain(float amt)
+    {
+        restoreTime = true;
+        yield return new WaitForSecondsRealtime(amt);
     }
 }
