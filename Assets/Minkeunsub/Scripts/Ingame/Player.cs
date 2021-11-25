@@ -47,7 +47,6 @@ public class Player : Entity
         base.Update();
         anim.SetInteger("PlayerState", (int)entityState);
         shockCurDelay += Time.deltaTime;
-        shockWaveCollider.SetActive(false);
         switch (entityState)
         {
             case EntityState.IDLE:
@@ -111,6 +110,7 @@ public class Player : Entity
             anim.SetInteger("AttackIndex", 3); // 3 == shockwave attack
             entityState = EntityState.IDLE;
             shockCurDelay = 0;
+            shockWaveCollider.SetActive(false);
         }
     }
 
@@ -191,7 +191,7 @@ public class Player : Entity
 
     protected override void Hit()
     {
-        Stop(0.1f);
+        Stop(0.5f);
     }
 
     public void Stop(float duration)

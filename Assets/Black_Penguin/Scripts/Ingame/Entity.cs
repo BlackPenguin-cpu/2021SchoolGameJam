@@ -56,7 +56,7 @@ public abstract class Entity : MonoBehaviour
     {
         entityState = EntityState.ONDAMAGE;
         yield return new WaitForSeconds(0.7f);
-        entityState = EntityState.IDLE;
+        entityState = EntityState.MOVING;
     }
 
 }

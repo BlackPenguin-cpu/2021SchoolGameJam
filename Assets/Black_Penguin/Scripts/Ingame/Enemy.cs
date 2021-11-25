@@ -93,12 +93,14 @@ public abstract class Enemy : Entity
     {
         Debug.Log($"{gameObject.name} ÇÇ°Ý");
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "PlayerAttack")
+        Debug.Log(collision.tag);
+        if (collision.tag == "PlayerAttack" && entityState != EntityState.ONDAMAGE)
         {
-            if (collision.name == "ShockWave")
+            if (collision.name == "ShockWaveAttack")
             {
+                Debug.Log("shockwave");
                 _hp -= player.GetComponent<Player>().Damage * 2 - (Mathf.Abs(transform.position.x - player.transform.position.x));
             }
             else
