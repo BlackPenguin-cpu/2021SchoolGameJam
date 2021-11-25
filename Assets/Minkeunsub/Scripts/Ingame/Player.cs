@@ -78,6 +78,7 @@ public class Player : Entity
             case EntityState.IDLE:
                 break;
             case EntityState.MOVING:
+                IdleController();
                 PlayerMove();
                 break;
             case EntityState.ONDAMAGE:
@@ -93,7 +94,7 @@ public class Player : Entity
 
     void ShockWaveAttack()
     {
-        if(attackAble)
+        if (attackAble)
         {
             shockWave.Play();
             shockWaveCollider.SetActive(true);
@@ -105,7 +106,7 @@ public class Player : Entity
 
     void PlayerAttack()
     {
-        if(attackAble)
+        if (attackAble)
         {
             int attack_index = Random.Range(0, 3);
             anim.SetInteger("AttackIndex", attack_index);
@@ -130,16 +131,16 @@ public class Player : Entity
     void IdleController()
     {
         attackAble = true;
-        if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
             entityState = EntityState.MOVING;
         }
-        else if(Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             entityState = EntityState.ATTACK;
             playerSkill = PlayerAttackState.COMMONATTACK;
         }
-        else if(Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             entityState = EntityState.ATTACK;
             playerSkill = PlayerAttackState.SHOCKWAVE;
@@ -148,7 +149,7 @@ public class Player : Entity
 
     void PlayerMove()
     {
-        if(Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(Vector3.right * Speed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(0, 180, 0);
@@ -160,7 +161,7 @@ public class Player : Entity
         }
         else
         {
-            entityState = EntityState.IDLE; 
+            entityState = EntityState.IDLE;
         }
     }
 
