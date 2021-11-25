@@ -7,8 +7,8 @@ public abstract class Enemy : Entity
     GameObject player;
     RaycastHit2D hit;
     float distance;
-    float nowAttackCooldown;
-    float AttackCooldown = 0;
+    protected float nowAttackCooldown;
+    public float AttackCooldown = 0;
     public float range;
 
     protected override void Start()
