@@ -22,9 +22,7 @@ public class Player : Entity
     public float shockWaveDelay;
     float shockCurDelay;
 
-    float StunSpeed;
-    bool restoreTime;
-    Coroutine timeDelayCoroutine;
+    bool waiting;
 
     protected override void Die()
     {
@@ -38,7 +36,6 @@ public class Player : Entity
         anim = GetComponent<Animator>();
         shockWave.Stop();
         shockWaveCollider.SetActive(false);
-        restoreTime = false;
         foreach (var item in attackCollider)
         {
             item.SetActive(false);
@@ -82,22 +79,6 @@ public class Player : Entity
         }
     }
 
-    void OnDamagedTime()
-    {
-        if (restoreTime)
-        {
-            if (Time.timeScale < 1)
-            {
-                Time.timeScale += Time.deltaTime * Speed;
-            }
-            else
-            {
-                Time.timeScale = 1;
-                restoreTime = false;
-            }
-        }
-    }
-
     private void FixedUpdate()
     {
         switch (entityState)
@@ -111,6 +92,7 @@ public class Player : Entity
             case EntityState.ONDAMAGE:
                 break;
             case EntityState.ATTACK:
+                AttackMove();
                 break;
             case EntityState.DIE:
                 break;
@@ -175,6 +157,20 @@ public class Player : Entity
         }
     }
 
+    void AttackMove()
+    {
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Translate(Vector3.right * Speed * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Translate(Vector3.right * Speed * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+    }
+
     void PlayerMove()
     {
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -195,27 +191,22 @@ public class Player : Entity
 
     protected override void Hit()
     {
-        StopTime(0.05f, 10, 0.1f);
+        Stop(0.5f);
     }
 
-    public void StopTime(float changeTime, int RestorSpeed, float Delay)
+    public void Stop(float duration)
     {
-        Speed = RestorSpeed;
-        if (Delay > 0)
-        {
-            StopCoroutine(timeDelayCoroutine);
-            timeDelayCoroutine = StartCoroutine(StartTimeAgain(Delay));
-        }
-        else
-        {
-            restoreTime = true;
-        }
-        Time.timeScale = changeTime;
+        if (waiting)
+            return;
+        Time.timeScale = 0;
+        StartCoroutine(Wait(duration));
     }
 
-    IEnumerator StartTimeAgain(float amt)
+    IEnumerator Wait(float duration)
     {
-        restoreTime = true;
-        yield return new WaitForSecondsRealtime(amt);
+        waiting = true;
+        yield return new WaitForSeconds(duration);
+        Time.timeScale = 1;
+        waiting = false;
     }
 }
