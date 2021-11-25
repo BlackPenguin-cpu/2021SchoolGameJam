@@ -201,8 +201,10 @@ public class Player : Entity
         Speed = RestorSpeed;
         if (Delay > 0)
         {
-            StopCoroutine(timeDelayCoroutine);
+            if (timeDelayCoroutine != null)
+                StopCoroutine(timeDelayCoroutine);
             timeDelayCoroutine = StartCoroutine(StartTimeAgain(Delay));
+            Delay = 0;
         }
         else
         {
