@@ -16,6 +16,7 @@ public class Player : Entity
 
     protected override void Start()
     {
+        base.Start();
         anim = GetComponent<Animator>();
         foreach (var item in attackCollider)
         {
@@ -25,6 +26,7 @@ public class Player : Entity
 
     protected override void Update()
     {
+        base.Update();
         anim.SetInteger("PlayerState", (int)entityState);
         switch (entityState)
         {
@@ -32,12 +34,31 @@ public class Player : Entity
                 IdleController();
                 break;
             case EntityState.MOVING:
-                PlayerMove();
                 break;
             case EntityState.ONDAMAGE:
                 break;
             case EntityState.ATTACK:
                 PlayerAttack();
+                break;
+            case EntityState.DIE:
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        switch (entityState)
+        {
+            case EntityState.IDLE:
+                break;
+            case EntityState.MOVING:
+                PlayerMove();
+                break;
+            case EntityState.ONDAMAGE:
+                break;
+            case EntityState.ATTACK:
                 break;
             case EntityState.DIE:
                 break;
