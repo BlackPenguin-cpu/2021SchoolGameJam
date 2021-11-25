@@ -16,7 +16,7 @@ public abstract class Entity : MonoBehaviour
     public float Damage;
     public float MaxHp;
     public float Speed;
-    private float hp;
+    [SerializeField] private float hp;
     public float _hp
     {
         get { return hp; }
