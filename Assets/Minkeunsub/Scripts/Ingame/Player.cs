@@ -28,6 +28,7 @@ public class Player : Entity
     {
         base.Start();
         anim = GetComponent<Animator>();
+        shockWave.Stop();
         shockWaveCollider.SetActive(false);
         foreach (var item in attackCollider)
         {
@@ -94,6 +95,7 @@ public class Player : Entity
     {
         if(attackAble)
         {
+            shockWave.Play();
             shockWaveCollider.SetActive(false);
             attackAble = false;
         }
