@@ -4,10 +4,9 @@ using UnityEngine;
 
 public abstract class Enemy : Entity
 {
-    GameObject player;
-    RaycastHit2D hit;
+    public GameObject player;
     float distance;
-    protected float nowAttackCooldown;
+    [SerializeField] float nowAttackCooldown;
     public float AttackCooldown = 0;
     public float range;
 
@@ -46,7 +45,9 @@ public abstract class Enemy : Entity
     {
         Debug.Log($"{gameObject}ÀÌ Á×À½");
     }
-    protected virtual void Attack() { }
+    protected virtual void Attack() {
+        nowAttackCooldown = 0;
+    }
 
     //private void Attack()
     //{
@@ -64,8 +65,8 @@ public abstract class Enemy : Entity
     private void Move()
     {
         float x = player.transform.position.x;
-        range = Mathf.Abs(gameObject.transform.position.x - x);
-        if (range <= distance)
+        distance = Mathf.Abs(gameObject.transform.position.x - x);
+        if (distance <= range)
         {
             entityState = EntityState.ATTACK;
         }
@@ -73,12 +74,12 @@ public abstract class Enemy : Entity
         {
             if (gameObject.transform.position.x < x)
             {
-                transform.rotation = Quaternion.Euler(0, 0, 0);
+                transform.rotation = Quaternion.Euler(0, 180, 0);
                 transform.position += new Vector3(Speed * Time.deltaTime, 0, 0);
             }
             if (gameObject.transform.position.x > x)
             {
-                transform.rotation = Quaternion.Euler(0, 180, 0);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 transform.position -= new Vector3(Speed * Time.deltaTime, 0, 0);
             }
         }
