@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Enemy : Entity
 {
+    Animator anim;
     public GameObject player;
     float distance;
     [SerializeField] float nowAttackCooldown;
@@ -13,12 +14,14 @@ public abstract class Enemy : Entity
     protected override void Start()
     {
         base.Start();
+        anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     protected override void Update()
     {
         base.Update();
+        anim.SetInteger("State", (int)entityState);
         switch (entityState)
         {
             case EntityState.IDLE:
@@ -30,8 +33,8 @@ public abstract class Enemy : Entity
                 Hit();
                 break;
             case EntityState.ATTACK:
-                if(AttackCooldown<nowAttackCooldown)
-                Attack();
+                if (AttackCooldown < nowAttackCooldown)
+                    Attack();
                 break;
             case EntityState.DIE:
                 Die();
@@ -45,7 +48,8 @@ public abstract class Enemy : Entity
     {
         Debug.Log($"{gameObject}ÀÌ Á×À½");
     }
-    protected virtual void Attack() {
+    protected virtual void Attack()
+    {
         nowAttackCooldown = 0;
     }
 
@@ -74,12 +78,12 @@ public abstract class Enemy : Entity
         {
             if (gameObject.transform.position.x < x)
             {
-                transform.rotation = Quaternion.Euler(0, 180, 0);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 transform.position += new Vector3(Speed * Time.deltaTime, 0, 0);
             }
             if (gameObject.transform.position.x > x)
             {
-                transform.rotation = Quaternion.Euler(0, 0, 0);
+                transform.rotation = Quaternion.Euler(0, 180, 0);
                 transform.position -= new Vector3(Speed * Time.deltaTime, 0, 0);
             }
         }
