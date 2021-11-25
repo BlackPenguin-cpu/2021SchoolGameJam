@@ -210,6 +210,7 @@ Transform:
   - {fileID: 265335308}
   - {fileID: 1619631761}
   - {fileID: 2031851929}
+  - {fileID: 93778214}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -270,6 +271,8 @@ MonoBehaviour:
   - {fileID: 1266054617}
   - {fileID: 265335307}
   - {fileID: 1619631760}
+  shockWaveCollider: {fileID: 0}
+  shockWave: {fileID: 2031851928}
 --- !u!95 &32392071
 Animator:
   serializedVersion: 3
@@ -289,6 +292,53 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &93778213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 93778214}
+  - component: {fileID: 93778215}
+  m_Layer: 0
+  m_Name: ShockWaveCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &93778214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93778213}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 32392067}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &93778215
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93778213}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 25
 --- !u!1 &264506687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,6 +1456,11 @@ Transform:
   m_Father: {fileID: 723588900}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &2031851928 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2253202612601771215, guid: c9714019365900b41a11e6cda21ecf25, type: 3}
+  m_PrefabInstance: {fileID: 2253202614060043607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2031851929 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2253202612601771214, guid: c9714019365900b41a11e6cda21ecf25, type: 3}

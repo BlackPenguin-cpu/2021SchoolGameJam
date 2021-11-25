@@ -2,13 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerAttackState
+{
+    SHOCKWAVE,
+    ELECTRONIC,
+    COMMONATTACK
+}
+
 public class Player : Entity
 {
-
+    PlayerAttackState playerSkill;
     Animator anim;
     bool attackAble = true;
 
     public GameObject[] attackCollider = new GameObject[3];
+    public GameObject shockWaveCollider;
+
+    public ParticleSystem shockWave;
 
     protected override void Die()
     {
@@ -18,6 +28,7 @@ public class Player : Entity
     {
         base.Start();
         anim = GetComponent<Animator>();
+        shockWaveCollider.SetActive(false);
         foreach (var item in attackCollider)
         {
             item.SetActive(false);
@@ -38,7 +49,19 @@ public class Player : Entity
             case EntityState.ONDAMAGE:
                 break;
             case EntityState.ATTACK:
-                PlayerAttack();
+                switch (playerSkill)
+                {
+                    case PlayerAttackState.SHOCKWAVE:
+                        ShockWaveAttack();
+                        break;
+                    case PlayerAttackState.ELECTRONIC:
+                        break;
+                    case PlayerAttackState.COMMONATTACK:
+                        PlayerAttack();
+                        break;
+                    default:
+                        break;
+                }
                 break;
             case EntityState.DIE:
                 break;
@@ -64,6 +87,15 @@ public class Player : Entity
                 break;
             default:
                 break;
+        }
+    }
+
+    void ShockWaveAttack()
+    {
+        if(attackAble)
+        {
+            shockWaveCollider.SetActive(false);
+            attackAble = false;
         }
     }
 
@@ -101,6 +133,12 @@ public class Player : Entity
         else if(Input.GetKeyDown(KeyCode.Z))
         {
             entityState = EntityState.ATTACK;
+            playerSkill = PlayerAttackState.COMMONATTACK;
+        }
+        else if(Input.GetKeyDown(KeyCode.A))
+        {
+            entityState = EntityState.ATTACK;
+            playerSkill = PlayerAttackState.SHOCKWAVE;
         }
     }
 
