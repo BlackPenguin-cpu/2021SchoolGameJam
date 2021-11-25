@@ -23,6 +23,7 @@ public class CameraController : MonoBehaviour
         Vector3 smoothPosition = Vector3.Lerp(transform.position, desire, smoothSpeed);
         transform.position = smoothPosition;
 
-        transform.LookAt(target);
+        if (GameManager.Instance.CameraLookat)
+            transform.LookAt(target);
     }
 }

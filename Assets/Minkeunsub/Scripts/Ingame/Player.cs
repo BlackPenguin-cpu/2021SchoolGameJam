@@ -48,6 +48,7 @@ public class Player : Entity
         base.Update();
         anim.SetInteger("PlayerState", (int)entityState);
         shockCurDelay += Time.deltaTime;
+        shockWaveCollider.SetActive(false);
         switch (entityState)
         {
             case EntityState.IDLE:
@@ -81,9 +82,9 @@ public class Player : Entity
 
     void OnDamagedTime()
     {
-        if(restoreTime)
+        if (restoreTime)
         {
-            if(Time.timeScale < 1)
+            if (Time.timeScale < 1)
             {
                 Time.timeScale += Time.deltaTime * Speed;
             }
@@ -198,7 +199,7 @@ public class Player : Entity
     public void StopTime(float changeTime, int RestorSpeed, float Delay)
     {
         Speed = RestorSpeed;
-        if(Delay > 0)
+        if (Delay > 0)
         {
             StopCoroutine(timeDelayCoroutine);
             timeDelayCoroutine = StartCoroutine(StartTimeAgain(Delay));
