@@ -191,7 +191,7 @@ public class Player : Entity
 
     protected override void Hit()
     {
-        Stop(0.5f);
+        Stop(0.1f);
     }
 
     public void Stop(float duration)
@@ -208,5 +208,6 @@ public class Player : Entity
         yield return new WaitForSeconds(duration);
         Time.timeScale = 1;
         waiting = false;
+        entityState = EntityState.IDLE;
     }
 }
