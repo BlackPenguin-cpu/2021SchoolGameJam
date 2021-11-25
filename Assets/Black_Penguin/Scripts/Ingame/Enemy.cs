@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Entity
+public abstract class Enemy : Entity
 {
     GameObject player;
+    RaycastHit2D hit;
     float distance;
+    float nowAttackCooldown;
+    float AttackCooldown = 0;
     public float range;
 
     protected override void Start()
@@ -25,23 +28,38 @@ public class Enemy : Entity
                 Move();
                 break;
             case EntityState.ONDAMAGE:
+                Hit();
                 break;
             case EntityState.ATTACK:
+                if(AttackCooldown<nowAttackCooldown)
+                Attack();
                 break;
             case EntityState.DIE:
+                Die();
                 break;
             default:
                 break;
         }
+        nowAttackCooldown += Time.deltaTime;
     }
     protected override void Die()
     {
         Debug.Log($"{gameObject}ÀÌ Á×À½");
     }
-    private void Attack()
-    {
-        
-    }
+    protected virtual void Attack() { }
+
+    //private void Attack()
+    //{
+    //    var rayhit = Physics2D.RaycastAll(transform.position, Vector3.right, distance);
+    //    Debug.DrawRay(transform.position, Vector3.right * distance);
+    //    foreach(var hit in rayhit)
+    //    {
+    //        if (hit.collider.gameObject.tag == "Player")
+    //        {
+    //            hit.collider.gameObject.GetComponent<Entity>()._hp -= Damage;
+    //        }
+    //    }
+    //}
 
     private void Move()
     {
@@ -53,15 +71,21 @@ public class Enemy : Entity
         }
         else
         {
-
             if (gameObject.transform.position.x < x)
             {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 transform.position += new Vector3(Speed * Time.deltaTime, 0, 0);
             }
             if (gameObject.transform.position.x > x)
             {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
                 transform.position -= new Vector3(Speed * Time.deltaTime, 0, 0);
             }
         }
+    }
+
+    protected override void Hit()
+    {
+        Debug.Log($"{gameObject.name} ÇÇ°Ý");
     }
 }

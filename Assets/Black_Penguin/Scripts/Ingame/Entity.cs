@@ -16,9 +16,31 @@ public abstract class Entity : MonoBehaviour
     public float Damage;
     public float MaxHp;
     public float Speed;
-    public float hp;
+    private float hp;
+    public float _hp
+    {
+        get { return hp; }
+        set 
+        { 
+            if(value >= MaxHp)
+            {
+                hp = MaxHp;
+            }
+            if(value <= 0)
+            {
+                entityState = EntityState.DIE;
+            }
+            if(value < hp)
+            {
+                Hit();
+            }
+            hp = value; 
+        }
+    }
+
     public EntityState entityState;
     protected abstract void Die();
+    protected abstract void Hit();
     //protected abstract void Attack();
     
     protected virtual void Start()
