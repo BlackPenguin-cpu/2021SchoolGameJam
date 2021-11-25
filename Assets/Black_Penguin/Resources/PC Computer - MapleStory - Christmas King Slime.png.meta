@@ -1,0 +1,3564 @@
+fileFormatVersion: 2
+guid: 941e5b17c0f86284abe46ac7517a3bb9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -937914426781925989
+    second: PC Computer - MapleStory - Christmas King Slime_0
+  - first:
+      213: 7602082242665806635
+    second: PC Computer - MapleStory - Christmas King Slime_1
+  - first:
+      213: -6234979504469918703
+    second: PC Computer - MapleStory - Christmas King Slime_2
+  - first:
+      213: 7581326367379315787
+    second: PC Computer - MapleStory - Christmas King Slime_3
+  - first:
+      213: -8515962664198211776
+    second: PC Computer - MapleStory - Christmas King Slime_4
+  - first:
+      213: -7319629307207852222
+    second: PC Computer - MapleStory - Christmas King Slime_5
+  - first:
+      213: -1656316507343011796
+    second: PC Computer - MapleStory - Christmas King Slime_6
+  - first:
+      213: -5643769438906468908
+    second: PC Computer - MapleStory - Christmas King Slime_7
+  - first:
+      213: -1682995457742882285
+    second: PC Computer - MapleStory - Christmas King Slime_8
+  - first:
+      213: 5468677477685548434
+    second: PC Computer - MapleStory - Christmas King Slime_9
+  - first:
+      213: -329380010309735570
+    second: PC Computer - MapleStory - Christmas King Slime_10
+  - first:
+      213: 865502495784741071
+    second: PC Computer - MapleStory - Christmas King Slime_11
+  - first:
+      213: 1152046089957040049
+    second: PC Computer - MapleStory - Christmas King Slime_12
+  - first:
+      213: -2438104716304194475
+    second: PC Computer - MapleStory - Christmas King Slime_13
+  - first:
+      213: 1196690484960781081
+    second: PC Computer - MapleStory - Christmas King Slime_14
+  - first:
+      213: -342879332352759801
+    second: PC Computer - MapleStory - Christmas King Slime_15
+  - first:
+      213: 6885443603109841760
+    second: PC Computer - MapleStory - Christmas King Slime_16
+  - first:
+      213: 8375392099170823719
+    second: PC Computer - MapleStory - Christmas King Slime_17
+  - first:
+      213: 3438930183165634581
+    second: PC Computer - MapleStory - Christmas King Slime_18
+  - first:
+      213: -5199678654411656911
+    second: PC Computer - MapleStory - Christmas King Slime_19
+  - first:
+      213: -244668859374978310
+    second: PC Computer - MapleStory - Christmas King Slime_20
+  - first:
+      213: 8584125511575455115
+    second: PC Computer - MapleStory - Christmas King Slime_21
+  - first:
+      213: 9146561262186096308
+    second: PC Computer - MapleStory - Christmas King Slime_22
+  - first:
+      213: 9057626791596098929
+    second: PC Computer - MapleStory - Christmas King Slime_23
+  - first:
+      213: 7501523955218963049
+    second: PC Computer - MapleStory - Christmas King Slime_24
+  - first:
+      213: -2233472638963740957
+    second: PC Computer - MapleStory - Christmas King Slime_25
+  - first:
+      213: 3057052558674328894
+    second: PC Computer - MapleStory - Christmas King Slime_26
+  - first:
+      213: -3240466855943689418
+    second: PC Computer - MapleStory - Christmas King Slime_27
+  - first:
+      213: 5113521589981019658
+    second: PC Computer - MapleStory - Christmas King Slime_28
+  - first:
+      213: -3492169855094298762
+    second: PC Computer - MapleStory - Christmas King Slime_29
+  - first:
+      213: -28201889065737015
+    second: PC Computer - MapleStory - Christmas King Slime_30
+  - first:
+      213: -6380789151630447314
+    second: PC Computer - MapleStory - Christmas King Slime_31
+  - first:
+      213: -439753608507135639
+    second: PC Computer - MapleStory - Christmas King Slime_32
+  - first:
+      213: -2034582331122932815
+    second: PC Computer - MapleStory - Christmas King Slime_33
+  - first:
+      213: -4021407119222968090
+    second: PC Computer - MapleStory - Christmas King Slime_34
+  - first:
+      213: -2285507390979640015
+    second: PC Computer - MapleStory - Christmas King Slime_35
+  - first:
+      213: 7880638865220744557
+    second: PC Computer - MapleStory - Christmas King Slime_36
+  - first:
+      213: -3963091531745020222
+    second: PC Computer - MapleStory - Christmas King Slime_37
+  - first:
+      213: -4477033381616977470
+    second: PC Computer - MapleStory - Christmas King Slime_38
+  - first:
+      213: 8432162588929887410
+    second: PC Computer - MapleStory - Christmas King Slime_39
+  - first:
+      213: 5597631830091083568
+    second: PC Computer - MapleStory - Christmas King Slime_40
+  - first:
+      213: -2994898610182290785
+    second: PC Computer - MapleStory - Christmas King Slime_41
+  - first:
+      213: 4020933874727206024
+    second: PC Computer - MapleStory - Christmas King Slime_42
+  - first:
+      213: 1815895032969386612
+    second: PC Computer - MapleStory - Christmas King Slime_43
+  - first:
+      213: 2545373260708074043
+    second: PC Computer - MapleStory - Christmas King Slime_44
+  - first:
+      213: -8985438714741409874
+    second: PC Computer - MapleStory - Christmas King Slime_45
+  - first:
+      213: 4180959966883501777
+    second: PC Computer - MapleStory - Christmas King Slime_46
+  - first:
+      213: 8159995028044164939
+    second: PC Computer - MapleStory - Christmas King Slime_47
+  - first:
+      213: -2786099841747199676
+    second: PC Computer - MapleStory - Christmas King Slime_48
+  - first:
+      213: 5656278158295681022
+    second: PC Computer - MapleStory - Christmas King Slime_49
+  - first:
+      213: -8916301479288197640
+    second: PC Computer - MapleStory - Christmas King Slime_50
+  - first:
+      213: 4986633495059405056
+    second: PC Computer - MapleStory - Christmas King Slime_51
+  - first:
+      213: -1513859578615780549
+    second: PC Computer - MapleStory - Christmas King Slime_52
+  - first:
+      213: 6936333508835907155
+    second: PC Computer - MapleStory - Christmas King Slime_53
+  - first:
+      213: -7619300496171379602
+    second: PC Computer - MapleStory - Christmas King Slime_54
+  - first:
+      213: 1718185637311390384
+    second: PC Computer - MapleStory - Christmas King Slime_55
+  - first:
+      213: 3418372032548231594
+    second: PC Computer - MapleStory - Christmas King Slime_56
+  - first:
+      213: 763869052327149015
+    second: PC Computer - MapleStory - Christmas King Slime_57
+  - first:
+      213: 1747254973766799103
+    second: PC Computer - MapleStory - Christmas King Slime_58
+  - first:
+      213: 4937314077017004265
+    second: PC Computer - MapleStory - Christmas King Slime_59
+  - first:
+      213: -8632609337920771827
+    second: PC Computer - MapleStory - Christmas King Slime_60
+  - first:
+      213: -6670423934346469697
+    second: PC Computer - MapleStory - Christmas King Slime_61
+  - first:
+      213: -1827021640031003821
+    second: PC Computer - MapleStory - Christmas King Slime_62
+  - first:
+      213: 6941595168873783027
+    second: PC Computer - MapleStory - Christmas King Slime_63
+  - first:
+      213: -8397564398852387871
+    second: PC Computer - MapleStory - Christmas King Slime_64
+  - first:
+      213: 8868548083577725400
+    second: PC Computer - MapleStory - Christmas King Slime_65
+  - first:
+      213: 3507153915459624136
+    second: PC Computer - MapleStory - Christmas King Slime_66
+  - first:
+      213: -8214143750191694778
+    second: PC Computer - MapleStory - Christmas King Slime_67
+  - first:
+      213: -4138486043030437476
+    second: PC Computer - MapleStory - Christmas King Slime_68
+  - first:
+      213: 479899632899843910
+    second: PC Computer - MapleStory - Christmas King Slime_69
+  - first:
+      213: 300092080589026054
+    second: PC Computer - MapleStory - Christmas King Slime_70
+  - first:
+      213: 7440756269770032564
+    second: PC Computer - MapleStory - Christmas King Slime_71
+  - first:
+      213: -3809889828530773418
+    second: PC Computer - MapleStory - Christmas King Slime_72
+  - first:
+      213: -6390140501398034259
+    second: PC Computer - MapleStory - Christmas King Slime_73
+  - first:
+      213: -6636626474183086736
+    second: PC Computer - MapleStory - Christmas King Slime_74
+  - first:
+      213: -2356717066965686676
+    second: PC Computer - MapleStory - Christmas King Slime_75
+  - first:
+      213: -3418459961716459450
+    second: PC Computer - MapleStory - Christmas King Slime_76
+  - first:
+      213: 1069972689386798022
+    second: PC Computer - MapleStory - Christmas King Slime_77
+  - first:
+      213: -8633608063619085585
+    second: PC Computer - MapleStory - Christmas King Slime_78
+  - first:
+      213: 6565909174618533217
+    second: PC Computer - MapleStory - Christmas King Slime_79
+  - first:
+      213: 8931938386460224479
+    second: PC Computer - MapleStory - Christmas King Slime_80
+  - first:
+      213: 1754742964338869666
+    second: PC Computer - MapleStory - Christmas King Slime_81
+  - first:
+      213: -5860885559079948859
+    second: PC Computer - MapleStory - Christmas King Slime_82
+  - first:
+      213: -8837261516351407724
+    second: PC Computer - MapleStory - Christmas King Slime_83
+  - first:
+      213: 5989691430672588066
+    second: PC Computer - MapleStory - Christmas King Slime_84
+  - first:
+      213: 3848749289550330550
+    second: PC Computer - MapleStory - Christmas King Slime_85
+  - first:
+      213: 6563494367515887895
+    second: PC Computer - MapleStory - Christmas King Slime_86
+  - first:
+      213: -7023332924606126657
+    second: PC Computer - MapleStory - Christmas King Slime_87
+  - first:
+      213: -1200988040756725135
+    second: PC Computer - MapleStory - Christmas King Slime_88
+  - first:
+      213: -2679050081164942685
+    second: PC Computer - MapleStory - Christmas King Slime_89
+  - first:
+      213: -3539207256497320390
+    second: PC Computer - MapleStory - Christmas King Slime_90
+  - first:
+      213: -88732183996119084
+    second: PC Computer - MapleStory - Christmas King Slime_91
+  - first:
+      213: 5929826694466004027
+    second: PC Computer - MapleStory - Christmas King Slime_92
+  - first:
+      213: 2184653438216997252
+    second: PC Computer - MapleStory - Christmas King Slime_93
+  - first:
+      213: -8657594251878646573
+    second: PC Computer - MapleStory - Christmas King Slime_94
+  - first:
+      213: -3752827939209474713
+    second: PC Computer - MapleStory - Christmas King Slime_95
+  - first:
+      213: -6938462912552306233
+    second: PC Computer - MapleStory - Christmas King Slime_96
+  - first:
+      213: -2521997032909497080
+    second: PC Computer - MapleStory - Christmas King Slime_97
+  - first:
+      213: 463286520573063453
+    second: PC Computer - MapleStory - Christmas King Slime_98
+  - first:
+      213: 6390418093314944679
+    second: PC Computer - MapleStory - Christmas King Slime_99
+  - first:
+      213: -3382616978650438292
+    second: PC Computer - MapleStory - Christmas King Slime_100
+  - first:
+      213: -2786745290572471548
+    second: PC Computer - MapleStory - Christmas King Slime_101
+  - first:
+      213: -2364956471458516460
+    second: PC Computer - MapleStory - Christmas King Slime_102
+  - first:
+      213: 6663213413469153942
+    second: PC Computer - MapleStory - Christmas King Slime_103
+  - first:
+      213: 6060565272474999400
+    second: PC Computer - MapleStory - Christmas King Slime_104
+  - first:
+      213: -378461615809157765
+    second: PC Computer - MapleStory - Christmas King Slime_105
+  - first:
+      213: -8466397227382489938
+    second: PC Computer - MapleStory - Christmas King Slime_106
+  - first:
+      213: 8782575374396748037
+    second: PC Computer - MapleStory - Christmas King Slime_107
+  - first:
+      213: 6343379896993255018
+    second: PC Computer - MapleStory - Christmas King Slime_108
+  - first:
+      213: -5222138188706306739
+    second: PC Computer - MapleStory - Christmas King Slime_109
+  - first:
+      213: 7194411835232282016
+    second: PC Computer - MapleStory - Christmas King Slime_110
+  - first:
+      213: -7282916529157654948
+    second: PC Computer - MapleStory - Christmas King Slime_111
+  - first:
+      213: 3321454761052064329
+    second: PC Computer - MapleStory - Christmas King Slime_112
+  - first:
+      213: 2099889412753732904
+    second: PC Computer - MapleStory - Christmas King Slime_113
+  - first:
+      213: 5380918292154168671
+    second: PC Computer - MapleStory - Christmas King Slime_114
+  - first:
+      213: 7529115359622826306
+    second: PC Computer - MapleStory - Christmas King Slime_115
+  - first:
+      213: -66695894794792626
+    second: PC Computer - MapleStory - Christmas King Slime_116
+  - first:
+      213: -6352399741991855270
+    second: PC Computer - MapleStory - Christmas King Slime_117
+  - first:
+      213: -6266421228077933652
+    second: PC Computer - MapleStory - Christmas King Slime_118
+  - first:
+      213: -1740200590854375530
+    second: PC Computer - MapleStory - Christmas King Slime_119
+  - first:
+      213: 1782575300856357881
+    second: PC Computer - MapleStory - Christmas King Slime_120
+  - first:
+      213: -7095503943585426659
+    second: PC Computer - MapleStory - Christmas King Slime_121
+  - first:
+      213: 5556043088565068291
+    second: PC Computer - MapleStory - Christmas King Slime_122
+  - first:
+      213: 1115336191488640997
+    second: PC Computer - MapleStory - Christmas King Slime_123
+  - first:
+      213: -6931355263727183346
+    second: PC Computer - MapleStory - Christmas King Slime_124
+  - first:
+      213: -7406355772759731059
+    second: PC Computer - MapleStory - Christmas King Slime_125
+  - first:
+      213: 7733954073043353670
+    second: PC Computer - MapleStory - Christmas King Slime_126
+  - first:
+      213: 7600469699584093523
+    second: PC Computer - MapleStory - Christmas King Slime_127
+  - first:
+      213: 6136948303745043832
+    second: PC Computer - MapleStory - Christmas King Slime_128
+  - first:
+      213: 5983575897875849152
+    second: PC Computer - MapleStory - Christmas King Slime_129
+  - first:
+      213: -8934557337574872391
+    second: PC Computer - MapleStory - Christmas King Slime_130
+  - first:
+      213: 3401595046024789558
+    second: PC Computer - MapleStory - Christmas King Slime_131
+  - first:
+      213: 1947130432045650931
+    second: PC Computer - MapleStory - Christmas King Slime_132
+  - first:
+      213: 3888219103926897385
+    second: PC Computer - MapleStory - Christmas King Slime_133
+  - first:
+      213: -7697164628410307136
+    second: PC Computer - MapleStory - Christmas King Slime_134
+  - first:
+      213: 9180169333240482464
+    second: PC Computer - MapleStory - Christmas King Slime_135
+  - first:
+      213: 6424030326058832637
+    second: PC Computer - MapleStory - Christmas King Slime_136
+  - first:
+      213: 5267264346044513218
+    second: PC Computer - MapleStory - Christmas King Slime_137
+  - first:
+      213: -5270794920098767605
+    second: PC Computer - MapleStory - Christmas King Slime_138
+  - first:
+      213: -7059639309583113456
+    second: PC Computer - MapleStory - Christmas King Slime_139
+  - first:
+      213: 6576621522414732031
+    second: PC Computer - MapleStory - Christmas King Slime_140
+  - first:
+      213: 6020072152660216165
+    second: PC Computer - MapleStory - Christmas King Slime_141
+  - first:
+      213: 2864265609852034405
+    second: PC Computer - MapleStory - Christmas King Slime_142
+  - first:
+      213: -5761138025841441894
+    second: PC Computer - MapleStory - Christmas King Slime_143
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_0
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 966
+        width: 74
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9df2f15ccbdbf2f0800000000000000
+      internalID: -937914426781925989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_1
+      rect:
+        serializedVersion: 2
+        x: 2493
+        y: 966
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b766ba585008960800000000000000
+      internalID: 7602082242665806635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_2
+      rect:
+        serializedVersion: 2
+        x: 2526
+        y: 966
+        width: 127
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11cba3ecc27e879a0800000000000000
+      internalID: -6234979504469918703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_3
+      rect:
+        serializedVersion: 2
+        x: 2659
+        y: 971
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c52fdd928463960800000000000000
+      internalID: 7581326367379315787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_4
+      rect:
+        serializedVersion: 2
+        x: 2695
+        y: 971
+        width: 64
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047f9ff831931d980800000000000000
+      internalID: -8515962664198211776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_5
+      rect:
+        serializedVersion: 2
+        x: 2762
+        y: 971
+        width: 79
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f56581de37b6a90800000000000000
+      internalID: -7319629307207852222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_6
+      rect:
+        serializedVersion: 2
+        x: 2846
+        y: 971
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20443089e49309e0800000000000000
+      internalID: -1656316507343011796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_7
+      rect:
+        serializedVersion: 2
+        x: 2877
+        y: 971
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d536c7e89d4da1b0800000000000000
+      internalID: -5643769438906468908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_8
+      rect:
+        serializedVersion: 2
+        x: 2893
+        y: 971
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ab3ae4c8cc4a8e0800000000000000
+      internalID: -1682995457742882285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_9
+      rect:
+        serializedVersion: 2
+        x: 2933
+        y: 971
+        width: 37
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29550a01135a4eb40800000000000000
+      internalID: 5468677477685548434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_10
+      rect:
+        serializedVersion: 2
+        x: 2974
+        y: 971
+        width: 60
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6baf5130aecd6bf0800000000000000
+      internalID: -329380010309735570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_11
+      rect:
+        serializedVersion: 2
+        x: 3037
+        y: 971
+        width: 61
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8a67d2fe1e20c00800000000000000
+      internalID: 865502495784741071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_12
+      rect:
+        serializedVersion: 2
+        x: 3103
+        y: 966
+        width: 73
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf54c4a0d3ecff00800000000000000
+      internalID: 1152046089957040049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_13
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 743
+        width: 210
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554eb7b9dac1a2ed0800000000000000
+      internalID: -2438104716304194475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_14
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 743
+        width: 222
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9136d2ed7af7b9010800000000000000
+      internalID: 1196690484960781081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_15
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 796
+        width: 84
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7086a4a5019dd3bf0800000000000000
+      internalID: -342879332352759801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_16
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 498
+        width: 233
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b0954f9720e8f50800000000000000
+      internalID: 6885443603109841760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_17
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 498
+        width: 233
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ea0bd4dbe5b3470800000000000000
+      internalID: 8375392099170823719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_18
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 514
+        width: 178
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518e4f608c889bf20800000000000000
+      internalID: 3438930183165634581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_19
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 546
+        width: 222
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131bc9910d707d7b0800000000000000
+      internalID: -5199678654411656911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_20
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 499
+        width: 176
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afaba5df7f2ca9cf0800000000000000
+      internalID: -244668859374978310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_21
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 498
+        width: 186
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85c2d01ca0f02770800000000000000
+      internalID: 8584125511575455115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_22
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 498
+        width: 210
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b663f4e10d1fee70800000000000000
+      internalID: 9146561262186096308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_23
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 560
+        width: 38
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175852dd39723bd70800000000000000
+      internalID: 9057626791596098929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_24
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 560
+        width: 319
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96ad8e0ea44ca1860800000000000000
+      internalID: 7501523955218963049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_25
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 524
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee0303e77c1101e0800000000000000
+      internalID: -2233472638963740957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_26
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 525
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d7b7bea15dc6a20800000000000000
+      internalID: 3057052558674328894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_27
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 507
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63bac01309c8703d0800000000000000
+      internalID: -3240466855943689418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_28
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 499
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0efb122bc0e6f640800000000000000
+      internalID: 5113521589981019658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_29
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 499
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677e6c3e402598fc0800000000000000
+      internalID: -3492169855094298762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_30
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 253
+        width: 161
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4ed34088ecb9ff0800000000000000
+      internalID: -28201889065737015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_31
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 253
+        width: 161
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2da66ec212e277a0800000000000000
+      internalID: -6380789151630447314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_32
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 253
+        width: 160
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9696c384c6ea5e9f0800000000000000
+      internalID: -439753608507135639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_33
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 253
+        width: 161
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3a1274626b3c3e0800000000000000
+      internalID: -2034582331122932815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_34
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 253
+        width: 160
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0fc7908871138c0800000000000000
+      internalID: -4021407119222968090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_35
+      rect:
+        serializedVersion: 2
+        x: 2317
+        y: 315
+        width: 191
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135f025132f3840e0800000000000000
+      internalID: -2285507390979640015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_36
+      rect:
+        serializedVersion: 2
+        x: 2515
+        y: 309
+        width: 74
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65be946b47ad5d60800000000000000
+      internalID: 7880638865220744557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_37
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 315
+        width: 72
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6bafdcf354009c0800000000000000
+      internalID: -3963091531745020222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_38
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 315
+        width: 95
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c977291cd16ed1c0800000000000000
+      internalID: -4477033381616977470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_39
+      rect:
+        serializedVersion: 2
+        x: 2773
+        y: 315
+        width: 117
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc0189f23f050570800000000000000
+      internalID: 8432162588929887410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_40
+      rect:
+        serializedVersion: 2
+        x: 2896
+        y: 315
+        width: 65
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03fafffed78cead40800000000000000
+      internalID: 5597631830091083568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_41
+      rect:
+        serializedVersion: 2
+        x: 2966
+        y: 309
+        width: 106
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9206c9e49bff66d0800000000000000
+      internalID: -2994898610182290785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_42
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 119
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c33742e0a3dc730800000000000000
+      internalID: 4020933874727206024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_43
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 153
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a598559ea533910800000000000000
+      internalID: 1815895032969386612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_44
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 153
+        width: 92
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b325841ae7bf25320800000000000000
+      internalID: 2545373260708074043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_45
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 146
+        width: 93
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea7bbc8881f4d4380800000000000000
+      internalID: -8985438714741409874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_46
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 125
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6583e20f0c50a30800000000000000
+      internalID: 4180959966883501777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_47
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 118
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4fa6879e302e3170800000000000000
+      internalID: 8159995028044164939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_48
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 58
+        width: 84
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449d2ef84f8c559d0800000000000000
+      internalID: -2786099841747199676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_49
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 44
+        width: 130
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7c30844032f7e40800000000000000
+      internalID: 5656278158295681022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_50
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 100
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdacb09b0fe24480800000000000000
+      internalID: -8916301479288197640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_51
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 102
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00994125eb4143540800000000000000
+      internalID: 4986633495059405056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_52
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 113
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ba8c8ebb0bdfae0800000000000000
+      internalID: -1513859578615780549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_53
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 105
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3569dc5739ec24060800000000000000
+      internalID: 6936333508835907155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_54
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 104
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e645fb8419ec24690800000000000000
+      internalID: -7619300496171379602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_55
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 15
+        width: 208
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2af1adbb838d710800000000000000
+      internalID: 1718185637311390384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_56
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 94
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9da26904f707f20800000000000000
+      internalID: 3418372032548231594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_57
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 15
+        width: 146
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ddbfde1bdec99a00800000000000000
+      internalID: 763869052327149015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_58
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 91
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe876b242f7f3810800000000000000
+      internalID: 1747254973766799103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_59
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 85
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e852297efcd48440800000000000000
+      internalID: 4937314077017004265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_60
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 97
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0923807b8fc23880800000000000000
+      internalID: -8632609337920771827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_61
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 93
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbed30ce5c4ed63a0800000000000000
+      internalID: -6670423934346469697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_62
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 66
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b10059f7d15a6e0800000000000000
+      internalID: -1827021640031003821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_63
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 37
+        width: 16
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe1a472700855060800000000000000
+      internalID: 6941595168873783027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_64
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 40
+        width: 12
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebcfe3ebabd57b80800000000000000
+      internalID: -8397564398852387871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_65
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 69
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d12f139e79631b70800000000000000
+      internalID: 8868548083577725400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_66
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 82
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc579787e9eba030800000000000000
+      internalID: 3507153915459624136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_67
+      rect:
+        serializedVersion: 2
+        x: 2963
+        y: 57
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c34d397cf710e80800000000000000
+      internalID: -8214143750191694778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_68
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 46
+        width: 11
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c914249ded42196c0800000000000000
+      internalID: -4138486043030437476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_69
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 74
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647e5da6c22f8a600800000000000000
+      internalID: 479899632899843910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_70
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 65
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603ba6748242a2400800000000000000
+      internalID: 300092080589026054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_71
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 71
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b547ef8760e24760800000000000000
+      internalID: 7440756269770032564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_72
+      rect:
+        serializedVersion: 2
+        x: 2230
+        y: 19
+        width: 84
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652ac09f26d802bc0800000000000000
+      internalID: -3809889828530773418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_73
+      rect:
+        serializedVersion: 2
+        x: 2477
+        y: 27
+        width: 39
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da865550219a157a0800000000000000
+      internalID: -6390140501398034259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_74
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 19
+        width: 195
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d2d535267f5e3a0800000000000000
+      internalID: -6636626474183086736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_75
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 15
+        width: 203
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c66e86360524b4fd0800000000000000
+      internalID: -2356717066965686676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_76
+      rect:
+        serializedVersion: 2
+        x: 2995
+        y: 68
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648befec6c03f80d0800000000000000
+      internalID: -3418459961716459450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_77
+      rect:
+        serializedVersion: 2
+        x: 3097
+        y: 55
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cbf446fd7e49de00800000000000000
+      internalID: 1069972689386798022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_78
+      rect:
+        serializedVersion: 2
+        x: 3117
+        y: 52
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea490e75334f2880800000000000000
+      internalID: -8633608063619085585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_79
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 54
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16dad9c4b9bce1b50800000000000000
+      internalID: 6565909174618533217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_80
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 62
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb23a893ae94fb70800000000000000
+      internalID: 8931938386460224479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_81
+      rect:
+        serializedVersion: 2
+        x: 2316
+        y: 0
+        width: 119
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a5c885dd691a5810800000000000000
+      internalID: 1754742964338869666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_82
+      rect:
+        serializedVersion: 2
+        x: 2481
+        y: 0
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cda2d5e2a3f9aea0800000000000000
+      internalID: -5860885559079948859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_83
+      rect:
+        serializedVersion: 2
+        x: 2526
+        y: 0
+        width: 150
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499f4a2097dbb5580800000000000000
+      internalID: -8837261516351407724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_84
+      rect:
+        serializedVersion: 2
+        x: 2711
+        y: 0
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22dd0771f98af1350800000000000000
+      internalID: 5989691430672588066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_85
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 52
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba3f295611896530800000000000000
+      internalID: 3848749289550330550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_86
+      rect:
+        serializedVersion: 2
+        x: 2994
+        y: 60
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719cf053a57361b50800000000000000
+      internalID: 6563494367515887895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_87
+      rect:
+        serializedVersion: 2
+        x: 3006
+        y: 0
+        width: 84
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5eb819aeb188e90800000000000000
+      internalID: -7023332924606126657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_88
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 57
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17af3337dbb355fe0800000000000000
+      internalID: -1200988040756725135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_89
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 51
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a2aea8352a12dad0800000000000000
+      internalID: -2679050081164942685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_90
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 57
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e0ef170c532eec0800000000000000
+      internalID: -3539207256497320390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_91
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 23
+        width: 138
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d744cc7c82c4cef0800000000000000
+      internalID: -88732183996119084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_92
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 48
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34664706f9fa4250800000000000000
+      internalID: 5929826694466004027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_93
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 49
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489824e2ab2715e10800000000000000
+      internalID: 2184653438216997252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_94
+      rect:
+        serializedVersion: 2
+        x: 2462
+        y: 26
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc3f47d5eb0ad780800000000000000
+      internalID: -8657594251878646573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_95
+      rect:
+        serializedVersion: 2
+        x: 2877
+        y: 0
+        width: 50
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d02446fd64bebc0800000000000000
+      internalID: -3752827939209474713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_96
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 47
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9f81a1eb0a5bf90800000000000000
+      internalID: -6938462912552306233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_97
+      rect:
+        serializedVersion: 2
+        x: 2981
+        y: 51
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d17d88f01100dd0800000000000000
+      internalID: -2521997032909497080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_98
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 51
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11fbf7c2aced6600800000000000000
+      internalID: 463286520573063453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_99
+      rect:
+        serializedVersion: 2
+        x: 3098
+        y: 49
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae2442e5635fa850800000000000000
+      internalID: 6390418093314944679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_100
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 0
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65e550a7c78e01d0800000000000000
+      internalID: -3382616978650438292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_101
+      rect:
+        serializedVersion: 2
+        x: 3145
+        y: 48
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4036feb4ced7359d0800000000000000
+      internalID: -2786745290572471548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_102
+      rect:
+        serializedVersion: 2
+        x: 3154
+        y: 52
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41234798e9cfd2fd0800000000000000
+      internalID: -2364956471458516460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_103
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 16
+        width: 139
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a627cdb4d787c50800000000000000
+      internalID: 6663213413469153942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_104
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 12
+        width: 157
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ad0fb41047b1450800000000000000
+      internalID: 6060565272474999400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_105
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 15
+        width: 62
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7523946a2f6fbaf0800000000000000
+      internalID: -378461615809157765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_106
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 48
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eacb38e1490518a80800000000000000
+      internalID: -8466397227382489938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_107
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 40
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501f20c55c9f1e970800000000000000
+      internalID: 8782575374396748037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_108
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 41
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6e03ab5866380850800000000000000
+      internalID: 6343379896993255018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_109
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 41
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45a8264cfc3787b0800000000000000
+      internalID: -5222138188706306739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_110
+      rect:
+        serializedVersion: 2
+        x: 2759
+        y: 24
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5e2ee427fa7d360800000000000000
+      internalID: 7194411835232282016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_111
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 23
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56bcb6d002edea90800000000000000
+      internalID: -7282916529157654948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_112
+      rect:
+        serializedVersion: 2
+        x: 2859
+        y: 27
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ac902e18d281e20800000000000000
+      internalID: 3321454761052064329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_113
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 46
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8253ac29b4e442d10800000000000000
+      internalID: 2099889412753732904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_114
+      rect:
+        serializedVersion: 2
+        x: 3111
+        y: 46
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5530496dacdcaa40800000000000000
+      internalID: 5380918292154168671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_115
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 15
+        width: 62
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2498143578acc7860800000000000000
+      internalID: 7529115359622826306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_116
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 38
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4197c2ef6c031ff0800000000000000
+      internalID: -66695894794792626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_117
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 40
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5bda43571eb7d7a0800000000000000
+      internalID: -6352399741991855270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_118
+      rect:
+        serializedVersion: 2
+        x: 2985
+        y: 43
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab927f08133909a0800000000000000
+      internalID: -6266421228077933652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_119
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 33
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697333858c099d7e0800000000000000
+      internalID: -1740200590854375530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_120
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 32
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3ade8aacafcb810800000000000000
+      internalID: 1782575300856357881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_121
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 37
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d131534c1c4b78d90800000000000000
+      internalID: -7095503943585426659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_122
+      rect:
+        serializedVersion: 2
+        x: 2961
+        y: 38
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3026faa70c70b1d40800000000000000
+      internalID: 5556043088565068291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_123
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 32
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e741da5b587a7f00800000000000000
+      internalID: 1115336191488640997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_124
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 29
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ad18d8c11eecf90800000000000000
+      internalID: -6931355263727183346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_125
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 27
+        width: 25
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d841e7c4aa6573990800000000000000
+      internalID: -7406355772759731059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_126
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 23
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6404fe0d046845b60800000000000000
+      internalID: 7733954073043353670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_127
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 29
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d64d93cea4a7960800000000000000
+      internalID: 7600469699584093523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_128
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 29
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87dc8a1a7f1da2550800000000000000
+      internalID: 6136948303745043832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_129
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 29
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf9a77a39ee90350800000000000000
+      internalID: 5983575897875849152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_130
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 27
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba6d745073120480800000000000000
+      internalID: -8934557337574872391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_131
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 26
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e39040ca4e43f20800000000000000
+      internalID: 3401595046024789558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_132
+      rect:
+        serializedVersion: 2
+        x: 2549
+        y: 24
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f31f65cfc8950b10800000000000000
+      internalID: 1947130432045650931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_133
+      rect:
+        serializedVersion: 2
+        x: 2821
+        y: 23
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea4372acaab5f530800000000000000
+      internalID: 3888219103926897385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_134
+      rect:
+        serializedVersion: 2
+        x: 2876
+        y: 26
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cde6e14d8d2e2590800000000000000
+      internalID: -7697164628410307136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_135
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 20
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aacbb5be53866f70800000000000000
+      internalID: 9180169333240482464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_136
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 23
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2d21bab8db62950800000000000000
+      internalID: 6424030326058832637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_137
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 23
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb301cf305191940800000000000000
+      internalID: 5267264346044513218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_138
+      rect:
+        serializedVersion: 2
+        x: 2477
+        y: 23
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d549f22ff5ad6b0800000000000000
+      internalID: -5270794920098767605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_139
+      rect:
+        serializedVersion: 2
+        x: 2543
+        y: 20
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0132ae5937f170e90800000000000000
+      internalID: -7059639309583113456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_140
+      rect:
+        serializedVersion: 2
+        x: 2859
+        y: 23
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff208b12e6ad44b50800000000000000
+      internalID: 6576621522414732031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_141
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 15
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56988852ab79b8350800000000000000
+      internalID: 6020072152660216165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_142
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 15
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d1999856aefb720800000000000000
+      internalID: 2864265609852034405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Christmas King Slime_143
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 0
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93c9b34d735c00b0800000000000000
+      internalID: -5761138025841441894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
