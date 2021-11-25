@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wave : MonoBehaviour
+public class MonsterWave : MonoBehaviour
 {
+    GameObject[] gameObjects;
+    public bool right;
     public int WaveLevel;
     public float WaveTime;
 
@@ -81,7 +83,10 @@ public class Wave : MonoBehaviour
     }
     IEnumerator Wave1()
     {
-        yield return new WaitForSeconds(1);
+        for(int i = 0; i < 15;i++){
+            Instantiate(gameObjects[0], new Vector3(44, 0, 0), Quaternion.identity);
+            yield return new WaitForSeconds(4);
+        }
     }
     IEnumerator Wave2()
     {

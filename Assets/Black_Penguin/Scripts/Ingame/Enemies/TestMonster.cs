@@ -24,7 +24,6 @@ public class TestMonster : Enemy
     {
         base.Attack();
         StartCoroutine(realAttack());
-
     }
     IEnumerator realAttack()
     {
