@@ -32,6 +32,7 @@ public abstract class Entity : MonoBehaviour
             }
             if(value < hp)
             {
+                StartCoroutine(Onhit());
                 Hit();
             }
             hp = value; 
@@ -45,20 +46,17 @@ public abstract class Entity : MonoBehaviour
     
     protected virtual void Start()
     {
-
+        hp = MaxHp;
     }
     protected virtual void Update()
     {
-        if (hp > MaxHp)
-        {
-            hp = MaxHp;
-        }
-        if (hp <= 0)
-        {
-            Die();
-        }
 
-
+    }
+    IEnumerator Onhit()
+    {
+        entityState = EntityState.ONDAMAGE;
+        yield return new WaitForSeconds(0.7f);
+        entityState = EntityState.IDLE;
     }
 
 }

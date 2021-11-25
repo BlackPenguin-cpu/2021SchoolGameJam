@@ -73,4 +73,8 @@ public class Player : Entity
             entityState = EntityState.IDLE; 
         }
     }
+
+    protected override void Hit()
+    {
+    }
 }
