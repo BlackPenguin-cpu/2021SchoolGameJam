@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10
-  MaxHp: 1000
-  Speed: 10
+  MaxHp: 100
+  Speed: 5
   entityState: 0
   player: {fileID: 0}
   nowAttackCooldown: 0
