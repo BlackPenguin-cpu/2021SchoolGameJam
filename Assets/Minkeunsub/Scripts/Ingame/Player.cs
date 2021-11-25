@@ -96,8 +96,10 @@ public class Player : Entity
         if(attackAble)
         {
             shockWave.Play();
-            shockWaveCollider.SetActive(false);
+            shockWaveCollider.SetActive(true);
             attackAble = false;
+            anim.SetInteger("AttackIndex", 3); // 3 == shockwave attack
+            entityState = EntityState.IDLE;
         }
     }
 

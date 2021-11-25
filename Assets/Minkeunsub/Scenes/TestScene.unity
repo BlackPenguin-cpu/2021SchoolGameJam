@@ -271,7 +271,7 @@ MonoBehaviour:
   - {fileID: 1266054617}
   - {fileID: 265335307}
   - {fileID: 1619631760}
-  shockWaveCollider: {fileID: 0}
+  shockWaveCollider: {fileID: 93778213}
   shockWave: {fileID: 2031851928}
 --- !u!95 &32392071
 Animator:
@@ -333,7 +333,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
