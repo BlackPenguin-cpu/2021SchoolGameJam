@@ -95,15 +95,15 @@ public abstract class Enemy : Entity
     private void OnTriggerStay2D(Collider2D collision)
     {
         Debug.Log(collision.tag);
-        if (collision.tag == "PlayerAttack" && entityState != EntityState.ONDAMAGE)
+        if (entityState != EntityState.ONDAMAGE)
         {
-            if (collision.gameObject.name == "ShockWaveCollider")
+            if (collision.gameObject.tag == "ShockWaveAttack")
             {
                 Debug.Log("Ãæ°ÝÆÄ!");
                 _hp -= player.GetComponent<Player>().Damage * 3 / (Mathf.Abs(transform.position.x - player.transform.position.x)/3);
                 OnKnockback(50 / Mathf.Abs(transform.position.x - player.transform.position.x) , 5);
             }
-            else
+            if(collision.gameObject.tag == "PlayerAttack")
             {
                 OnKnockback(2,1);
                 _hp -= player.GetComponent<Player>().Damage;
