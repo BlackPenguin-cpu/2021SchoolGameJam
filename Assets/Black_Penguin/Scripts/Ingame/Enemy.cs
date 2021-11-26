@@ -97,9 +97,8 @@ public abstract class Enemy : Entity
         Debug.Log(collision.tag);
         if (collision.tag == "PlayerAttack" && entityState != EntityState.ONDAMAGE)
         {
-            if (collision.name == "ShockWaveAttack")
+            if (collision.name == "ShockWaveCollider")
             {
-                Debug.Log("shockwave");
                 _hp -= player.GetComponent<Player>().Damage * 3 / (Mathf.Abs(transform.position.x - player.transform.position.x)/3);
                 OnKnockback(5 / Mathf.Abs(transform.position.x - player.transform.position.x)/5);
             }
