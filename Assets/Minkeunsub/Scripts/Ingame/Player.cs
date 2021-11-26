@@ -87,6 +87,10 @@ public class Player : Entity
         switch (entityState)
         {
             case EntityState.IDLE:
+                foreach (var item in attackCollider)
+                {
+                    item.SetActive(false);
+                }
                 break;
             case EntityState.MOVING:
                 IdleController();
@@ -145,10 +149,6 @@ public class Player : Entity
     public void EndAttack()
     {
         entityState = EntityState.IDLE;
-        foreach (var item in attackCollider)
-        {
-            item.SetActive(false);
-        }
     }
 
     void IdleController()
