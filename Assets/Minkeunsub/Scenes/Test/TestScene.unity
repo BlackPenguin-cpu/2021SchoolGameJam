@@ -211,9 +211,8 @@ Transform:
   - {fileID: 1619631761}
   - {fileID: 2031851929}
   - {fileID: 93778214}
-  - {fileID: 1445833857}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &32392068
 Rigidbody2D:
@@ -798,7 +797,7 @@ Transform:
   - {fileID: 1941477760}
   - {fileID: 264506689}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954184356
 GameObject:
@@ -1009,7 +1008,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1082694130
 MonoBehaviour:
@@ -2130,8 +2129,8 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.0044517517
-          value: 0.5405388
+          time: 0
+          value: 0
           inSlope: 2.9217997
           outSlope: 2.9217997
           tangentMode: 0
@@ -2139,17 +2138,17 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.2146037
         - serializedVersion: 3
-          time: 0.069610156
-          value: 1
-          inSlope: 1.7140081
-          outSlope: 1.7140081
+          time: 0.08293152
+          value: 0.9076777
+          inSlope: 0.53645915
+          outSlope: 0.53645915
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.33333334
+          outWeight: 0.2261143
         - serializedVersion: 3
           time: 1
-          value: 0.79729736
+          value: 1
           inSlope: -0.93711597
           outSlope: -0.93711597
           tangentMode: 0
@@ -10962,13 +10961,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445833854}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.3723098, y: -2.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1782849033}
   - {fileID: 1143836992}
-  m_Father: {fileID: 32392067}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1619631760
 GameObject:
@@ -12184,8 +12183,8 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.0044517517
-          value: 0.5405388
+          time: 0
+          value: 0
           inSlope: 2.9217997
           outSlope: 2.9217997
           tangentMode: 0
@@ -12193,17 +12192,17 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.2146037
         - serializedVersion: 3
-          time: 0.069610156
-          value: 1
-          inSlope: 1.7140081
-          outSlope: 1.7140081
+          time: 0.08293152
+          value: 0.9076777
+          inSlope: 0.53645915
+          outSlope: 0.53645915
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.33333334
+          outWeight: 0.2261143
         - serializedVersion: 3
           time: 1
-          value: 0.79729736
+          value: 1
           inSlope: -0.93711597
           outSlope: -0.93711597
           tangentMode: 0
