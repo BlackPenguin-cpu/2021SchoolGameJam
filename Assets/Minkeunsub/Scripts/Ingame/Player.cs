@@ -235,7 +235,7 @@ public class Player : Entity
     protected override void Hit()
     {
         hitEffect.Play();
-        mainCamera.Shake(0.2f, 0.25f);
+        mainCamera.Shake(5, 5);
         Stop(0.25f);
         playerState = PlayerState.OnDamaged;
     }
