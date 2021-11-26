@@ -35,6 +35,14 @@ public class Player : Entity
     bool isMoving;
     bool waiting;
 
+    public float DashForce;
+    public float StartDashTimer;
+
+    float CurrentDashTimer;
+    float DashDirection;
+
+    bool isDashing;
+
     protected override void Die()
     {
     }
@@ -89,11 +97,18 @@ public class Player : Entity
 
                 break;
             case PlayerState.Dash:
-
+                if (!isDashing)
+                    Dash();
                 break;
             default:
                 break;
         }
+    }
+
+    void Dash()
+    {
+        isDashing = true;
+        CurrentDashTimer = StartDashTimer;
     }
 
     private void FixedUpdate()
@@ -163,6 +178,10 @@ public class Player : Entity
         {
             playerState = PlayerState.Skill;
             playerSkill = PlayerAttackState.SHOCKWAVE;
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            playerState = PlayerState.Dash;
         }
     }
 
