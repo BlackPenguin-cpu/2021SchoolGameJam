@@ -95,12 +95,16 @@ public class MonsterWave : MonoBehaviour
     IEnumerator Wave1()
     {
         for(int i = 0; i < 15;i++){
-            Instantiate(gameObjects[0], new Vector3(44, 0, 0), Quaternion.identity);
+            Instantiate(gameObjects[0], new Vector3(position, -2f, 0), Quaternion.identity);
             yield return new WaitForSeconds(4);
         }
     }
     IEnumerator Wave2()
     {
+        for(int i = 0; i < 15; i++)
+        {
+            Instantiate(gameObjects[0], new Vector3(position, -2f, 0), Quaternion.identity);
+        }
         yield return new WaitForSeconds(1);
     }
     IEnumerator Wave3()
