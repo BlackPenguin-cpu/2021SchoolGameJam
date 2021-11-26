@@ -119,10 +119,12 @@ public abstract class Enemy : Entity
         }
         if(player.transform.position.x - gameObject.transform.position.x  <= 0)
         {
+            rigid.velocity = new Vector2(0, rigid.velocity.y);
             rigid.AddForce(new Vector2(value, 1),ForceMode2D.Impulse);
         }
         else
         {
+            rigid.velocity = new Vector2(0,rigid.velocity.y);
             rigid.AddForce(new Vector2(-value, 1), ForceMode2D.Impulse);
         }
     }

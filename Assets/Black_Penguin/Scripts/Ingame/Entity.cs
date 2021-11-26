@@ -16,26 +16,27 @@ public abstract class Entity : MonoBehaviour
     public float Damage;
     public float MaxHp;
     public float Speed;
+    public bool Invinsible;
     [SerializeField] private float hp;
     public float _hp
     {
         get { return hp; }
-        set 
-        { 
-            if(value >= MaxHp)
+        set
+        {
+            if (value >= MaxHp)
             {
                 hp = MaxHp;
             }
-            if(value <= 0)
+            if (value <= 0)
             {
                 entityState = EntityState.DIE;
             }
-            if(value < hp)
+            if (value < hp && !Invinsible)
             {
                 StartCoroutine(Onhit());
                 Hit();
             }
-            hp = value; 
+            hp = value;
         }
     }
 
@@ -43,7 +44,7 @@ public abstract class Entity : MonoBehaviour
     protected abstract void Die();
     protected abstract void Hit();
     //protected abstract void Attack();
-    
+
     protected virtual void Start()
     {
         hp = MaxHp;
@@ -52,7 +53,7 @@ public abstract class Entity : MonoBehaviour
     {
 
     }
-    IEnumerator Onhit()
+    protected virtual IEnumerator Onhit()
     {
         entityState = EntityState.ONDAMAGE;
         yield return new WaitForSeconds(0.7f);
