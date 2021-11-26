@@ -97,11 +97,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2957090b9b32a0f4f87d43be5a3a6a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
-  MaxHp: 1000
+  Damage: 25
+  MaxHp: 100
   Speed: 10
+  InvinsibleTime: 0
+  hp: 0
   entityState: 0
   player: {fileID: 0}
+  distance: 0
   nowAttackCooldown: 0
   AttackCooldown: 1
   range: 3
@@ -151,4 +154,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MonsterWave : MonoBehaviour
 {
-    GameObject[] gameObjects;
+    [SerializeField] GameObject[] gameObjects;
     public int position;
     public bool isRight;
     public int WaveLevel;

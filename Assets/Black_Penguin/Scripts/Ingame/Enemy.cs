@@ -46,6 +46,7 @@ public abstract class Enemy : Entity
     protected override void Die()
     {
         Debug.Log($"{gameObject}ÀÌ Á×À½");
+        Destroy(gameObject);
     }
     protected virtual void Attack()
     {

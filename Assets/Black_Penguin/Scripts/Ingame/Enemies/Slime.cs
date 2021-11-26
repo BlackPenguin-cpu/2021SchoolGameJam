@@ -5,6 +5,7 @@ using UnityEngine;
 public class Slime : Enemy
 {
     float Movecooldown;
+    float delay;
     protected override void Start()
     {
         base.Start();
@@ -14,6 +15,7 @@ public class Slime : Enemy
     protected override void Update()
     {
         base.Update();
+        delay -= Time.deltaTime;
     }
     IEnumerator hitevent(SpriteRenderer sprite)
     {
@@ -87,8 +89,9 @@ public class Slime : Enemy
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player" && entityState != EntityState.ONDAMAGE)
+        if(collision.gameObject.tag == "Player" && entityState != EntityState.ONDAMAGE && delay <=0)
         {
+            delay = 1;
             collision.gameObject.GetComponent<Entity>()._hp -= Damage;
         }
     }
