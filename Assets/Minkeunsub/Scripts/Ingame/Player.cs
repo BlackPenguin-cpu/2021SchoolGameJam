@@ -60,7 +60,11 @@ public class Player : Entity
                 switch (playerSkill)
                 {
                     case PlayerAttackState.SHOCKWAVE:
-                        ShockWaveAttack();
+                        if(shockCurDelay >= shockWaveDelay)
+                        {
+                            ShockWaveAnimation();
+                            shockCurDelay = 0;
+                        }
                         break;
                     case PlayerAttackState.ELECTRONIC:
                         break;
@@ -100,18 +104,27 @@ public class Player : Entity
         }
     }
 
-    void ShockWaveAttack()
+    void ShockWaveAnimation()
     {
         if (attackAble)
         {
-            shockWave.Play();
-            shockWaveCollider.SetActive(true);
             attackAble = false;
             anim.SetInteger("AttackIndex", 3); // 3 == shockwave attack
-            entityState = EntityState.IDLE;
             shockCurDelay = 0;
-            shockWaveCollider.SetActive(false);
         }
+    }
+
+    public void ShockWaveAttackStart()
+    {
+        shockWave.Play();
+        shockWaveCollider.SetActive(true);
+    }
+    
+    public void ShockWaveAttackEnd()
+    {
+        entityState = EntityState.IDLE;
+        shockWaveCollider.SetActive(false);
+        attackAble = true;
     }
 
     void PlayerAttack()
