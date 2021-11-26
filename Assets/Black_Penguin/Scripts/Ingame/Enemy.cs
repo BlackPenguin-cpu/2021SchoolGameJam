@@ -97,20 +97,20 @@ public abstract class Enemy : Entity
         Debug.Log(collision.tag);
         if (collision.tag == "PlayerAttack" && entityState != EntityState.ONDAMAGE)
         {
-            if (collision.name == "ShockWaveAttack")
+            if (collision.gameObject.name == "ShockWaveCollider")
             {
-                Debug.Log("shockwave");
+                Debug.Log("Ãæ°ÝÆÄ!");
                 _hp -= player.GetComponent<Player>().Damage * 3 / (Mathf.Abs(transform.position.x - player.transform.position.x)/3);
-                OnKnockback(5 / Mathf.Abs(transform.position.x - player.transform.position.x)/5);
+                OnKnockback(50 / Mathf.Abs(transform.position.x - player.transform.position.x) , 5);
             }
             else
             {
-                OnKnockback(2);
+                OnKnockback(2,1);
                 _hp -= player.GetComponent<Player>().Damage;
             }
         }
     }
-    void OnKnockback(float value)
+    void OnKnockback(float value, float value2)
     {
         Rigidbody2D rigid = GetComponent<Rigidbody2D>();
         if (value < 0)
@@ -120,12 +120,12 @@ public abstract class Enemy : Entity
         if(player.transform.position.x - gameObject.transform.position.x  <= 0)
         {
             rigid.velocity = new Vector2(0, rigid.velocity.y);
-            rigid.AddForce(new Vector2(value, 1),ForceMode2D.Impulse);
+            rigid.AddForce(new Vector2(value, value2),ForceMode2D.Impulse);
         }
         else
         {
             rigid.velocity = new Vector2(0,rigid.velocity.y);
-            rigid.AddForce(new Vector2(-value, 1), ForceMode2D.Impulse);
+            rigid.AddForce(new Vector2(-value, value2), ForceMode2D.Impulse);
         }
     }
 }
