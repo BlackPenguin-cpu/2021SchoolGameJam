@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerHp: 50
-  CameraLookat: 0
+  CameraLookat: 1
 --- !u!1 &1266054617
 GameObject:
   m_ObjectHideFlags: 0

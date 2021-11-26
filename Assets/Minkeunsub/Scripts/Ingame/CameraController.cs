@@ -24,6 +24,15 @@ public class CameraController : MonoBehaviour
         transform.position = smoothPosition;
 
         if (GameManager.Instance.CameraLookat)
-            transform.LookAt(target);
+        {
+            LookAt();
+        }
+    }
+
+    void LookAt()
+    {
+        transform.LookAt(target);
+        Quaternion eulerRotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+        transform.rotation = eulerRotation;
     }
 }
