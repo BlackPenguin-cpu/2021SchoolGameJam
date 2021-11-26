@@ -232,7 +232,7 @@ public class Player : Entity
     protected override void Hit()
     {
         hitEffect.Play();
-        Stop(0.5f);
+        Stop(0.25f);
         playerState = PlayerState.OnDamaged;
     }
 
@@ -251,6 +251,10 @@ public class Player : Entity
         waiting = true;
         yield return new WaitForSecondsRealtime(duration);
         Time.timeScale = 1;
+        foreach (var item in attackCollider)
+        {
+            item.SetActive(false);
+        }
         RB.velocity = new Vector2(5 * direction, 5);
         waiting = false;
         playerState = PlayerState.Idle;
