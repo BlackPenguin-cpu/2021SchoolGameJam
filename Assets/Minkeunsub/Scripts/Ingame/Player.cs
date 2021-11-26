@@ -23,6 +23,7 @@ public class Player : Entity
     PlayerAttackState playerSkill;
     PlayerState playerState;
     Animator anim;
+    Rigidbody2D RB;
     bool attackAble = true;
 
     public GameObject[] attackCollider = new GameObject[3];
@@ -51,6 +52,7 @@ public class Player : Entity
     {
         base.Start();
         MaxHp = GameManager.Instance.PlayerHp;
+        RB = GetComponent<Rigidbody2D>();
         _hp = MaxHp;
         anim = GetComponent<Animator>();
         shockWave.Stop();
@@ -97,8 +99,7 @@ public class Player : Entity
 
                 break;
             case PlayerState.Dash:
-                if (!isDashing)
-                    Dash();
+                Dash();
                 break;
             default:
                 break;
@@ -107,8 +108,19 @@ public class Player : Entity
 
     void Dash()
     {
-        isDashing = true;
-        CurrentDashTimer = StartDashTimer;
+        if (isDashing)
+        {
+            RB.velocity = transform.right * DashForce;
+
+            CurrentDashTimer -= Time.deltaTime;
+
+            if (CurrentDashTimer <= 0)
+            {
+                isDashing = false;
+                playerState = PlayerState.Idle;
+                RB.velocity = Vector2.zero;
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -182,24 +194,31 @@ public class Player : Entity
         if (Input.GetKeyDown(KeyCode.C))
         {
             playerState = PlayerState.Dash;
+            isDashing = true;
+            CurrentDashTimer = StartDashTimer;
+            RB.velocity = Vector2.zero;
+            CurrentDashTimer -= Time.deltaTime;
         }
     }
 
     void PlayerMove()
     {
-        if (Input.GetKey(KeyCode.LeftArrow) && playerState != PlayerState.Attack)
+        if(!isDashing)
         {
-            transform.Translate(Vector3.right * Speed * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
-        else if (Input.GetKey(KeyCode.RightArrow) && playerState != PlayerState.Attack)
-        {
-            transform.Translate(Vector3.right * Speed * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
-        else
-        {
-            isMoving = false;
+            if (Input.GetKey(KeyCode.LeftArrow) && playerState != PlayerState.Attack)
+            {
+                transform.Translate(Vector3.right * Speed * Time.deltaTime);
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+            else if (Input.GetKey(KeyCode.RightArrow) && playerState != PlayerState.Attack)
+            {
+                transform.Translate(Vector3.right * Speed * Time.deltaTime);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else
+            {
+                isMoving = false;
+            }
         }
     }
 
