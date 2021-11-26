@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MomSlime : Enemy
 {
+    [SerializeField] GameObject babySlime;
     float Movecooldown;
     protected override void Start()
     {
@@ -85,9 +86,22 @@ public class MomSlime : Enemy
             rigid.AddForce(new Vector2(-Speed, 5), ForceMode2D.Impulse);
         }
     }
+
+    IEnumerator Summon()
+    {
+        GetComponent<Rigidbody2D>().gravityScale = 0;
+        GetComponent<Collider2D>().isTrigger = true;
+        GameObject baby = Instantiate(babySlime, transform.position, Quaternion.identity);
+        Entity BabySlime = baby.GetComponent<Entity>();
+        BabySlime.MaxHp = 80;
+        yield return new WaitForSeconds(3);
+        GetComponent<Rigidbody2D>().gravityScale = 1;
+        GetComponent<Collider2D>().isTrigger = false;
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && entityState != EntityState.ONDAMAGE)
         {
             collision.gameObject.GetComponent<Entity>()._hp -= Damage;
         }
