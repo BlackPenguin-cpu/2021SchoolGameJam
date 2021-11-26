@@ -31,12 +31,18 @@ public abstract class Entity : MonoBehaviour
             {
                 entityState = EntityState.DIE;
             }
-            if (value < hp && InvinsibleTime<=0)
+            if ((entityState == EntityState.ONDAMAGE && gameObject.tag == "Player"))
             {
-                StartCoroutine(Onhit());
-                Hit();
+                return;
+                
             }
-            hp = value;
+                if (value < hp)
+                {
+                    StartCoroutine(Onhit());
+                    Hit();
+                }
+                hp = value;
+            
         }
     }
 
@@ -56,7 +62,7 @@ public abstract class Entity : MonoBehaviour
     protected virtual IEnumerator Onhit()
     {
         entityState = EntityState.ONDAMAGE;
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         entityState = EntityState.MOVING;
     }
 

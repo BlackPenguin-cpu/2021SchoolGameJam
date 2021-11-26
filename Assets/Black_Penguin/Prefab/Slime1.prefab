@@ -167,6 +167,7 @@ MonoBehaviour:
   Damage: 10
   MaxHp: 300
   Speed: 5
+  InvinsibleTime: 0
   hp: 300
   entityState: 0
   player: {fileID: 0}
