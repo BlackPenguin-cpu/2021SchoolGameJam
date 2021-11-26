@@ -6,7 +6,7 @@ public abstract class Enemy : Entity
 {
     Animator anim;
     public GameObject player;
-    float distance;
+    public float distance;
     [SerializeField] float nowAttackCooldown;
     public float AttackCooldown = 0;
     public float range;
@@ -30,7 +30,6 @@ public abstract class Enemy : Entity
                 Move();
                 break;
             case EntityState.ONDAMAGE:
-                Hit();
                 break;
             case EntityState.ATTACK:
                 if (AttackCooldown < nowAttackCooldown)
@@ -66,7 +65,7 @@ public abstract class Enemy : Entity
     //    }
     //}
 
-    private void Move()
+    protected virtual void Move()
     {
         float x = player.transform.position.x;
         distance = Mathf.Abs(gameObject.transform.position.x - x);
@@ -101,12 +100,32 @@ public abstract class Enemy : Entity
             if (collision.name == "ShockWaveAttack")
             {
                 Debug.Log("shockwave");
-                _hp -= player.GetComponent<Player>().Damage * 2 - (Mathf.Abs(transform.position.x - player.transform.position.x));
+                _hp -= player.GetComponent<Player>().Damage * 3 / (Mathf.Abs(transform.position.x - player.transform.position.x)/3);
+                OnKnockback(5 / Mathf.Abs(transform.position.x - player.transform.position.x)/5);
             }
             else
             {
+                OnKnockback(2);
                 _hp -= player.GetComponent<Player>().Damage;
             }
+        }
+    }
+    void OnKnockback(float value)
+    {
+        Rigidbody2D rigid = GetComponent<Rigidbody2D>();
+        if (value < 0)
+        {
+            return;
+        }
+        if(player.transform.position.x - gameObject.transform.position.x  <= 0)
+        {
+            rigid.AddForce(new Vector2(value, 1),ForceMode2D.Impulse);
+            Debug.Log("¹ÐÃÆ´Ù!1");
+        }
+        else
+        {
+            rigid.AddForce(new Vector2(-value, 1), ForceMode2D.Impulse);
+            Debug.Log("¹ÐÃÆ´Ù!2");
         }
     }
 }
