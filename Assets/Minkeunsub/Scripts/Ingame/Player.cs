@@ -44,6 +44,8 @@ public class Player : Entity
 
     bool isDashing;
 
+    public ParticleSystem hitEffect;
+
     protected override void Die()
     {
     }
@@ -56,6 +58,7 @@ public class Player : Entity
         _hp = MaxHp;
         anim = GetComponent<Animator>();
         shockWave.Stop();
+        hitEffect.Stop();
         shockWaveCollider.SetActive(false);
         foreach (var item in attackCollider)
         {
@@ -224,6 +227,7 @@ public class Player : Entity
 
     protected override void Hit()
     {
+        hitEffect.Play();
         Stop(0.5f);
         playerState = PlayerState.OnDamaged;
     }
