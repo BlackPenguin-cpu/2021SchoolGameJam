@@ -20,6 +20,9 @@ public enum PlayerState
 
 public class Player : Entity
 {
+
+    CameraController mainCamera;
+
     PlayerAttackState playerSkill;
     PlayerState playerState;
     Animator anim;
@@ -47,7 +50,6 @@ public class Player : Entity
     bool isDashing;
 
     public ParticleSystem hitEffect;
-
     protected override void Die()
     {
     }
@@ -62,6 +64,7 @@ public class Player : Entity
         shockWave.Stop();
         hitEffect.Stop();
         shockWaveCollider.SetActive(false);
+        mainCamera = Camera.main.GetComponent<CameraController>();
         foreach (var item in attackCollider)
         {
             item.SetActive(false);
@@ -208,7 +211,7 @@ public class Player : Entity
 
     void PlayerMove()
     {
-        if(!isDashing)
+        if (!isDashing)
         {
             if (Input.GetKey(KeyCode.LeftArrow) && playerState != PlayerState.Attack)
             {
@@ -232,6 +235,7 @@ public class Player : Entity
     protected override void Hit()
     {
         hitEffect.Play();
+        mainCamera.Shake(0.2f, 0.25f);
         Stop(0.25f);
         playerState = PlayerState.OnDamaged;
     }
