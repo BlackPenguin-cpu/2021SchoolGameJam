@@ -42,6 +42,8 @@ public class Player : Entity
     float CurrentDashTimer;
     float DashDirection;
 
+    int direction = 1;
+
     bool isDashing;
 
     public ParticleSystem hitEffect;
@@ -72,7 +74,7 @@ public class Player : Entity
         anim.SetInteger("PlayerState", (int)playerState);
         anim.SetBool("IsMove", isMoving);
         shockCurDelay += Time.deltaTime;
-
+        hitEffect.transform.position = transform.position;
         switch (playerState)
         {
             case PlayerState.Idle:
@@ -212,11 +214,13 @@ public class Player : Entity
             {
                 transform.Translate(Vector3.right * Speed * Time.deltaTime);
                 transform.rotation = Quaternion.Euler(0, 180, 0);
+                direction = 1;
             }
             else if (Input.GetKey(KeyCode.RightArrow) && playerState != PlayerState.Attack)
             {
                 transform.Translate(Vector3.right * Speed * Time.deltaTime);
                 transform.rotation = Quaternion.Euler(0, 0, 0);
+                direction = -1;
             }
             else
             {
@@ -236,15 +240,18 @@ public class Player : Entity
     {
         if (waiting)
             return;
-        Time.timeScale = 0;
         StartCoroutine(Wait(duration));
     }
 
     IEnumerator Wait(float duration)
     {
+        yield return new WaitForSeconds(0.05f);
+        Time.timeScale = 0;
+
         waiting = true;
         yield return new WaitForSecondsRealtime(duration);
         Time.timeScale = 1;
+        RB.velocity = new Vector2(5 * direction, 5);
         waiting = false;
         playerState = PlayerState.Idle;
     }
