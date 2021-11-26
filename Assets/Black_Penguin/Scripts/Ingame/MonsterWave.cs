@@ -5,14 +5,25 @@ using UnityEngine;
 public class MonsterWave : MonoBehaviour
 {
     GameObject[] gameObjects;
-    public bool right;
+    public int position;
+    public bool isRight;
     public int WaveLevel;
     public float WaveTime;
 
     private void Update()
     {
-        if (WaveLevel < 20)
+        if (WaveLevel < 20 && WaveTime >= 100)
         {
+            if (Random.Range(0, 2) == 1)
+            {
+                position = 44;
+                isRight = true;
+            }
+            else
+            {
+                position = -44;
+                isRight = false;
+            }
             WaveLevel++;
             switch (WaveLevel)
             {

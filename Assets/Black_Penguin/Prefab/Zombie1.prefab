@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1112667196253350951}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.0720758, y: -4.496823, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -101,8 +101,10 @@ MonoBehaviour:
   Damage: 10
   MaxHp: 100
   Speed: 5
+  hp: 0
   entityState: 0
   player: {fileID: 0}
+  distance: 0
   nowAttackCooldown: 0
   AttackCooldown: 1
   range: 3
@@ -119,7 +121,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.009016231, y: 0.0045081377}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -130,7 +132,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.3508347, y: 0.64836884}
   m_EdgeRadius: 0
 --- !u!50 &1112667196253350955
 Rigidbody2D:
@@ -152,7 +154,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!95 &3605787228285698249
 Animator:
   serializedVersion: 3
