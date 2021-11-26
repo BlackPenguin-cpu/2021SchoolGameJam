@@ -120,12 +120,10 @@ public abstract class Enemy : Entity
         if(player.transform.position.x - gameObject.transform.position.x  <= 0)
         {
             rigid.AddForce(new Vector2(value, 1),ForceMode2D.Impulse);
-            Debug.Log("¹ÐÃÆ´Ù!1");
         }
         else
         {
             rigid.AddForce(new Vector2(-value, 1), ForceMode2D.Impulse);
-            Debug.Log("¹ÐÃÆ´Ù!2");
         }
     }
 }
