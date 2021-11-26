@@ -16,7 +16,7 @@ public abstract class Entity : MonoBehaviour
     public float Damage;
     public float MaxHp;
     public float Speed;
-    public bool Invinsible;
+    public float InvinsibleTime;
     [SerializeField] private float hp;
     public float _hp
     {
@@ -31,7 +31,7 @@ public abstract class Entity : MonoBehaviour
             {
                 entityState = EntityState.DIE;
             }
-            if (value < hp && !Invinsible)
+            if (value < hp && InvinsibleTime<=0)
             {
                 StartCoroutine(Onhit());
                 Hit();
