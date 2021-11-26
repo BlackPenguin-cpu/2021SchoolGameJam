@@ -6,12 +6,22 @@ public enum PlayerAttackState
 {
     SHOCKWAVE,
     ELECTRONIC,
-    COMMONATTACK
+}
+
+public enum PlayerState
+{
+    Idle,
+    Attack,
+    Skill,
+    Dash,
+    OnDamaged,
+    Die,
 }
 
 public class Player : Entity
 {
     PlayerAttackState playerSkill;
+    PlayerState playerState;
     Animator anim;
     bool attackAble = true;
 
@@ -22,6 +32,7 @@ public class Player : Entity
     public float shockWaveDelay;
     float shockCurDelay;
 
+    bool isMoving;
     bool waiting;
 
     protected override void Die()
@@ -45,22 +56,23 @@ public class Player : Entity
     protected override void Update()
     {
         base.Update();
-        anim.SetInteger("PlayerState", (int)entityState);
+        anim.SetInteger("PlayerState", (int)playerState);
+        anim.SetBool("IsMove", isMoving);
         shockCurDelay += Time.deltaTime;
-        switch (entityState)
+
+        switch (playerState)
         {
-            case EntityState.IDLE:
+            case PlayerState.Idle:
                 IdleController();
                 break;
-            case EntityState.MOVING:
+            case PlayerState.Attack:
+                PlayerAttack();
                 break;
-            case EntityState.ONDAMAGE:
-                break;
-            case EntityState.ATTACK:
+            case PlayerState.Skill:
                 switch (playerSkill)
                 {
                     case PlayerAttackState.SHOCKWAVE:
-                        if(shockCurDelay >= shockWaveDelay)
+                        if (shockCurDelay >= shockWaveDelay)
                         {
                             ShockWaveAnimation();
                             shockCurDelay = 0;
@@ -68,14 +80,16 @@ public class Player : Entity
                         break;
                     case PlayerAttackState.ELECTRONIC:
                         break;
-                    case PlayerAttackState.COMMONATTACK:
-                        PlayerAttack();
-                        break;
-                    default:
-                        break;
                 }
                 break;
-            case EntityState.DIE:
+            case PlayerState.OnDamaged:
+
+                break;
+            case PlayerState.Die:
+
+                break;
+            case PlayerState.Dash:
+
                 break;
             default:
                 break;
@@ -84,28 +98,7 @@ public class Player : Entity
 
     private void FixedUpdate()
     {
-        switch (entityState)
-        {
-            case EntityState.IDLE:
-                foreach (var item in attackCollider)
-                {
-                    item.SetActive(false);
-                }
-                break;
-            case EntityState.MOVING:
-                IdleController();
-                PlayerMove();
-                break;
-            case EntityState.ONDAMAGE:
-                break;
-            case EntityState.ATTACK:
-                AttackMove();
-                break;
-            case EntityState.DIE:
-                break;
-            default:
-                break;
-        }
+        PlayerMove();
     }
 
     void ShockWaveAnimation()
@@ -123,10 +116,10 @@ public class Player : Entity
         shockWave.Play();
         shockWaveCollider.SetActive(true);
     }
-    
+
     public void ShockWaveAttackEnd()
     {
-        entityState = EntityState.IDLE;
+        playerState = PlayerState.Idle;
         shockWaveCollider.SetActive(false);
         attackAble = true;
     }
@@ -148,7 +141,11 @@ public class Player : Entity
 
     public void EndAttack()
     {
-        entityState = EntityState.IDLE;
+        playerState = PlayerState.Idle;
+        foreach (var item in attackCollider)
+        {
+            item.SetActive(false);
+        }
     }
 
     void IdleController()
@@ -156,55 +153,41 @@ public class Player : Entity
         attackAble = true;
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
-            entityState = EntityState.MOVING;
+            isMoving = true;
         }
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            entityState = EntityState.ATTACK;
-            playerSkill = PlayerAttackState.COMMONATTACK;
+            playerState = PlayerState.Attack;
         }
         if (Input.GetKeyDown(KeyCode.A) && shockCurDelay >= shockWaveDelay)
         {
-            entityState = EntityState.ATTACK;
+            playerState = PlayerState.Skill;
             playerSkill = PlayerAttackState.SHOCKWAVE;
-        }
-    }
-
-    void AttackMove()
-    {
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Translate(Vector3.right * Speed * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.Translate(Vector3.right * Speed * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 
     void PlayerMove()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) && playerState != PlayerState.Attack)
         {
             transform.Translate(Vector3.right * Speed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow) && playerState != PlayerState.Attack)
         {
             transform.Translate(Vector3.right * Speed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else
         {
-            entityState = EntityState.IDLE;
+            isMoving = false;
         }
     }
 
     protected override void Hit()
     {
         Stop(0.5f);
+        playerState = PlayerState.OnDamaged;
     }
 
     public void Stop(float duration)
@@ -221,6 +204,6 @@ public class Player : Entity
         yield return new WaitForSecondsRealtime(duration);
         Time.timeScale = 1;
         waiting = false;
-        entityState = EntityState.IDLE;
+        playerState = PlayerState.Idle;
     }
 }
