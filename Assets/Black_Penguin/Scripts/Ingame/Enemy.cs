@@ -32,7 +32,7 @@ public abstract class Enemy : Entity
             case EntityState.ONDAMAGE:
                 break;
             case EntityState.ATTACK:
-                if (AttackCooldown < nowAttackCooldown)
+                if (AttackCooldown < nowAttackCooldown && entityState != EntityState.ONDAMAGE)
                     Attack();
                 break;
             case EntityState.DIE:

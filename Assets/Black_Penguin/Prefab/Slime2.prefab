@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6780999940686543118}
   - component: {fileID: 6780999940686543119}
-  - component: {fileID: 6780999940686543116}
   - component: {fileID: 6780999940686543104}
   - component: {fileID: 6780999940686543105}
+  - component: {fileID: 5075825857904918455}
   m_Layer: 0
   m_Name: Slime2
   m_TagString: Untagged
@@ -85,26 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6780999940686543116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6780999940686543117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2957090b9b32a0f4f87d43be5a3a6a1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 10
-  MaxHp: 1000
-  Speed: 10
-  entityState: 0
-  player: {fileID: 0}
-  nowAttackCooldown: 0
-  AttackCooldown: 1
-  range: 3
 --- !u!61 &6780999940686543104
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -152,3 +132,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5075825857904918455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780999940686543117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcab9ed7b3655f14694c62495686e8fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 0
+  MaxHp: 0
+  Speed: 0
+  InvinsibleTime: 0
+  hp: 0
+  entityState: 0
+  player: {fileID: 0}
+  distance: 0
+  nowAttackCooldown: 0
+  AttackCooldown: 0
+  range: 0
+  babySlime: {fileID: 8468656338215727823, guid: c6e04bbcf7e84a042b6c86ff7ffd2cf0, type: 3}

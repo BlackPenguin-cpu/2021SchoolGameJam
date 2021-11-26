@@ -87,7 +87,7 @@ public class Slime : Enemy
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player" && entityState != EntityState.ONDAMAGE)
         {
             collision.gameObject.GetComponent<Entity>()._hp -= Damage;
         }
