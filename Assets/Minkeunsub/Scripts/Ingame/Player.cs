@@ -79,6 +79,13 @@ public class Player : Entity
         anim.SetBool("IsMove", isMoving);
         shockCurDelay += Time.deltaTime;
         hitEffect.transform.position = transform.position;
+
+        if (Input.GetKeyDown(KeyCode.A) && shockCurDelay >= shockWaveDelay)
+        {
+            playerState = PlayerState.Skill;
+            playerSkill = PlayerAttackState.SHOCKWAVE;
+        }
+
         switch (playerState)
         {
             case PlayerState.Idle:
@@ -195,11 +202,7 @@ public class Player : Entity
         {
             playerState = PlayerState.Attack;
         }
-        if (Input.GetKeyDown(KeyCode.A) && shockCurDelay >= shockWaveDelay)
-        {
-            playerState = PlayerState.Skill;
-            playerSkill = PlayerAttackState.SHOCKWAVE;
-        }
+        
         if (Input.GetKeyDown(KeyCode.C))
         {
             playerState = PlayerState.Dash;
