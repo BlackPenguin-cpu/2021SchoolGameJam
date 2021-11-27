@@ -198,6 +198,7 @@ public class Player : Entity
         {
             isMoving = true;
         }
+        else isMoving = false;
         if (Input.GetKeyDown(KeyCode.Z))
         {
             playerState = PlayerState.Attack;
@@ -228,10 +229,6 @@ public class Player : Entity
                 transform.Translate(Vector3.right * Speed * Time.deltaTime);
                 transform.rotation = Quaternion.Euler(0, 0, 0);
                 direction = -1;
-            }
-            else
-            {
-                isMoving = false;
             }
         }
     }
