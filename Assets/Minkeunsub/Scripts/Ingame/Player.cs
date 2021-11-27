@@ -60,6 +60,7 @@ public class Player : Entity
 
     protected override void Die()
     {
+        playerState = PlayerState.Die;
     }
 
     protected override void Start()
@@ -87,21 +88,27 @@ public class Player : Entity
     protected override void Update()
     {
         base.Update();
-        anim.SetInteger("PlayerState", (int)playerState);
-        anim.SetBool("IsMove", isMoving);
-        shockCurDelay += Time.deltaTime;
-        hitEffect.transform.position = transform.position;
 
-        if (Input.GetKeyDown(KeyCode.A) && shockCurDelay >= shockWaveDelay)
+        if (playerState != PlayerState.Die)
         {
-            playerState = PlayerState.Skill;
-            playerSkill = PlayerAttackState.SHOCKWAVE;
+            anim.SetInteger("PlayerState", (int)playerState);
+            anim.SetBool("IsMove", isMoving);
+            shockCurDelay += Time.deltaTime;
+            hitEffect.transform.position = transform.position;
+
+            if (Input.GetKeyDown(KeyCode.A) && shockCurDelay >= shockWaveDelay)
+            {
+                playerState = PlayerState.Skill;
+                playerSkill = PlayerAttackState.SHOCKWAVE;
+            }
+            if (shockCurDelay >= shockWaveDelay && isCharged)
+            {
+                shockWaveCharge.Play();
+                isCharged = false;
+            }
         }
-        if(shockCurDelay >= shockWaveDelay && isCharged)
-        {
-            shockWaveCharge.Play();
-            isCharged = false;
-        }
+
+
         switch (playerState)
         {
             case PlayerState.Idle:
@@ -129,7 +136,7 @@ public class Player : Entity
                 SR.color = new Color(0.5f, 0.5f, 0.5f);
                 break;
             case PlayerState.Die:
-
+                GameManager.Instance.IsGameOver = true;
                 break;
             case PlayerState.Dash:
                 Dash();
@@ -158,7 +165,8 @@ public class Player : Entity
 
     private void FixedUpdate()
     {
-        PlayerMove();
+        if (playerState != PlayerState.Die)
+            PlayerMove();
     }
 
     void ShockWaveAnimation()
