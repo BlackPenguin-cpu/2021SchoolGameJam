@@ -65,6 +65,7 @@ public class Player : Entity
         hitEffect.Stop();
         shockWaveCollider.SetActive(false);
         mainCamera = Camera.main.GetComponent<CameraController>();
+        shockCurDelay = shockWaveDelay;
         foreach (var item in attackCollider)
         {
             item.SetActive(false);
@@ -211,7 +212,7 @@ public class Player : Entity
 
     void PlayerMove()
     {
-        if (!isDashing)
+        if (!isDashing && playerState != PlayerState.OnDamaged)
         {
             if (Input.GetKey(KeyCode.LeftArrow) && playerState != PlayerState.Attack)
             {
@@ -236,8 +237,12 @@ public class Player : Entity
     {
         hitEffect.Play();
         mainCamera.Shake(5, 5);
-        Stop(0.25f);
         playerState = PlayerState.OnDamaged;
+        anim.SetInteger("PlayerState", (int)playerState);
+        anim.SetInteger("AttackIndex", 0);
+        isMoving = false;
+        anim.SetBool("IsMove", isMoving);
+        Stop(0.25f);
     }
 
     public void Stop(float duration)
@@ -261,6 +266,15 @@ public class Player : Entity
         }
         RB.velocity = new Vector2(5 * direction, 5);
         waiting = false;
-        playerState = PlayerState.Idle;
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground") && playerState == PlayerState.OnDamaged)
+        {
+            RB.velocity = Vector2.zero;
+            playerState = PlayerState.Idle;
+        }
+    }
+
 }
