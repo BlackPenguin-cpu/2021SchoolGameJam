@@ -26,6 +26,7 @@ public abstract class Entity : MonoBehaviour
             if (value >= MaxHp)
             {
                 hp = MaxHp;
+                return;
             }
             if (value <= 0)
             {
