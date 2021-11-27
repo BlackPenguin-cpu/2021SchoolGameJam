@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TestMonster : Enemy
 {
+    Coroutine attack;
     protected override void Start()
     {
         base.Start();
@@ -12,6 +13,10 @@ public class TestMonster : Enemy
     protected override void Update()
     {
         base.Update();
+        if(entityState == EntityState.DIE)
+        {
+            StopCoroutine(attack);
+        }
     }
     IEnumerator hitevent(SpriteRenderer sprite)
     {
@@ -23,6 +28,7 @@ public class TestMonster : Enemy
     protected override void Attack()
     {
         base.Attack();
+        attack = StartCoroutine(realAttack());
         StartCoroutine(realAttack());
     }
     IEnumerator realAttack()
