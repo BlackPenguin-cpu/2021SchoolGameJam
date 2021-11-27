@@ -7,7 +7,7 @@ public abstract class Enemy : Entity
     Animator anim;
     public ParticleSystem Hitparticle;
     public ParticleSystem Deathparticle;
-    public bool deadEffected;
+    public bool deadEffected =false;
     public GameObject player;
     public float distance;
     [SerializeField] float nowAttackCooldown;
@@ -17,10 +17,10 @@ public abstract class Enemy : Entity
     protected override void Start()
     {
         base.Start();
-        anim = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player");
         Hitparticle.Stop();
         Deathparticle.Stop();
+        anim = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     protected override void Update()
@@ -51,11 +51,13 @@ public abstract class Enemy : Entity
     protected override void Die()
     {
         Debug.Log($"{gameObject}ÀÌ Á×À½");
-        if (deadEffected)
+        if (!deadEffected)
         {
             Deathparticle.Play();
             deadEffected = true;
         }
+        entityState = EntityState.DIE;
+
     }
     protected virtual void Attack()
     {

@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 132
+  m_SortingOrder: 5
   m_Sprite: {fileID: -8888137880808734524, guid: c798b3226fb845f489bb3e82fe780901, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -107,6 +107,7 @@ MonoBehaviour:
   entityState: 0
   Hitparticle: {fileID: 5157071171005603995}
   Deathparticle: {fileID: 2628660141680846813}
+  deadEffected: 0
   player: {fileID: 0}
   distance: 0
   nowAttackCooldown: 0

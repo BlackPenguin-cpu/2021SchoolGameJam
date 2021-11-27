@@ -20280,7 +20280,7 @@ MonoBehaviour:
   position: 0
   isRight: 0
   WaveLevel: 0
-  WaveTime: 0
+  WaveTime: 100
 --- !u!4 &898427568
 Transform:
   m_ObjectHideFlags: 0
