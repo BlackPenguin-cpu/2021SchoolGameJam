@@ -276,7 +276,7 @@ public class Player : Entity
     IEnumerator Wait(float duration)
     {
         yield return new WaitForSeconds(0.05f);
-        Time.timeScale = 0;
+        Time.timeScale = 0.1f;
 
         waiting = true;
         yield return new WaitForSecondsRealtime(duration);
