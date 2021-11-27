@@ -57,10 +57,16 @@ public abstract class Enemy : Entity
             deadEffected = true;
         }
         entityState = EntityState.DIE;
-
+        Rigidbody2D rigid = GetComponent<Rigidbody2D>() ;
+        Collider2D collider = GetComponent<Collider2D>();
+        Destroy(rigid);
+        Destroy(collider);
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        sprite.color = new Color(0.5f, 0.5f, 0.5f,0.5f);
     }
     protected virtual void Attack()
     {
+        if (entityState == EntityState.DIE) return;
         nowAttackCooldown = 0;
     }
 
