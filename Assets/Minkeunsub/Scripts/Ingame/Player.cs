@@ -49,7 +49,7 @@ public class Player : Entity
     int direction = 1;
 
     bool isDashing;
-
+    bool isGround = true;
     bool isCharged = false;
 
     [Header("Particles")]
@@ -108,7 +108,10 @@ public class Player : Entity
                 isCharged = false;
             }
         }
-
+        if (_hp <= 0)
+        {
+            playerState = PlayerState.Die;
+        }
 
         switch (playerState)
         {
@@ -116,7 +119,8 @@ public class Player : Entity
                 IdleController();
                 break;
             case PlayerState.Attack:
-                PlayerAttack();
+                if (isGround)
+                    PlayerAttack();
                 break;
             case PlayerState.Skill:
                 switch (playerSkill)
@@ -264,30 +268,33 @@ public class Player : Entity
 
     protected override void Hit()
     {
-        mainCamera.ShakeForTime(0.3f);
-        hitEffect.Play();
-        playerState = PlayerState.OnDamaged;
-        anim.SetInteger("PlayerState", (int)playerState);
-        isMoving = false;
-        anim.SetBool("IsMove", isMoving);
-        Stop(0.25f);
+        if (playerState != PlayerState.Die)
+        {
+            mainCamera.ShakeForTime(0.3f);
+            hitEffect.Play();
+            playerState = PlayerState.OnDamaged;
+            anim.SetInteger("PlayerState", (int)playerState);
+            isMoving = false;
+            anim.SetBool("IsMove", isMoving);
+            Stop(0.25f);
+        }
     }
 
     public void Stop(float duration)
     {
         if (waiting)
             return;
-        isDashing = false;
         StartCoroutine(Wait(duration));
     }
 
     IEnumerator Wait(float duration)
     {
+        isDashing = false;
+        waiting = true;
         yield return new WaitForSeconds(0.05f);
         Time.timeScale = 0.1f;
 
         yield return new WaitForSecondsRealtime(duration);
-        waiting = true;
         Time.timeScale = 1;
         foreach (var item in attackCollider)
         {
@@ -307,6 +314,15 @@ public class Player : Entity
                 playerState = PlayerState.Idle;
             }
             SR.color = new Color(1, 1, 1);
+            isGround = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            isGround = false;
         }
     }
 
