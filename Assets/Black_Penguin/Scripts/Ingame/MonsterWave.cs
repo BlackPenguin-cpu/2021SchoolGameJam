@@ -7,6 +7,8 @@ public class MonsterWave : MonoBehaviour
     [SerializeField] GameObject[] gameObjects;
     public int position;
     public bool isRight;
+    const int right = 44;
+    const int left = -44;
     public int WaveLevel;
     public float WaveTime;
 
@@ -21,12 +23,10 @@ public class MonsterWave : MonoBehaviour
             if (Random.Range(0, 2) == 1)
             {
                 position = 44;
-                isRight = true;
             }
             else
             {
                 position = -44;
-                isRight = false;
             }
             WaveLevel++;
             switch (WaveLevel)
@@ -184,27 +184,60 @@ public class MonsterWave : MonoBehaviour
     }
     IEnumerator Wave8()
     {
-        for(int i = 0; i < 100; i++)
+        for (int i = 0; i < 100; i++)
         {
-            Instantiate(gameObjects[0], new Vector3(position, -2f, 0), Quaternion.identity);
+            if (Random.Range(0, 2) == 0)
+            {
+                Instantiate(gameObjects[0], new Vector3(left, -2f, 0), Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(gameObjects[0], new Vector3(right, -2f, 0), Quaternion.identity);
+            }
             yield return new WaitForSeconds(1);
         }
         yield return new WaitForSeconds(1);
     }
     IEnumerator Wave9()
     {
-        for(int i = 0; i < 5; i++)
+        yield return new WaitForSeconds(5);
+        for (int i = 0; i < 4; i++)
         {
-
+            Instantiate(gameObjects[3], new Vector3(right, -2f, 0), Quaternion.identity);
+            yield return new WaitForSeconds(5);
+            Instantiate(gameObjects[3], new Vector3(right, -2f, 0), Quaternion.identity);
+            yield return new WaitForSeconds(10);
+            Instantiate(gameObjects[3], new Vector3(left, -2f, 0), Quaternion.identity);
+            yield return new WaitForSeconds(5);
+            Instantiate(gameObjects[3], new Vector3(left, -2f, 0), Quaternion.identity);
         }
         yield return new WaitForSeconds(1);
     }
     IEnumerator Wave10()
     {
+        for (int j = 0; j < 2; j++)
+        {
+            for (int i = 4; i > -5; i--)
+            {
+                Instantiate(gameObjects[3], new Vector3(i * 11, 5f, 0), Quaternion.identity);
+                yield return new WaitForSeconds(0.5f);
+            }
+            yield return new WaitForSeconds(10);
+            for (int i = -4; i < 5; i++)
+            {
+                Instantiate(gameObjects[3], new Vector3(i * 11, 5f, 0), Quaternion.identity);
+                yield return new WaitForSeconds(0.5f);
+            }
+            yield return new WaitForSeconds(40);
+        }
         yield return new WaitForSeconds(1);
     }
     IEnumerator Wave11()
     {
+        for (int i = 0; i < 10; i++)
+        {
+            Instantiate(gameObjects[3], new Vector3(position, 5f, 0), Quaternion.identity);
+        }
         yield return new WaitForSeconds(1);
     }
     IEnumerator Wave12()
