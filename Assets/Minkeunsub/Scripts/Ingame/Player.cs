@@ -174,6 +174,7 @@ public class Player : Entity
     public void ShockWaveAttackStart()
     {
         shockWave.Play();
+        mainCamera.ShakeForTime(0.5f);
         shockWaveCollider.SetActive(true);
     }
 
@@ -254,8 +255,8 @@ public class Player : Entity
 
     protected override void Hit()
     {
+        mainCamera.ShakeForTime(0.3f);
         hitEffect.Play();
-        mainCamera.Shake(5, 5);
         playerState = PlayerState.OnDamaged;
         anim.SetInteger("PlayerState", (int)playerState);
         anim.SetInteger("AttackIndex", 0);
