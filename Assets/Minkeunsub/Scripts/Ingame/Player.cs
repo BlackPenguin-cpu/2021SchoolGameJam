@@ -65,6 +65,7 @@ public class Player : Entity
         hitEffect.Stop();
         shockWaveCollider.SetActive(false);
         mainCamera = Camera.main.GetComponent<CameraController>();
+        shockCurDelay = shockWaveDelay;
         foreach (var item in attackCollider)
         {
             item.SetActive(false);
@@ -78,6 +79,13 @@ public class Player : Entity
         anim.SetBool("IsMove", isMoving);
         shockCurDelay += Time.deltaTime;
         hitEffect.transform.position = transform.position;
+
+        if (Input.GetKeyDown(KeyCode.A) && shockCurDelay >= shockWaveDelay)
+        {
+            playerState = PlayerState.Skill;
+            playerSkill = PlayerAttackState.SHOCKWAVE;
+        }
+
         switch (playerState)
         {
             case PlayerState.Idle:
@@ -190,15 +198,12 @@ public class Player : Entity
         {
             isMoving = true;
         }
+        else isMoving = false;
         if (Input.GetKeyDown(KeyCode.Z))
         {
             playerState = PlayerState.Attack;
         }
-        if (Input.GetKeyDown(KeyCode.A) && shockCurDelay >= shockWaveDelay)
-        {
-            playerState = PlayerState.Skill;
-            playerSkill = PlayerAttackState.SHOCKWAVE;
-        }
+        
         if (Input.GetKeyDown(KeyCode.C))
         {
             playerState = PlayerState.Dash;
@@ -211,7 +216,7 @@ public class Player : Entity
 
     void PlayerMove()
     {
-        if (!isDashing)
+        if (!isDashing && playerState != PlayerState.OnDamaged)
         {
             if (Input.GetKey(KeyCode.LeftArrow) && playerState != PlayerState.Attack)
             {
@@ -225,10 +230,6 @@ public class Player : Entity
                 transform.rotation = Quaternion.Euler(0, 0, 0);
                 direction = -1;
             }
-            else
-            {
-                isMoving = false;
-            }
         }
     }
 
@@ -236,8 +237,12 @@ public class Player : Entity
     {
         hitEffect.Play();
         mainCamera.Shake(5, 5);
-        Stop(0.25f);
         playerState = PlayerState.OnDamaged;
+        anim.SetInteger("PlayerState", (int)playerState);
+        anim.SetInteger("AttackIndex", 0);
+        isMoving = false;
+        anim.SetBool("IsMove", isMoving);
+        Stop(0.25f);
     }
 
     public void Stop(float duration)
@@ -261,6 +266,15 @@ public class Player : Entity
         }
         RB.velocity = new Vector2(5 * direction, 5);
         waiting = false;
-        playerState = PlayerState.Idle;
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground") && playerState == PlayerState.OnDamaged)
+        {
+            RB.velocity = Vector2.zero;
+            playerState = PlayerState.Idle;
+        }
+    }
+
 }

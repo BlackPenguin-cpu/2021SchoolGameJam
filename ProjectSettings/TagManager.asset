@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerAttack
   - ShockWaveAttack
+  - Ground
   layers:
   - Default
   - TransparentFX
