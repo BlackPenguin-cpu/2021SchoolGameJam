@@ -30,6 +30,9 @@ public abstract class Entity : MonoBehaviour
             if (value <= 0)
             {
                 entityState = EntityState.DIE;
+                Die();
+                hp = 0;
+                return;
             }
             if ((entityState == EntityState.ONDAMAGE && gameObject.tag == "Player"))
             {
@@ -54,6 +57,7 @@ public abstract class Entity : MonoBehaviour
     protected virtual void Start()
     {
         hp = MaxHp;
+        
     }
     protected virtual void Update()
     {
