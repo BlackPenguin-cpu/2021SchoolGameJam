@@ -268,7 +268,6 @@ public class Player : Entity
         hitEffect.Play();
         playerState = PlayerState.OnDamaged;
         anim.SetInteger("PlayerState", (int)playerState);
-        anim.SetInteger("AttackIndex", 0);
         isMoving = false;
         anim.SetBool("IsMove", isMoving);
         Stop(0.25f);
