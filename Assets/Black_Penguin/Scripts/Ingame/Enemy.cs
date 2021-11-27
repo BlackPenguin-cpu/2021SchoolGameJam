@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Enemy : Entity
 {
     Animator anim;
+    public ParticleSystem particle;
     public GameObject player;
     public float distance;
     [SerializeField] float nowAttackCooldown;
@@ -91,6 +92,8 @@ public abstract class Enemy : Entity
 
     protected override void Hit()
     {
+        particle.Play();
+
         Debug.Log($"{gameObject.name} 피격");
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -101,7 +104,7 @@ public abstract class Enemy : Entity
             if (collision.gameObject.tag == "ShockWaveAttack")
             {
                 Debug.Log("충격파!");
-                _hp -= player.GetComponent<Player>().Damage * 3 / (Mathf.Abs(transform.position.x - player.transform.position.x)/3);
+                _hp -= player.GetComponent<Player>().Damage * 1.5f / (Mathf.Abs(transform.position.x - player.transform.position.x)/3);
                 OnKnockback(50 / Mathf.Abs(transform.position.x - player.transform.position.x) , 5);
             }
             if(collision.gameObject.tag == "PlayerAttack")

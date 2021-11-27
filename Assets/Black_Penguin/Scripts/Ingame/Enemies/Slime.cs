@@ -6,6 +6,7 @@ public class Slime : Enemy
 {
     float Movecooldown;
     float delay;
+    bool canJump;
     protected override void Start()
     {
         base.Start();
@@ -74,6 +75,10 @@ public class Slime : Enemy
 
     void bounce()
     {
+        if (!canJump)
+        {
+            return;
+        }
         float x = player.transform.position.x;
         Rigidbody2D rigid = GetComponent<Rigidbody2D>();
         if (gameObject.transform.position.x < x)
@@ -89,6 +94,14 @@ public class Slime : Enemy
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Ground")
+        {
+            canJump = true;
+        }
+        else if (collision.gameObject == null)
+        {
+            canJump = false;
+        }
         if(collision.gameObject.tag == "Player" && entityState != EntityState.ONDAMAGE && delay <=0)
         {
             delay = 1;
