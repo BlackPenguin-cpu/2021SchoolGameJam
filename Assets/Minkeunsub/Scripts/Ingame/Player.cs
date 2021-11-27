@@ -50,7 +50,14 @@ public class Player : Entity
 
     bool isDashing;
 
+    bool isCharged = true;
+
+    [Header("Particles")]
     public ParticleSystem hitEffect;
+    public ParticleSystem enemySlashLeft;
+    public ParticleSystem enemySlashRight;
+    public ParticleSystem shockWaveCharge;
+
     protected override void Die()
     {
     }
@@ -58,6 +65,9 @@ public class Player : Entity
     protected override void Start()
     {
         base.Start();
+        enemySlashLeft.Stop();
+        enemySlashRight.Stop();
+        shockWaveCharge.Stop();
         MaxHp = GameManager.Instance.PlayerHp;
         RB = GetComponent<Rigidbody2D>();
         SR = GetComponent<SpriteRenderer>();
@@ -87,7 +97,11 @@ public class Player : Entity
             playerState = PlayerState.Skill;
             playerSkill = PlayerAttackState.SHOCKWAVE;
         }
-
+        if(shockCurDelay >= shockWaveDelay && isCharged)
+        {
+            shockWaveCharge.Play();
+            isCharged = false;
+        }
         switch (playerState)
         {
             case PlayerState.Idle:
@@ -104,6 +118,7 @@ public class Player : Entity
                         {
                             ShockWaveAnimation();
                             shockCurDelay = 0;
+                            isCharged = true;
                         }
                         break;
                     case PlayerAttackState.ELECTRONIC:
@@ -225,12 +240,14 @@ public class Player : Entity
                 transform.Translate(Vector3.right * Speed * Time.deltaTime);
                 transform.rotation = Quaternion.Euler(0, 180, 0);
                 direction = 1;
+                playerState = PlayerState.Idle;
             }
             else if (Input.GetKey(KeyCode.RightArrow) && playerState != PlayerState.Attack)
             {
                 transform.Translate(Vector3.right * Speed * Time.deltaTime);
                 transform.rotation = Quaternion.Euler(0, 0, 0);
                 direction = -1;
+                playerState = PlayerState.Idle;
             }
         }
     }
@@ -251,6 +268,7 @@ public class Player : Entity
     {
         if (waiting)
             return;
+        isDashing = false;
         StartCoroutine(Wait(duration));
     }
 
@@ -280,4 +298,12 @@ public class Player : Entity
         }
     }
 
+    public ParticleSystem Attack()
+    {
+        ParticleSystem slashParticle = direction == 1 ? enemySlashLeft : enemySlashRight;
+        slashParticle.Stop();
+        slashParticle.Play();
+        Debug.Log(slashParticle.name);
+        return slashParticle;
+    }
 }
