@@ -287,8 +287,8 @@ public class Player : Entity
         yield return new WaitForSeconds(0.05f);
         Time.timeScale = 0.1f;
 
-        waiting = true;
         yield return new WaitForSecondsRealtime(duration);
+        waiting = true;
         Time.timeScale = 1;
         foreach (var item in attackCollider)
         {

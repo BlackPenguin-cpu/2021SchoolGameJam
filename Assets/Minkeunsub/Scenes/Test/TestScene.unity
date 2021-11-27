@@ -253,7 +253,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.55, y: 3.14}
+    oldSize: {x: 2.92, y: 3.27}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -20277,8 +20277,8 @@ MonoBehaviour:
   player: {fileID: 32392070}
   position: 0
   isRight: 0
-  WaveLevel: 0
-  WaveTime: 100
+  WaveLevel: 2
+  WaveTime: 200
 --- !u!4 &898427568
 Transform:
   m_ObjectHideFlags: 0
