@@ -106,7 +106,7 @@ public abstract class Enemy : Entity
             }
             if(collision.gameObject.tag == "PlayerAttack")
             {
-                OnKnockback(2,1);
+                OnKnockback(5,1);
                 _hp -= player.GetComponent<Player>().Damage;
             }
         }
