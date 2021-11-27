@@ -79,12 +79,12 @@ public class Slime : Enemy
         if (gameObject.transform.position.x < x)
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
-            rigid.AddForce(new Vector2(Speed, 5), ForceMode2D.Impulse);
+            rigid.AddForce(new Vector2(Speed, 3), ForceMode2D.Impulse);
         }
         if (gameObject.transform.position.x > x)
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
-            rigid.AddForce(new Vector2(-Speed, 5), ForceMode2D.Impulse);
+            rigid.AddForce(new Vector2(-Speed, 3), ForceMode2D.Impulse);
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
