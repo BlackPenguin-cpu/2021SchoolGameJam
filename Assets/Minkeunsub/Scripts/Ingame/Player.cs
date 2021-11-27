@@ -50,7 +50,7 @@ public class Player : Entity
 
     bool isDashing;
 
-    bool isCharged = true;
+    bool isCharged = false;
 
     [Header("Particles")]
     public ParticleSystem hitEffect;
