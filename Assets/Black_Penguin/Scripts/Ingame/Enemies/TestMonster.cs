@@ -13,7 +13,10 @@ public class TestMonster : Enemy
     protected override void Update()
     {
         base.Update();
-
+        if (_hp <= 0)
+        {
+            entityState = EntityState.DIE;
+        }
     }
     IEnumerator hitevent(SpriteRenderer sprite)
     {
