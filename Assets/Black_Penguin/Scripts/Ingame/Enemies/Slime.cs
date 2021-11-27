@@ -75,7 +75,7 @@ public class Slime : Enemy
 
     void bounce()
     {
-        if (!canJump)
+        if (!canJump || EntityState.DIE == entityState)
         {
             return;
         }
@@ -102,7 +102,7 @@ public class Slime : Enemy
         {
             canJump = false;
         }
-        if(collision.gameObject.tag == "Player" && entityState != EntityState.ONDAMAGE && delay <=0)
+        if(collision.gameObject.tag == "Player" && entityState != EntityState.ONDAMAGE && delay <=0 && entityState != EntityState.DIE)
         {
             delay = 1;
             collision.gameObject.GetComponent<Entity>()._hp -= Damage;
@@ -111,7 +111,6 @@ public class Slime : Enemy
     protected override void Die()
     {
         base.Die();
-        Destroy(gameObject);
     }
     protected override void Hit()
     {

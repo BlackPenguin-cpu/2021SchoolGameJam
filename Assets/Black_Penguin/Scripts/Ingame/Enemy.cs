@@ -5,7 +5,9 @@ using UnityEngine;
 public abstract class Enemy : Entity
 {
     Animator anim;
-    public ParticleSystem particle;
+    public ParticleSystem Hitparticle;
+    public ParticleSystem Deathparticle;
+    public bool deadEffected;
     public GameObject player;
     public float distance;
     [SerializeField] float nowAttackCooldown;
@@ -17,6 +19,8 @@ public abstract class Enemy : Entity
         base.Start();
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
+        Hitparticle.Stop();
+        Deathparticle.Stop();
     }
 
     protected override void Update()
@@ -47,7 +51,11 @@ public abstract class Enemy : Entity
     protected override void Die()
     {
         Debug.Log($"{gameObject}이 죽음");
-        Destroy(gameObject);
+        if (deadEffected)
+        {
+            Deathparticle.Play();
+            deadEffected = true;
+        }
     }
     protected virtual void Attack()
     {
@@ -69,6 +77,7 @@ public abstract class Enemy : Entity
 
     protected virtual void Move()
     {
+        if (entityState == EntityState.DIE) return;
         float x = player.transform.position.x;
         distance = Mathf.Abs(gameObject.transform.position.x - x);
         if (distance <= range)
@@ -92,7 +101,7 @@ public abstract class Enemy : Entity
 
     protected override void Hit()
     {
-        particle.Play();
+        Hitparticle.Play();
         Debug.Log($"{gameObject.name} 피격");
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -103,12 +112,12 @@ public abstract class Enemy : Entity
             if (collision.gameObject.tag == "ShockWaveAttack")
             {
                 Debug.Log("충격파!");
-                _hp -= player.GetComponent<Player>().Damage * 1.5f / (Mathf.Abs(transform.position.x - player.transform.position.x)/3);
-                OnKnockback(50 / Mathf.Abs(transform.position.x - player.transform.position.x) , 5);
+                _hp -= player.GetComponent<Player>().Damage * 1.5f / (Mathf.Abs(transform.position.x - player.transform.position.x) / 3);
+                OnKnockback(50 / Mathf.Abs(transform.position.x - player.transform.position.x), 5);
             }
-            if(collision.gameObject.tag == "PlayerAttack")
+            if (collision.gameObject.tag == "PlayerAttack")
             {
-                OnKnockback(5,1);
+                OnKnockback(5, 1);
                 _hp -= player.GetComponent<Player>().Damage;
             }
         }
@@ -120,14 +129,14 @@ public abstract class Enemy : Entity
         {
             return;
         }
-        if(player.transform.position.x - gameObject.transform.position.x  <= 0)
+        if (player.transform.position.x - gameObject.transform.position.x <= 0)
         {
             rigid.velocity = new Vector2(0, rigid.velocity.y);
-            rigid.AddForce(new Vector2(value, value2),ForceMode2D.Impulse);
+            rigid.AddForce(new Vector2(value, value2), ForceMode2D.Impulse);
         }
         else
         {
-            rigid.velocity = new Vector2(0,rigid.velocity.y);
+            rigid.velocity = new Vector2(0, rigid.velocity.y);
             rigid.AddForce(new Vector2(-value, value2), ForceMode2D.Impulse);
         }
     }
