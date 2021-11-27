@@ -174,6 +174,7 @@ public class Player : Entity
     public void ShockWaveAttackStart()
     {
         shockWave.Play();
+        mainCamera.ShakeForTime(0.5f);
         shockWaveCollider.SetActive(true);
     }
 
