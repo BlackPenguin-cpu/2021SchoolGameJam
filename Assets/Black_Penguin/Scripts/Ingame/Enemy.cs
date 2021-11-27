@@ -93,7 +93,6 @@ public abstract class Enemy : Entity
     protected override void Hit()
     {
         particle.Play();
-
         Debug.Log($"{gameObject.name} ÇÇ°Ý");
     }
     private void OnTriggerStay2D(Collider2D collision)
