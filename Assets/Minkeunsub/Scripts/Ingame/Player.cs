@@ -27,6 +27,7 @@ public class Player : Entity
     PlayerState playerState;
     Animator anim;
     Rigidbody2D RB;
+    SpriteRenderer SR;
     bool attackAble = true;
 
     public GameObject[] attackCollider = new GameObject[3];
@@ -59,6 +60,7 @@ public class Player : Entity
         base.Start();
         MaxHp = GameManager.Instance.PlayerHp;
         RB = GetComponent<Rigidbody2D>();
+        SR = GetComponent<SpriteRenderer>();
         _hp = MaxHp;
         anim = GetComponent<Animator>();
         shockWave.Stop();
@@ -109,7 +111,7 @@ public class Player : Entity
                 }
                 break;
             case PlayerState.OnDamaged:
-
+                SR.color = new Color(0.5f, 0.5f, 0.5f);
                 break;
             case PlayerState.Die:
 
@@ -203,7 +205,7 @@ public class Player : Entity
         {
             playerState = PlayerState.Attack;
         }
-        
+
         if (Input.GetKeyDown(KeyCode.C))
         {
             playerState = PlayerState.Dash;
@@ -274,6 +276,7 @@ public class Player : Entity
         {
             RB.velocity = Vector2.zero;
             playerState = PlayerState.Idle;
+            SR.color = new Color(1, 1, 1);
         }
     }
 
