@@ -45,6 +45,7 @@ public class Player : Entity
 
     float CurrentDashTimer;
     float DashDirection;
+    float lifeTime;
 
     int direction = 1;
 
@@ -57,6 +58,8 @@ public class Player : Entity
     public ParticleSystem enemySlashLeft;
     public ParticleSystem enemySlashRight;
     public ParticleSystem shockWaveCharge;
+
+    MonsterWave monster;
 
     protected override void Die()
     {
@@ -79,6 +82,7 @@ public class Player : Entity
         shockWaveCollider.SetActive(false);
         mainCamera = Camera.main.GetComponent<CameraController>();
         shockCurDelay = shockWaveDelay;
+        monster = FindObjectOfType(typeof(MonsterWave)) as MonsterWave;
         foreach (var item in attackCollider)
         {
             item.SetActive(false);
@@ -88,7 +92,7 @@ public class Player : Entity
     protected override void Update()
     {
         base.Update();
-
+        InGameUIManager.Instance.SetValue(monster.WaveLevel, lifeTime += Time.deltaTime, _hp, shockWaveDelay, shockCurDelay);
         if (playerState != PlayerState.Die)
         {
             anim.SetInteger("PlayerState", (int)playerState);
@@ -220,6 +224,7 @@ public class Player : Entity
         {
             item.SetActive(false);
         }
+        ShockWaveAttackEnd();
     }
 
     void IdleController()
