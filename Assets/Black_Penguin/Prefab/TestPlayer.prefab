@@ -103,9 +103,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.01
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -143,6 +143,8 @@ MonoBehaviour:
   Damage: 0
   MaxHp: 0
   Speed: 10
+  InvinsibleTime: 0
+  hp: 0
   entityState: 0
   attackCollider:
   - {fileID: 3802100724459362289}
@@ -150,6 +152,13 @@ MonoBehaviour:
   - {fileID: 3802100723799833784}
   shockWaveCollider: {fileID: 3802100723345740557}
   shockWave: {fileID: 3802100724226735024}
+  shockWaveDelay: 0
+  DashForce: 0
+  StartDashTimer: 0
+  hitEffect: {fileID: 0}
+  enemySlashLeft: {fileID: 0}
+  enemySlashRight: {fileID: 0}
+  shockWaveCharge: {fileID: 0}
 --- !u!95 &3802100723278143919
 Animator:
   serializedVersion: 3
