@@ -54,7 +54,6 @@ public class TestMonster : Enemy
     protected override void Die()
     {
         base.Die();
-        Destroy(gameObject);
     }
     protected override void Hit()
     {

@@ -57,7 +57,6 @@ public abstract class Entity : MonoBehaviour
     protected virtual void Start()
     {
         hp = MaxHp;
-        
     }
     protected virtual void Update()
     {

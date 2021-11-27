@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 132
+  m_SortingOrder: 5
   m_Sprite: {fileID: -1132296383242338538, guid: acec6ddd82bfbac4eb75c7ee081afa7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -104,10 +104,11 @@ MonoBehaviour:
   MaxHp: 100
   Speed: 5
   InvinsibleTime: 0
-  hp: 0
+  hp: 100
   entityState: 0
   Hitparticle: {fileID: 6992499806508447355}
   Deathparticle: {fileID: 3727740878866300032}
+  deadEffected: 0
   player: {fileID: 0}
   distance: 0
   nowAttackCooldown: 0
@@ -186,6 +187,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1112667196253350948}
     m_Modifications:
+    - target: {fileID: 4292922671855222724, guid: 75f32c0fa4a78b645b9d6ca01dd1b1c0, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4292922671855222726, guid: 75f32c0fa4a78b645b9d6ca01dd1b1c0, type: 3}
       propertyPath: m_Name
       value: DeadParticle
@@ -253,6 +258,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1112667196253350948}
     m_Modifications:
+    - target: {fileID: 6594859277082170608, guid: 2bdbf7b98eea2a241a61d4292351f85f, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6594859277082170609, guid: 2bdbf7b98eea2a241a61d4292351f85f, type: 3}
       propertyPath: m_RootOrder
       value: 0
