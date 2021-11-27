@@ -20270,7 +20270,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67196503b89229049a0c693e15d09183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjects: []
+  gameObjects:
+  - {fileID: 1112667196253350951, guid: c33033d7c56abf240bdad534bf97a8ee, type: 3}
+  - {fileID: 5157306410533561577, guid: de8332e0ba83dc5418a6c5bc12133e88, type: 3}
+  - {fileID: 5162352351561681502, guid: 7a195b24c1f952842a6c2c006fde108c, type: 3}
+  - {fileID: 8468656338215727823, guid: c6e04bbcf7e84a042b6c86ff7ffd2cf0, type: 3}
+  - {fileID: 6780999940686543117, guid: 0018eabe00a2a294681e8ce834de1a99, type: 3}
   player: {fileID: 32392070}
   position: 0
   isRight: 0
