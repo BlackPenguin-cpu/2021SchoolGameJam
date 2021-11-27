@@ -13,10 +13,7 @@ public class TestMonster : Enemy
     protected override void Update()
     {
         base.Update();
-        if(entityState == EntityState.DIE)
-        {
-            StopCoroutine(attack);
-        }
+
     }
     IEnumerator hitevent(SpriteRenderer sprite)
     {
@@ -33,6 +30,10 @@ public class TestMonster : Enemy
     }
     IEnumerator realAttack()
     {
+        if (entityState == EntityState.DIE)
+        {
+            StopCoroutine(attack);
+        }
         RaycastHit2D[] rayhit;
         yield return new WaitForSeconds(0.9f);
         if(player.transform.position.x > transform.position.x)
@@ -46,6 +47,7 @@ public class TestMonster : Enemy
         Debug.DrawRay(transform.position, Vector3.right * range);
         foreach (var hit in rayhit)
         {
+            if (entityState == EntityState.DIE) yield break;
             if (hit.collider.gameObject.tag == "Player")
             {
                 Debug.Log("플레이어 공격");
