@@ -96,10 +96,11 @@ public class Player : Entity
             shockCurDelay += Time.deltaTime;
             hitEffect.transform.position = transform.position;
 
-            if (Input.GetKeyDown(KeyCode.A) && shockCurDelay >= shockWaveDelay)
+            if (Input.GetKeyDown(KeyCode.A) && shockCurDelay >= shockWaveDelay && !waiting)
             {
                 playerState = PlayerState.Skill;
                 playerSkill = PlayerAttackState.SHOCKWAVE;
+                entityState = EntityState.IDLE;
             }
             if (shockCurDelay >= shockWaveDelay && isCharged)
             {
@@ -299,10 +300,13 @@ public class Player : Entity
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Ground") && playerState == PlayerState.OnDamaged)
+        if (other.gameObject.CompareTag("Ground"))
         {
-            RB.velocity = Vector2.zero;
-            playerState = PlayerState.Idle;
+            if (playerState == PlayerState.OnDamaged)
+            {
+                RB.velocity = Vector2.zero;
+                playerState = PlayerState.Idle;
+            }
             SR.color = new Color(1, 1, 1);
         }
     }
