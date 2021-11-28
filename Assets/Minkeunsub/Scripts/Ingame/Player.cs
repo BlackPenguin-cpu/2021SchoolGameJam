@@ -188,7 +188,6 @@ public class Player : Entity
         if(Input.GetKeyDown(KeyCode.S) && fenceCur >= fenceDelay)
         {
             Quaternion temp_rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
-            Debug.Log(FenceTransform.position);
             Instantiate(FencePrefab, FenceTransform.position, temp_rotation);
             fenceCur = 0;
         }
