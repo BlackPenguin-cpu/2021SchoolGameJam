@@ -124,7 +124,6 @@ public class Player : Entity
                 playerState = PlayerState.Skill;
                 playerSkill = PlayerAttackState.SHOCKWAVE;
                 entityState = EntityState.IDLE;
-                isMoving = false;
             }
             if (shockCurDelay >= shockWaveDelay && isCharged)
             {
@@ -249,6 +248,7 @@ public class Player : Entity
         playerState = PlayerState.Idle;
         shockWaveCollider.SetActive(false);
         attackAble = true;
+        isMoving = true;
     }
 
     void PlayerAttack()
