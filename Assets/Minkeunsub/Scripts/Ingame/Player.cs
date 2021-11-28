@@ -24,7 +24,7 @@ public class Player : Entity
     CameraController mainCamera;
 
     PlayerAttackState playerSkill;
-    PlayerState playerState;
+    public PlayerState playerState;
     Animator anim;
     Rigidbody2D RB;
     SpriteRenderer SR;
@@ -39,6 +39,7 @@ public class Player : Entity
 
     bool isMoving;
     bool waiting;
+    bool gameoverChk;
 
     public float DashForce;
     public float StartDashTimer;
@@ -60,6 +61,8 @@ public class Player : Entity
     public ParticleSystem shockWaveCharge;
 
     MonsterWave monster;
+
+    public int killCount;
 
     protected override void Die()
     {
@@ -92,9 +95,10 @@ public class Player : Entity
     protected override void Update()
     {
         base.Update();
-        InGameUIManager.Instance.SetValue(monster.WaveLevel, lifeTime += Time.deltaTime, _hp, shockWaveDelay, shockCurDelay);
         if (playerState != PlayerState.Die)
         {
+            lifeTime += Time.deltaTime;
+            InGameUIManager.Instance.SetValue(monster.WaveLevel, lifeTime, _hp, shockWaveDelay, shockCurDelay, killCount);
             anim.SetInteger("PlayerState", (int)playerState);
             anim.SetBool("IsMove", isMoving);
             shockCurDelay += Time.deltaTime;
@@ -115,6 +119,11 @@ public class Player : Entity
         if (_hp <= 0)
         {
             playerState = PlayerState.Die;
+            if(!gameoverChk)
+            {
+                InGameUIManager.Instance.GameOver();
+                gameoverChk = true;
+            }
         }
 
         switch (playerState)
