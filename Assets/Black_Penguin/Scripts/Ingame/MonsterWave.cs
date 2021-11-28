@@ -8,8 +8,8 @@ public class MonsterWave : MonoBehaviour
     [SerializeField] Player player;
     public int position;
     public bool isRight;
-    const int right = 35;
-    const int left = -35;
+    const int right = 44;
+    const int left = -44;
     public int WaveLevel;
     public float WaveTime;
 
@@ -24,11 +24,11 @@ public class MonsterWave : MonoBehaviour
             player._hp += 25;
             if (Random.Range(0, 2) == 1)
             {
-                position = 35;
+                position = 44;
             }
             else
             {
-                position = -35;
+                position = -44;
             }
             WaveLevel++;
             switch (WaveLevel)
