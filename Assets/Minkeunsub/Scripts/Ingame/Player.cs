@@ -67,6 +67,7 @@ public class Player : Entity
     protected override void Die()
     {
         playerState = PlayerState.Die;
+        gameoverChk = true;
     }
 
     protected override void Start()
@@ -95,11 +96,13 @@ public class Player : Entity
     protected override void Update()
     {
         base.Update();
+        anim.SetBool("IsGround", isGround);
+        anim.SetInteger("PlayerState", (int)playerState);
+
         if (playerState != PlayerState.Die)
         {
             lifeTime += Time.deltaTime;
             InGameUIManager.Instance.SetValue(monster.WaveLevel, lifeTime, _hp, shockWaveDelay, shockCurDelay, killCount);
-            anim.SetInteger("PlayerState", (int)playerState);
             anim.SetBool("IsMove", isMoving);
             shockCurDelay += Time.deltaTime;
             hitEffect.transform.position = transform.position;
@@ -116,14 +119,15 @@ public class Player : Entity
                 isCharged = false;
             }
         }
-        if (_hp <= 0)
+        if (entityState == EntityState.DIE)
         {
+            Debug.Log("Dead");
             playerState = PlayerState.Die;
-            if(!gameoverChk)
-            {
-                InGameUIManager.Instance.GameOver();
-                gameoverChk = true;
-            }
+        }
+        if (!gameoverChk && playerState == PlayerState.Die)
+        {
+            InGameUIManager.Instance.GameOver();
+            gameoverChk = true;
         }
 
         switch (playerState)
@@ -162,6 +166,11 @@ public class Player : Entity
             default:
                 break;
         }
+    }
+
+    public void DieAnimationEnd()
+    {
+        gameoverChk = true;
     }
 
     void Dash()
@@ -329,6 +338,10 @@ public class Player : Entity
             }
             SR.color = new Color(1, 1, 1);
             isGround = true;
+            if(playerState == PlayerState.Die)
+            {
+                gameoverChk = false;
+            }
         }
     }
 
