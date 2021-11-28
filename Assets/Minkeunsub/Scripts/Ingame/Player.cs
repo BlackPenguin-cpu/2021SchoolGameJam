@@ -59,6 +59,7 @@ public class Player : Entity
     public ParticleSystem enemySlashLeft;
     public ParticleSystem enemySlashRight;
     public ParticleSystem shockWaveCharge;
+    public ParticleSystem deadParticle;
 
     MonsterWave monster;
 
@@ -74,6 +75,7 @@ public class Player : Entity
     {
         base.Start();
         enemySlashLeft.Stop();
+        deadParticle.Stop();
         enemySlashRight.Stop();
         shockWaveCharge.Stop();
         MaxHp = GameManager.Instance.PlayerHp;
@@ -126,7 +128,8 @@ public class Player : Entity
         }
         if (!gameoverChk && playerState == PlayerState.Die)
         {
-            InGameUIManager.Instance.GameOver();
+            InGameUIManager.Instance.SetValue(monster.WaveLevel, lifeTime, _hp, shockWaveDelay, shockCurDelay, killCount);
+            StartCoroutine(PlayerDeadEffect());
             gameoverChk = true;
         }
 
@@ -166,6 +169,12 @@ public class Player : Entity
             default:
                 break;
         }
+    }
+
+    IEnumerator PlayerDeadEffect()
+    {
+        yield return new WaitForSeconds(3);
+        InGameUIManager.Instance.GameOver();
     }
 
     public void DieAnimationEnd()
@@ -301,6 +310,7 @@ public class Player : Entity
             anim.SetBool("IsMove", isMoving);
             Stop(0.25f);
         }
+
     }
 
     public void Stop(float duration)
