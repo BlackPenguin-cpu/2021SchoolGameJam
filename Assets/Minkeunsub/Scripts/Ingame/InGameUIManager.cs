@@ -47,7 +47,7 @@ public class InGameUIManager : Singleton<InGameUIManager>
     void Update()
     {
 
-        skillGauge.fillAmount = gaugeCur / gaugeMax;
+        skillGauge.fillAmount = 1 - gaugeCur / gaugeMax;
         playerHpImg.fillAmount = playerHp / maxHp;
         stageTxt.text = "Stage: " + stage.ToString();
         lifetimeTxt.text = "Time: " + string.Format("{0:0.00}", lifeTime);
