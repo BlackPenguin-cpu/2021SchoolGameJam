@@ -54,6 +54,13 @@ public class Player : Entity
     bool isGround = true;
     bool isCharged = false;
 
+    [Header("Fence")]
+    public Transform FenceTransform;
+    public GameObject FencePrefab;
+    public float fenceDelay;
+    float fenceCur;
+    bool fenceAble;
+
     [Header("Particles")]
     public ParticleSystem hitEffect;
     public ParticleSystem enemySlashLeft;
@@ -91,6 +98,7 @@ public class Player : Entity
         mainCamera = Camera.main.GetComponent<CameraController>();
         shockCurDelay = shockWaveDelay;
         monster = FindObjectOfType(typeof(MonsterWave)) as MonsterWave;
+        fenceCur = fenceDelay;
         foreach (var item in attackCollider)
         {
             item.SetActive(false);
@@ -116,6 +124,7 @@ public class Player : Entity
                 playerState = PlayerState.Skill;
                 playerSkill = PlayerAttackState.SHOCKWAVE;
                 entityState = EntityState.IDLE;
+                isMoving = false;
             }
             if (shockCurDelay >= shockWaveDelay && isCharged)
             {
@@ -173,6 +182,18 @@ public class Player : Entity
         }
     }
 
+    void FenceController()
+    {
+        fenceCur += Time.deltaTime;
+        if(Input.GetKeyDown(KeyCode.S) && fenceCur >= fenceDelay)
+        {
+            Quaternion temp_rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+            Debug.Log(FenceTransform.position);
+            Instantiate(FencePrefab, FenceTransform.position, temp_rotation);
+            fenceCur = 0;
+        }
+    }
+
     IEnumerator PlayerDeadEffect()
     {
         yield return new WaitForSeconds(3);
@@ -203,7 +224,7 @@ public class Player : Entity
 
     private void FixedUpdate()
     {
-        if (playerState != PlayerState.Die)
+        if (playerState != PlayerState.Die && playerState != PlayerState.Skill)
             PlayerMove();
     }
 
@@ -258,6 +279,7 @@ public class Player : Entity
 
     void IdleController()
     {
+        FenceController();
         attackAble = true;
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
