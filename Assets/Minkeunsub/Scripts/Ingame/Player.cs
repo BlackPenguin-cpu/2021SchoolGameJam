@@ -67,6 +67,8 @@ public class Player : Entity
 
     protected override void Die()
     {
+        if (!gameoverChk)
+            deadParticle.Play();
         playerState = PlayerState.Die;
         gameoverChk = true;
     }
@@ -348,7 +350,7 @@ public class Player : Entity
             }
             SR.color = new Color(1, 1, 1);
             isGround = true;
-            if(playerState == PlayerState.Die)
+            if (playerState == PlayerState.Die)
             {
                 gameoverChk = false;
             }
