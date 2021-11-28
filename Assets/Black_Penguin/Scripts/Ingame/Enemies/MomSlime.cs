@@ -56,45 +56,19 @@ public class MomSlime : Enemy
     }
     protected override void Move()
     {
-        ////base 하지 않습니다!
-        //float x = player.transform.position.x;
-        //Rigidbody2D rigid = GetComponent<Rigidbody2D>();
-        //    if (gameObject.transform.position.x < x)
-        //    {
-        //        transform.rotation = Quaternion.Euler(0, 0, 0);
-        //        rigid.AddForce(new Vector2(Speed, 5), ForceMode2D.Impulse);
-        //    }
-        //    if (gameObject.transform.position.x > x)
-        //    {
-        //        transform.rotation = Quaternion.Euler(0, 180, 0);
-        //        rigid.AddForce(new Vector2(-Speed, 5), ForceMode2D.Impulse);
-        //    }
+        base.Move();
     }
-
-    void bounce()
-    {
-        float x = player.transform.position.x;
-        Rigidbody2D rigid = GetComponent<Rigidbody2D>();
-        if (gameObject.transform.position.x < x)
-        {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-            rigid.AddForce(new Vector2(Speed, 5), ForceMode2D.Impulse);
-        }
-        if (gameObject.transform.position.x > x)
-        {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-            rigid.AddForce(new Vector2(-Speed, 5), ForceMode2D.Impulse);
-        }
-    }
-
-    IEnumerator Summon()
+    //소환 관련 함수 애니매이션
+    void Summon()
     {
         GetComponent<Rigidbody2D>().gravityScale = 0;
         GetComponent<Collider2D>().isTrigger = true;
         GameObject baby = Instantiate(babySlime, transform.position, Quaternion.identity);
         Entity BabySlime = baby.GetComponent<Entity>();
         BabySlime.MaxHp = 80;
-        yield return new WaitForSeconds(3);
+    }
+    void summonEnd()
+    {
         GetComponent<Rigidbody2D>().gravityScale = 1;
         GetComponent<Collider2D>().isTrigger = false;
     }

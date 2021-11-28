@@ -7,7 +7,7 @@ public abstract class Enemy : Entity
     Animator anim;
     public ParticleSystem Hitparticle;
     public ParticleSystem Deathparticle;
-    public bool deadEffected =false;
+    public bool deadEffected = false;
     public GameObject player;
     public float distance;
     [SerializeField] float nowAttackCooldown;
@@ -27,24 +27,27 @@ public abstract class Enemy : Entity
     {
         base.Update();
         anim.SetInteger("State", (int)entityState);
-        switch (entityState)
+        if (!GameManager.Instance.IsGameOver)
         {
-            case EntityState.IDLE:
-                break;
-            case EntityState.MOVING:
-                Move();
-                break;
-            case EntityState.ONDAMAGE:
-                break;
-            case EntityState.ATTACK:
-                if (AttackCooldown < nowAttackCooldown && entityState != EntityState.ONDAMAGE)
-                    Attack();
-                break;
-            case EntityState.DIE:
-                Die();
-                break;
-            default:
-                break;
+            switch (entityState)
+            {
+                case EntityState.IDLE:
+                    break;
+                case EntityState.MOVING:
+                    Move();
+                    break;
+                case EntityState.ONDAMAGE:
+                    break;
+                case EntityState.ATTACK:
+                    if (AttackCooldown < nowAttackCooldown && entityState != EntityState.ONDAMAGE)
+                        Attack();
+                    break;
+                case EntityState.DIE:
+                    Die();
+                    break;
+                default:
+                    break;
+            }
         }
         nowAttackCooldown += Time.deltaTime;
     }
@@ -57,12 +60,12 @@ public abstract class Enemy : Entity
             deadEffected = true;
         }
         entityState = EntityState.DIE;
-        Rigidbody2D rigid = GetComponent<Rigidbody2D>() ;
+        Rigidbody2D rigid = GetComponent<Rigidbody2D>();
         Collider2D collider = GetComponent<Collider2D>();
         Destroy(rigid);
         Destroy(collider);
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
-        sprite.color = new Color(0.5f, 0.5f, 0.5f,0.5f);
+        sprite.color = new Color(0.5f, 0.5f, 0.5f, 0.5f);
     }
     protected virtual void Attack()
     {

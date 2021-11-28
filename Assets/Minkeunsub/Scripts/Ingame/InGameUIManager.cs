@@ -66,7 +66,7 @@ public class InGameUIManager : Singleton<InGameUIManager>
         Debug.Log(Lifetime);
         Killcount = @"박멸한 바이러스 수: ?" + killcount.ToString() + "마리";
         Survivewave = @"생존한 웨이브: ?" + stage.ToString() + "회";
-        Result = @"테스트 결과: ?Failed";
+        Result = @"테스트 결과: ?Failed...";
         GameOverObject.SetActive(true);
     }
 

@@ -96,6 +96,7 @@ public class MonsterWave : MonoBehaviour
             }
             WaveTime = 0;
         }
+        if(!GameManager.Instance.IsGameOver)
         WaveTime += Time.deltaTime;
     }
     IEnumerator Clear()
@@ -143,24 +144,27 @@ public class MonsterWave : MonoBehaviour
     }
     IEnumerator Wave4()
     {
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 60; i++)
         {
-            Instantiate(gameObjects[0], new Vector3(position, -2f, 0), Quaternion.identity);
-            yield return new WaitForSeconds(3);
+            Instantiate(gameObjects[0], new Vector3(left, -2f, 0), Quaternion.identity);
+            yield return new WaitForSeconds(1.5f);
+            Instantiate(gameObjects[0], new Vector3(right, -2f, 0), Quaternion.identity);
+            yield return new WaitForSeconds(1.5f);
         }
-        yield return new WaitForSeconds(1);
     }
     IEnumerator Wave5()
     {
         for (int i = 0; i < 5; i++)
         {
             Instantiate(gameObjects[2], new Vector3(position, -2f, 0), Quaternion.identity);
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(5);
             for (int j = 0; j < 8; j++)
             {
                 Instantiate(gameObjects[0], new Vector3(position, -2f, 0), Quaternion.identity);
                 yield return new WaitForSeconds(1);
             }
+            Instantiate(gameObjects[2], new Vector3(position, -2f, 0), Quaternion.identity);
+            yield return new WaitForSeconds(5);
         }
         yield return new WaitForSeconds(1);
     }
