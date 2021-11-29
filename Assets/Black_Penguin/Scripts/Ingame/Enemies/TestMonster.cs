@@ -79,6 +79,18 @@ public class TestMonster : Enemy
     protected override void Hit()
     {
         base.Hit();
+        switch (Random.Range(1, 4))
+        {
+            case 1:
+        SoundManager.Instance.PlaySound("타격음");
+                break;
+            case 2:
+        SoundManager.Instance.PlaySound("타격음1");
+                break;
+            case 3:
+        SoundManager.Instance.PlaySound("타격음2");
+                break;
+        }
         SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer>();
         if (attack != null)
             StopCoroutine(attack);
