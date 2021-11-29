@@ -6,24 +6,19 @@ using UnityEngine.UI;
 public class InGameUIManager : Singleton<InGameUIManager>
 {
     [Header("Status UI")]
-    public Image skillGauge;
-    public Image playerHpImg;
-    public Text stageTxt;
-    public Text lifetimeTxt;
+    public Image ingame_skillGauge;
+    public Image ingame_playerHpImg;
+    public Text ingame_stageTxt;
+    public Text ingame_lifetimeTxt;
 
     [Header("Game Over UI")]
-    public GameObject GameOverObject;
-    public Text titleTxt;
-    public Text lifeTimeTxt;
-    public Text killCountTxt;
-    public Text surviveWaveTxt;
-    public Text resultTxt;
-
-    string title;
-    string Lifetime;
-    string Killcount;
-    string Survivewave;
-    string Result;
+    public GameObject GameoverObject;
+    public Image[] gameover_Messages; //0: title, 1~3: variables, 4: result
+    public Text[] gameover_MessagesTxt; //0~2: variables
+    public string[] s_MessagesTxt; //0~2: variables
+    public Image[] gameover_ResultImg; //0: Failed, 1: Successed
+    public Image[] gameover_successIcons;
+    public Image[] gameover_failedIcons;
 
     int stage;
     float lifeTime;
@@ -33,6 +28,8 @@ public class InGameUIManager : Singleton<InGameUIManager>
     float gaugeMax;
     float gaugeCur;
 
+    public bool gameSuccess;
+
     protected override void Awake()
     {
 
@@ -41,105 +38,95 @@ public class InGameUIManager : Singleton<InGameUIManager>
     void Start()
     {
         maxHp = GameManager.Instance.PlayerHp;
-        GameOverObject.SetActive(false);
+        DeActiveObj();
+    }
+
+    void MessageTxtInitial()
+    {
+        s_MessagesTxt[0] = string.Format("{0:0.00}", lifeTime);
+        s_MessagesTxt[1] = stage.ToString();
+        s_MessagesTxt[2] = killcount.ToString();
+    }
+
+    void DeActiveObj()
+    {
+        foreach (var item in gameover_Messages)
+        {
+            item.gameObject.SetActive(false);
+        }
+        foreach (var item in gameover_ResultImg)
+        {
+            item.gameObject.SetActive(false);
+        }
+        foreach (var item in gameover_successIcons)
+        {
+            item.gameObject.SetActive(false);
+        }
+        foreach (var item in gameover_failedIcons)
+        {
+            item.gameObject.SetActive(false);
+        }
+        GameoverObject.SetActive(false);
     }
 
     void Update()
     {
+        ingame_skillGauge.fillAmount = 1 - gaugeCur / gaugeMax;
+        ingame_playerHpImg.fillAmount = playerHp / maxHp;
+        ingame_stageTxt.text = "Stage: " + stage.ToString();
+        ingame_lifetimeTxt.text = "Time: " + string.Format("{0:0.00}", lifeTime);
+    }
 
-        skillGauge.fillAmount = 1 - gaugeCur / gaugeMax;
-        playerHpImg.fillAmount = playerHp / maxHp;
-        stageTxt.text = "Stage: " + stage.ToString();
-        lifetimeTxt.text = "Time: " + string.Format("{0:0.00}", lifeTime);
+    IEnumerator GameResult()
+    {
+        yield return null;
+        GameoverObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+
+        //title
+        gameover_Messages[0].gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+
+        //messages
+        for (int i = 0; i < s_MessagesTxt.Length; i++)
+        {
+            gameover_Messages[i + 1].gameObject.SetActive(true);
+            yield return new WaitForSeconds(1f);
+            for (int j = 0; j < s_MessagesTxt[i].Length; j++)
+            {
+                gameover_MessagesTxt[i].text += s_MessagesTxt[i][j];
+                yield return null;
+            }
+            yield return new WaitForSeconds(0.5f);
+            if (gameSuccess)
+            {
+                gameover_successIcons[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                gameover_failedIcons[i].gameObject.SetActive(true);
+            }
+            yield return new WaitForSeconds(1f);
+        }
+
+        //result
+        yield return new WaitForSeconds(1f);
+        gameover_Messages[4].gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        if (gameSuccess)
+        {
+            gameover_ResultImg[1].gameObject.SetActive(true);
+        }
+        else
+        {
+            gameover_ResultImg[0].gameObject.SetActive(true);
+        }
     }
 
     public void GameOver()
     {
-        GameOverResult();
-        StartCoroutine(GameOverText());
-    }
-
-    public void GameOverResult()
-    {
-        title = @"치료제 테스트 결과";
-        Lifetime = @"생존시간: ?" + string.Format("{0:0.00}", lifeTime).ToString() + "초";
-        Debug.Log(Lifetime);
-        Killcount = @"박멸한 바이러스 수: ?" + killcount.ToString() + "마리";
-        Survivewave = @"생존한 웨이브: ?" + stage.ToString() + "회";
-        Result = @"테스트 결과: ?Failed...";
-        GameOverObject.SetActive(true);
-    }
-
-    public IEnumerator GameOverText()
-    {
-        for (int i = 0; i < title.Length; i++)
-        {
-            titleTxt.text += title[i];
-            yield return new WaitForSecondsRealtime(0.05f);
-        }
-        yield return new WaitForSecondsRealtime(1f);
-
-        string s_temp = Lifetime;
-        string[] s_arr = s_temp.Split('?');
-        for (int i = 0; i < s_arr[0].Length; i++)
-        {
-            lifeTimeTxt.text += s_arr[0][i];
-            yield return new WaitForSecondsRealtime(0.05f);
-        }
-        yield return new WaitForSecondsRealtime(1f);
-
-        for (int i = 0; i < s_arr[1].Length; i++)
-        {
-            lifeTimeTxt.text += s_arr[1][i];
-            yield return new WaitForSecondsRealtime(0.05f);
-        }
-        yield return new WaitForSecondsRealtime(1f);
-
-        s_temp = Killcount;
-        s_arr = s_temp.Split('?');
-        for (int i = 0; i < s_arr[0].Length; i++)
-        {
-            killCountTxt.text += s_arr[0][i];
-            yield return new WaitForSecondsRealtime(0.05f);
-        }
-        yield return new WaitForSecondsRealtime(1f);
-
-        for (int i = 0; i < s_arr[1].Length; i++)
-        {
-            killCountTxt.text += s_arr[1][i];
-            yield return new WaitForSecondsRealtime(0.05f);
-        }
-        yield return new WaitForSecondsRealtime(1f);
-
-        s_temp = Survivewave;
-        s_arr = s_temp.Split('?');
-        for (int i = 0; i < s_arr[0].Length; i++)
-        {
-            surviveWaveTxt.text += s_arr[0][i];
-            yield return new WaitForSecondsRealtime(0.05f);
-        }
-        yield return new WaitForSecondsRealtime(1f);
-
-        for (int i = 0; i < s_arr[1].Length; i++)
-        {
-            surviveWaveTxt.text += s_arr[1][i];
-            yield return new WaitForSecondsRealtime(0.05f);
-        }
-        yield return new WaitForSecondsRealtime(3);
-
-        s_temp = Result;
-        s_arr = s_temp.Split('?');
-        for (int i = 0; i < s_arr[0].Length; i++)
-        {
-            resultTxt.text += s_arr[0][i];
-            yield return new WaitForSecondsRealtime(0.05f);
-        }
-        yield return new WaitForSecondsRealtime(3f);
-        for (int i = 0; i < s_arr[1].Length; i++)
-        {
-            resultTxt.text += s_arr[1][i];
-            yield return new WaitForSecondsRealtime(0.05f);
-        }
+        MessageTxtInitial();
+        StartCoroutine(GameResult());
     }
 
     public void SetValue(int _stage, float _lifeTime, float _playerHp, float _gaugeMax, float _gaugeCur, int _killCount)
