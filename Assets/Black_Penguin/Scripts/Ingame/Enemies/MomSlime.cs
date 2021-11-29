@@ -70,7 +70,7 @@ public class MomSlime : Enemy
     private void OnCollisionStay2D(Collision2D collision)
     {
         
-        if (collision.gameObject.tag == "Player" && entityState != EntityState.ONDAMAGE && InGameUIManager.Instance.gameSuccess == false)
+        if (collision.gameObject.tag == "Player" && entityState != EntityState.ONDAMAGE && InGameUIManager.Instance.gameSuccess == false && GameManager.Instance.IsGameOver == false)
         {
             collision.gameObject.GetComponent<Entity>()._hp -= Damage;
         }

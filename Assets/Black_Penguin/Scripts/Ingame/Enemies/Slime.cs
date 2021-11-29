@@ -96,9 +96,8 @@ public class Slime : Enemy
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (InGameUIManager.Instance.gameSuccess == false)
+        if (InGameUIManager.Instance.gameSuccess == false && GameManager.Instance.IsGameOver == false)
         {
-
             if (collision.gameObject.tag == "Ground")
             {
                 canJump = true;

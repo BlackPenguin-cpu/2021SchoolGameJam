@@ -20,6 +20,10 @@ public class MonsterWave : MonoBehaviour
             WaveLevel = 19;
             WaveTime = 100;
         }
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+            WaveTime = 110;
+        }
         if (WaveTime >= 122)
         {
             StartCoroutine(Clear());
@@ -101,7 +105,7 @@ public class MonsterWave : MonoBehaviour
             }
             WaveTime = 0;
         }
-        if(!GameManager.Instance.IsGameOver)
+        if(!GameManager.Instance.IsGameOver && !InGameUIManager.Instance.gameSuccess)
         WaveTime += Time.deltaTime;
     }
     IEnumerator Clear()
