@@ -38,6 +38,7 @@ public class InGameUIManager : Singleton<InGameUIManager>
 
     public bool gameSuccess;
     Coroutine now_play_coroutine;
+    bool coroutineActive = true;
 
     protected override void Awake()
     {
@@ -157,8 +158,11 @@ public class InGameUIManager : Singleton<InGameUIManager>
     public void GameOver()
     {
         MessageTxtInitial();
-        if (now_play_coroutine == null)
+        if (now_play_coroutine == null && coroutineActive)
+        {
             now_play_coroutine = StartCoroutine(GameResult());
+            coroutineActive = false;
+        }
     }
 
     public void SetValue(int _stage, float _lifeTime, float _playerHp, float _gaugeMax, float _gaugeCur, int _killCount)
