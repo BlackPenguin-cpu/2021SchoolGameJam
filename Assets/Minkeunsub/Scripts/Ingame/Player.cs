@@ -371,7 +371,7 @@ public class Player : Entity
 
     protected override void Hit()
     {
-        if (playerState != PlayerState.Die)
+        if (playerState != PlayerState.Die && playerState != PlayerState.Skill)
         {
             SoundManager.Instance.PlaySound("플레이어피격");
             mainCamera.ShakeForTime(0.3f);
