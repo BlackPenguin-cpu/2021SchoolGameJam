@@ -7,7 +7,6 @@ public class PlayerSlash : MonoBehaviour
     CameraController main_camera;
     public Player player;
 
-
     private void Start()
     {
         main_camera = Camera.main.GetComponent<CameraController>();

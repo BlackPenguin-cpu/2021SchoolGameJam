@@ -9,6 +9,7 @@ public class Slime : Enemy
     bool isDead = false;
     [SerializeField] Sprite[] deadSprites;
     SpriteRenderer sprite;
+    [SerializeField] AudioClip[] hitSounds;
     protected override void Start()
     {
         base.Start();
@@ -135,6 +136,7 @@ public class Slime : Enemy
     protected override void Hit()
     {
         base.Hit();
+        SoundManager.Instance.PlaySound(hitSounds[Random.Range(0, 2)]);
         SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer>();
         StartCoroutine(hitevent(sprite));
     }

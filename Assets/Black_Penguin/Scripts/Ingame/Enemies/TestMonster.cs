@@ -39,7 +39,7 @@ public class TestMonster : Enemy
         }
         RaycastHit2D[] rayhit;
         yield return new WaitForSeconds(1f);
-        if(player.transform.position.x > transform.position.x)
+        if (player.transform.position.x > transform.position.x)
         {
             rayhit = Physics2D.RaycastAll(transform.position, Vector3.right, range);
         }
@@ -80,7 +80,8 @@ public class TestMonster : Enemy
     {
         base.Hit();
         SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer>();
-        StopCoroutine(attack);
+        if (attack != null)
+            StopCoroutine(attack);
         StartCoroutine(hitevent(sprite));
     }
 
