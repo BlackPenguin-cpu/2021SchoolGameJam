@@ -65,6 +65,10 @@ public class TestMonster : Enemy
     protected override void Die()
     {
         base.Die();
+        Rigidbody2D rigid = GetComponent<Rigidbody2D>();
+        Collider2D collider = GetComponent<Collider2D>();
+        Destroy(rigid);
+        Destroy(collider);
     }
     protected override void Hit()
     {

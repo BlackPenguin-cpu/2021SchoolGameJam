@@ -123,9 +123,9 @@ public class Slime : Enemy
     IEnumerator Dead()
     {
         Transform transform = GetComponent<Transform>();
-        while (transform.localScale.y <= 0.1f)
+        while (transform.localScale.y >= 0.1f)
         {
-            transform.localScale = new Vector3(transform.localScale.x, Mathf.Lerp(transform.localScale.y, 0, 1));
+            transform.localScale = Vector3.Lerp(transform.position, new Vector3(1, 0, 1),0.1f);
             yield return new WaitForSeconds(0.1f);
         }
     }
