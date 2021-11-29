@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2957090b9b32a0f4f87d43be5a3a6a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
+  Damage: 5
   MaxHp: 100
   Speed: 5
   InvinsibleTime: 0

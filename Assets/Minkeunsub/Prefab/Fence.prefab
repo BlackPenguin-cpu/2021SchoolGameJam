@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8822404011711955876}
   - component: {fileID: 8822404011711955883}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Fence_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,9 +93,9 @@ GameObject:
   - component: {fileID: 8822404011780004815}
   - component: {fileID: 8822404011780004808}
   - component: {fileID: 917169914}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Fence
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,10 +155,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 0
-  MaxHp: 0
+  MaxHp: 50
   Speed: 0
   InvinsibleTime: 0
-  hp: 0
+  hp: 50
   entityState: 0
   shakeableObj:
   - {fileID: 8822404011711955876}
@@ -173,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8822404013151010828}
   - component: {fileID: 8822404013151010867}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Fence_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

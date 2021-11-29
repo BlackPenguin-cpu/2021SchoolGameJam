@@ -30533,7 +30533,7 @@ GameObject:
   - component: {fileID: 491123532}
   - component: {fileID: 491123531}
   - component: {fileID: 491123530}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Barrier (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85695,7 +85695,7 @@ GameObject:
   - component: {fileID: 1534949007}
   - component: {fileID: 1534949006}
   - component: {fileID: 1534949008}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
