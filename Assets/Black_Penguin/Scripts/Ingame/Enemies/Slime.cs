@@ -114,6 +114,8 @@ public class Slime : Enemy
         base.Die();
         if (!isDead)
         {
+            Collider2D collider = GetComponent<Collider2D>();
+            collider.isTrigger = true;
             Animator animator = GetComponent<Animator>();
             animator.SetInteger("dead", Random.Range(1, 3));
             StartCoroutine(Dead());
@@ -123,11 +125,12 @@ public class Slime : Enemy
     IEnumerator Dead()
     {
         Transform transform = GetComponent<Transform>();
-        while (transform.localScale.y >= 0.1f)
+        while (transform.localScale.y >= 0.01f)
         {
-            transform.localScale = Vector3.Lerp(transform.position, new Vector3(1, 0, 1),0.1f);
-            yield return new WaitForSeconds(0.1f);
+            transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(1, 0, 1),0.02f);
+            yield return new WaitForSeconds(0.02f);
         }
+        Destroy(gameObject);
     }
     protected override void Hit()
     {
