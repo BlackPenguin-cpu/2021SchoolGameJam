@@ -69,7 +69,8 @@ public class MomSlime : Enemy
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && entityState != EntityState.ONDAMAGE)
+        
+        if (collision.gameObject.tag == "Player" && entityState != EntityState.ONDAMAGE && InGameUIManager.Instance.gameSuccess == false)
         {
             collision.gameObject.GetComponent<Entity>()._hp -= Damage;
         }
@@ -77,6 +78,14 @@ public class MomSlime : Enemy
     protected override void Die()
     {
         base.Die();
+        StartCoroutine(destroy());
+    }
+    IEnumerator destroy()
+    {
+        yield return new WaitForSeconds(2);
+        Collider2D collider = GetComponent<Collider2D>();
+        collider.isTrigger = true;
+        yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
     protected override void Hit()

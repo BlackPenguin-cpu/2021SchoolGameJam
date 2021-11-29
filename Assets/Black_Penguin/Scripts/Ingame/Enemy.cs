@@ -60,7 +60,7 @@ public abstract class Enemy : Entity
             Deathparticle.Play();
             deadEffected = true;
         }
-        gameObject.layer = 5;
+        gameObject.layer = 4;
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
         sprite.color = new Color(0.5f, 0.5f, 0.5f, 0.5f);
         entityState = EntityState.DIE;

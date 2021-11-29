@@ -96,18 +96,22 @@ public class Slime : Enemy
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (InGameUIManager.Instance.gameSuccess == false)
         {
-            canJump = true;
-        }
-        else if (collision.gameObject == null)
-        {
-            canJump = false;
-        }
-        if (collision.gameObject.tag == "Player" && entityState != EntityState.ONDAMAGE && delay <= 0 && entityState != EntityState.DIE)
-        {
-            delay = 1;
-            collision.gameObject.GetComponent<Entity>()._hp -= Damage;
+
+            if (collision.gameObject.tag == "Ground")
+            {
+                canJump = true;
+            }
+            else if (collision.gameObject == null)
+            {
+                canJump = false;
+            }
+            if (collision.gameObject.tag == "Player" && entityState != EntityState.ONDAMAGE && delay <= 0 && entityState != EntityState.DIE)
+            {
+                delay = 1;
+                collision.gameObject.GetComponent<Entity>()._hp -= Damage;
+            }
         }
     }
     protected override void Die()
@@ -128,7 +132,7 @@ public class Slime : Enemy
         Transform transform = GetComponent<Transform>();
         while (transform.localScale.y >= 0.01f)
         {
-            transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(1, 0, 1),0.02f);
+            transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(1, 0, 1), 0.02f);
             yield return new WaitForSeconds(0.02f);
         }
         Destroy(gameObject);

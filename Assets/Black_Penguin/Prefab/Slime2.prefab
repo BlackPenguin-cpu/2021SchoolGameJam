@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 6780999940686543104}
   - component: {fileID: 6780999940686543105}
   - component: {fileID: 5075825857904918455}
-  - component: {fileID: 7580835028126467406}
+  - component: {fileID: 2350629910250808904}
   m_Layer: 6
   m_Name: Slime2
   m_TagString: Enemy
@@ -195,7 +195,7 @@ MonoBehaviour:
   AudioClip: {fileID: 0}
   babySlime: {fileID: 8468656338215727823, guid: c6e04bbcf7e84a042b6c86ff7ffd2cf0, type: 3}
   spawnPosition: {fileID: 2171856086136682254}
---- !u!95 &7580835028126467406
+--- !u!95 &2350629910250808904
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
