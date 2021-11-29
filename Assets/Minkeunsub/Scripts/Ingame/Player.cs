@@ -440,7 +440,6 @@ public class Player : Entity
         ParticleSystem slashParticle = direction == 1 ? enemySlashLeft : enemySlashRight;
         slashParticle.Stop();
         slashParticle.Play();
-        Debug.Log(slashParticle.name);
         return slashParticle;
     }
 }
