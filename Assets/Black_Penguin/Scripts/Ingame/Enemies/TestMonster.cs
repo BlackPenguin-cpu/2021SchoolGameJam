@@ -80,6 +80,7 @@ public class TestMonster : Enemy
     {
         base.Hit();
         SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer>();
+        StopCoroutine(attack);
         StartCoroutine(hitevent(sprite));
     }
 
