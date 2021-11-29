@@ -7,7 +7,7 @@ public class IntroUIManager : MonoBehaviour
 {
     void Start()
     {
-        
+        TitleScene();
     }
 
     void Update()

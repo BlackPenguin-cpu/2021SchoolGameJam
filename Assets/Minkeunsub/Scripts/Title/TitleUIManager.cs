@@ -25,7 +25,7 @@ public class TitleUIManager : MonoBehaviour
 
     public void Ingame()
     {
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene("InGameScene");
     }
 
     public void HowtoPlay()
