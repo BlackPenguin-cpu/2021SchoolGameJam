@@ -7,11 +7,33 @@ public class FenceEntity : Entity
 
     Vector3[] originPos;
     public Transform[] shakeableObj;
-
+    int alreadyDead;
     protected override void Die()
     {
+        Rigidbody2D[] childrenFence = gameObject.GetComponentsInChildren<Rigidbody2D>();
+        foreach (Rigidbody2D rigid in childrenFence)
+        {
+            if (alreadyDead != 2)
+            {
+                alreadyDead++;
+                SpriteRenderer sprite = rigid.gameObject.GetComponent<SpriteRenderer>();
+                rigid.bodyType = RigidbodyType2D.Dynamic;
+                rigid.gravityScale = 2;
+                rigid.AddForce(new Vector2(Random.Range(-2, 3), Random.Range(1, 2)), ForceMode2D.Impulse);
+                StartCoroutine(Dead(sprite));
+            }
+        }
     }
-
+    IEnumerator Dead(SpriteRenderer sprite)
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            sprite.color = new Color(1, 1, 1, 1.0f - (i * 0.1f));
+            yield return new WaitForSeconds(0.1f);
+        }
+        Destroy(sprite.gameObject);
+        Destroy(gameObject);
+    }
     protected override void Hit()
     {
         StartCoroutine(Shake(0.2f, 0.5f));
