@@ -106,6 +106,7 @@ public class MonsterWave : MonoBehaviour
     }
     IEnumerator Clear()
     {
+        InGameUIManager.Instance.gameSuccess = true;
         yield return new WaitForSeconds(1);
     }
     IEnumerator Wave1()

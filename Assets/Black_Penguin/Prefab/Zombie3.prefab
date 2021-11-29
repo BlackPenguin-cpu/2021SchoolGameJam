@@ -114,6 +114,8 @@ MonoBehaviour:
   nowAttackCooldown: 0
   AttackCooldown: 1
   range: 3
+  AudioClip: {fileID: 0}
+  AttackDealy: 0.6
 --- !u!61 &5162352351561681491
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,7 +173,7 @@ Animator:
   m_GameObject: {fileID: 5162352351561681502}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 22763b4f76437ac49966ff89314559d5, type: 2}
+  m_Controller: {fileID: 9100000, guid: dcf04e71b35fa1f4cbb825274e9234d5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

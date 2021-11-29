@@ -5,6 +5,7 @@ using UnityEngine;
 public class TestMonster : Enemy
 {
     Coroutine attack;
+    public float AttackDealy;
     protected override void Start()
     {
         base.Start();
@@ -38,7 +39,7 @@ public class TestMonster : Enemy
             StopCoroutine(attack);
         }
         RaycastHit2D[] rayhit;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(AttackDealy);
         if (player.transform.position.x > transform.position.x)
         {
             rayhit = Physics2D.RaycastAll(transform.position, Vector3.right, range);
@@ -65,7 +66,7 @@ public class TestMonster : Enemy
     protected override void Die()
     {
         base.Die();
-        gameObject.layer = 4;
+         gameObject.layer = 4;
         StartCoroutine(destroy());
     }
     IEnumerator destroy()
@@ -84,5 +85,4 @@ public class TestMonster : Enemy
             StopCoroutine(attack);
         StartCoroutine(hitevent(sprite));
     }
-
 }
