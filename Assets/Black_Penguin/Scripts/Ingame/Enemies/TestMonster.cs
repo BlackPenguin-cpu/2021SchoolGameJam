@@ -38,7 +38,7 @@ public class TestMonster : Enemy
             StopCoroutine(attack);
         }
         RaycastHit2D[] rayhit;
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(1f);
         if(player.transform.position.x > transform.position.x)
         {
             rayhit = Physics2D.RaycastAll(transform.position, Vector3.right, range);
@@ -65,10 +65,16 @@ public class TestMonster : Enemy
     protected override void Die()
     {
         base.Die();
-        Rigidbody2D rigid = GetComponent<Rigidbody2D>();
+        gameObject.layer = 4;
+        StartCoroutine(destroy());
+    }
+    IEnumerator destroy()
+    {
+        yield return new WaitForSeconds(2);
         Collider2D collider = GetComponent<Collider2D>();
-        Destroy(rigid);
-        Destroy(collider);
+        collider.isTrigger = true;
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
     }
     protected override void Hit()
     {

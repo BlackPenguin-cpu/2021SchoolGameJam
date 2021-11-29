@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 5
   MaxHp: 100
-  Speed: 5
+  Speed: 3
   InvinsibleTime: 0
   hp: 100
   entityState: 0
