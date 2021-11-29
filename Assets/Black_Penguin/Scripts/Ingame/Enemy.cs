@@ -27,7 +27,7 @@ public abstract class Enemy : Entity
     {
         base.Update();
         anim.SetInteger("State", (int)entityState);
-        if (!GameManager.Instance.IsGameOver && entityState != EntityState.DIE)
+        if (!GameManager.Instance.IsGameOver)
         { 
             switch (entityState)
             {
@@ -59,9 +59,9 @@ public abstract class Enemy : Entity
             Deathparticle.Play();
             deadEffected = true;
         }
-        entityState = EntityState.DIE;
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
         sprite.color = new Color(0.5f, 0.5f, 0.5f, 0.5f);
+        entityState = EntityState.DIE;
     }
     protected virtual void Attack()
     {
