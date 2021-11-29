@@ -54,7 +54,6 @@ public class TestMonster : Enemy
             if (entityState == EntityState.DIE) yield break;
             if (hit.collider.gameObject.tag == "Player")
             {
-                Debug.Log("플레이어 공격");
                 hit.collider.gameObject.GetComponent<Entity>()._hp -= Damage;
             }
             else

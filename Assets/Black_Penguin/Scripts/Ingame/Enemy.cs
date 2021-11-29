@@ -26,6 +26,7 @@ public abstract class Enemy : Entity
 
     protected override void Update()
     {
+        if (InGameUIManager.Instance.gameSuccess == true) entityState = EntityState.DIE;
         base.Update();
         anim.SetInteger("State", (int)entityState);
         if (!GameManager.Instance.IsGameOver)
