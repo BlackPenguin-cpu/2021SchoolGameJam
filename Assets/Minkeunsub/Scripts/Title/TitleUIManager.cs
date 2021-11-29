@@ -12,6 +12,7 @@ public class TitleUIManager : MonoBehaviour
     [Header("Checkbox")]
     [SerializeField] Image check;
 
+
     void Start()
     {
         HowToPlayObj.SetActive(false);

@@ -37,6 +37,7 @@ public class InGameUIManager : Singleton<InGameUIManager>
     float gaugeCur;
 
     public bool gameSuccess;
+    Coroutine now_play_coroutine;
 
     protected override void Awake()
     {
@@ -156,7 +157,8 @@ public class InGameUIManager : Singleton<InGameUIManager>
     public void GameOver()
     {
         MessageTxtInitial();
-        StartCoroutine(GameResult());
+        if (now_play_coroutine == null)
+            now_play_coroutine = StartCoroutine(GameResult());
     }
 
     public void SetValue(int _stage, float _lifeTime, float _playerHp, float _gaugeMax, float _gaugeCur, int _killCount)

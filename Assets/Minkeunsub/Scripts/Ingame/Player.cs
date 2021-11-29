@@ -145,7 +145,7 @@ public class Player : Entity
             shockCurDelay += Time.deltaTime;
             hitEffect.transform.position = transform.position;
 
-            if (Input.GetKeyDown(KeyCode.A) && shockCurDelay >= shockWaveDelay && !waiting)
+            if (Input.GetKeyDown(KeyCode.A) && shockCurDelay >= shockWaveDelay && !waiting && playerState != PlayerState.Attack)
             {
                 playerState = PlayerState.Skill;
                 playerSkill = PlayerAttackState.SHOCKWAVE;
