@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class InGameUIManager : Singleton<InGameUIManager>
 {
@@ -20,6 +22,12 @@ public class InGameUIManager : Singleton<InGameUIManager>
     public Image[] gameover_successIcons;
     public Image[] gameover_failedIcons;
 
+    [Header("Game End UI")]
+    public GameObject gameend_buttons;
+    public Button[] gameend_button;
+    public Vector3[] gameend_buttons_pos;
+    public Transform[] gameend_buttons_initial_pos;
+
     int stage;
     float lifeTime;
     float playerHp;
@@ -32,7 +40,12 @@ public class InGameUIManager : Singleton<InGameUIManager>
 
     protected override void Awake()
     {
-
+        gameend_buttons_pos = new Vector3[2];
+        for (int i = 0; i < gameend_button.Length; i++)
+        {
+            gameend_buttons_pos[i] = gameend_button[i].transform.localPosition;
+            gameend_button[i].transform.localPosition = gameend_buttons_initial_pos[i].localPosition;
+        }
     }
 
     void Start()
@@ -67,6 +80,7 @@ public class InGameUIManager : Singleton<InGameUIManager>
             item.gameObject.SetActive(false);
         }
         GameoverObject.SetActive(false);
+        gameend_buttons.SetActive(false);
     }
 
     void Update()
@@ -81,23 +95,32 @@ public class InGameUIManager : Singleton<InGameUIManager>
     {
         yield return null;
         GameoverObject.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        GameoverObject.transform.DOLocalMove(Vector3.zero, 0.5f, false);
+        yield return new WaitForSeconds(1f);
 
         //title
         gameover_Messages[0].gameObject.SetActive(true);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
         //messages
         for (int i = 0; i < s_MessagesTxt.Length; i++)
         {
             gameover_Messages[i + 1].gameObject.SetActive(true);
-            yield return new WaitForSeconds(1f);
+            float alpha = 0;
+            while (alpha < 1)
+            {
+                gameover_Messages[i + 1].color = new Color(1, 1, 1, alpha);
+                alpha += 0.1f;
+                yield return new WaitForSeconds(0.01f);
+            }
+
+            yield return new WaitForSeconds(0.5f);
             for (int j = 0; j < s_MessagesTxt[i].Length; j++)
             {
                 gameover_MessagesTxt[i].text += s_MessagesTxt[i][j];
                 yield return null;
             }
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.25f);
             if (gameSuccess)
             {
                 gameover_successIcons[i].gameObject.SetActive(true);
@@ -106,13 +129,13 @@ public class InGameUIManager : Singleton<InGameUIManager>
             {
                 gameover_failedIcons[i].gameObject.SetActive(true);
             }
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
         }
 
         //result
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         gameover_Messages[4].gameObject.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         if (gameSuccess)
         {
             gameover_ResultImg[1].gameObject.SetActive(true);
@@ -120,6 +143,13 @@ public class InGameUIManager : Singleton<InGameUIManager>
         else
         {
             gameover_ResultImg[0].gameObject.SetActive(true);
+        }
+        yield return new WaitForSeconds(1f);
+        gameend_buttons.SetActive(true);
+
+        for (int i = 0; i < gameend_button.Length; i++)
+        {
+            gameend_button[i].transform.DOLocalMove(gameend_buttons_pos[i], 0.5f);
         }
     }
 
@@ -139,5 +169,13 @@ public class InGameUIManager : Singleton<InGameUIManager>
         killcount = _killCount;
     }
 
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
+    public void Home()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum PlayerAttackState
 {
@@ -73,6 +74,10 @@ public class Player : Entity
     public ParticleSystem dashParticle;
     public ParticleSystem fenceParticle;
 
+    [Header("UI Object")]
+    public Image barrier_gauge;
+    public Text barrier_count;
+
     MonsterWave monster;
 
     public int killCount;
@@ -118,14 +123,21 @@ public class Player : Entity
         }
     }
 
+    void UIController()
+    {
+        barrier_count.text = curFenceCount.ToString();
+        barrier_gauge.fillAmount = 1 - fenceCur / fenceDelay;
+    }
+
     protected override void Update()
     {
         base.Update();
         anim.SetBool("IsGround", isGround);
         anim.SetInteger("PlayerState", (int)playerState);
-
+        UIController();
         if (playerState != PlayerState.Die)
         {
+            fenceCur += Time.deltaTime;
             lifeTime += Time.deltaTime;
             InGameUIManager.Instance.SetValue(monster.WaveLevel, lifeTime, _hp, shockWaveDelay, shockCurDelay, killCount);
             anim.SetBool("IsMove", isMoving);
@@ -197,7 +209,6 @@ public class Player : Entity
     void FenceController()
     {
         if (curFenceCount > maxFenceCount) curFenceCount = maxFenceCount;
-        fenceCur += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.S) && fenceCur >= fenceDelay && curFenceCount > 0)
         {
             Quaternion temp_rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
