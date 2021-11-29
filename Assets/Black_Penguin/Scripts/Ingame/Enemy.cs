@@ -27,8 +27,8 @@ public abstract class Enemy : Entity
     {
         base.Update();
         anim.SetInteger("State", (int)entityState);
-        if (!GameManager.Instance.IsGameOver)
-        {
+        if (!GameManager.Instance.IsGameOver && entityState != EntityState.DIE)
+        { 
             switch (entityState)
             {
                 case EntityState.IDLE:
@@ -53,8 +53,6 @@ public abstract class Enemy : Entity
     }
     protected override void Die()
     {
-        
-        Debug.Log($"{gameObject}ÀÌ Á×À½");
         if (!deadEffected)
         {
             player.GetComponent<Player>().killCount++;
