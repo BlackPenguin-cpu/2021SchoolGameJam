@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Slime : Enemy
 {
-    float Movecooldown;
     float delay;
     bool canJump;
+    bool isDead = false;
+    [SerializeField] Sprite[] deadSprites;
+    SpriteRenderer sprite;
     protected override void Start()
     {
         base.Start();
-        Movecooldown = -0.5f;
         entityState = EntityState.MOVING;
     }
     protected override void Update()
@@ -102,7 +103,7 @@ public class Slime : Enemy
         {
             canJump = false;
         }
-        if(collision.gameObject.tag == "Player" && entityState != EntityState.ONDAMAGE && delay <=0 && entityState != EntityState.DIE)
+        if (collision.gameObject.tag == "Player" && entityState != EntityState.ONDAMAGE && delay <= 0 && entityState != EntityState.DIE)
         {
             delay = 1;
             collision.gameObject.GetComponent<Entity>()._hp -= Damage;
@@ -111,6 +112,22 @@ public class Slime : Enemy
     protected override void Die()
     {
         base.Die();
+        if (!isDead)
+        {
+            Animator animator = GetComponent<Animator>();
+            animator.SetInteger("dead", Random.Range(1, 3));
+            StartCoroutine(Dead());
+            isDead = true;
+        }
+    }
+    IEnumerator Dead()
+    {
+        Transform transform = GetComponent<Transform>();
+        while (transform.localScale.y <= 0.1f)
+        {
+            transform.localScale = new Vector3(transform.localScale.x, Mathf.Lerp(transform.localScale.y, 0, 1));
+            yield return new WaitForSeconds(0.1f);
+        }
     }
     protected override void Hit()
     {
