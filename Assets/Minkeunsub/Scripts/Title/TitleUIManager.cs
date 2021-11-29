@@ -10,7 +10,6 @@ public class TitleUIManager : MonoBehaviour
     [SerializeField] GameObject HowToPlayObj;
 
     [Header("Checkbox")]
-    [SerializeField] Button checkboxButton;
     [SerializeField] Image check;
 
     void Start()
