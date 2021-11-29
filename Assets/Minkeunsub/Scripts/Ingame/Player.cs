@@ -48,7 +48,7 @@ public class Player : Entity
     float DashDirection;
     float lifeTime;
 
-    int direction = 1;
+    public int direction = 1;
 
     bool isDashing;
     bool isGround = true;
@@ -67,6 +67,7 @@ public class Player : Entity
     public ParticleSystem enemySlashRight;
     public ParticleSystem shockWaveCharge;
     public ParticleSystem deadParticle;
+    public ParticleSystem dashParticle;
 
     MonsterWave monster;
 
@@ -83,22 +84,28 @@ public class Player : Entity
     protected override void Start()
     {
         base.Start();
-        enemySlashLeft.Stop();
-        deadParticle.Stop();
-        enemySlashRight.Stop();
-        shockWaveCharge.Stop();
-        MaxHp = GameManager.Instance.PlayerHp;
-        RB = GetComponent<Rigidbody2D>();
-        SR = GetComponent<SpriteRenderer>();
-        _hp = MaxHp;
-        anim = GetComponent<Animator>();
+
         shockWave.Stop();
         hitEffect.Stop();
-        shockWaveCollider.SetActive(false);
-        mainCamera = Camera.main.GetComponent<CameraController>();
-        shockCurDelay = shockWaveDelay;
-        monster = FindObjectOfType(typeof(MonsterWave)) as MonsterWave;
+        deadParticle.Stop();
+        dashParticle.Stop();
+        enemySlashLeft.Stop();
+        enemySlashRight.Stop();
+        shockWaveCharge.Stop();
+
+        _hp = MaxHp;
         fenceCur = fenceDelay;
+        shockCurDelay = shockWaveDelay;
+        MaxHp = GameManager.Instance.PlayerHp;
+
+        anim = GetComponent<Animator>();
+        RB = GetComponent<Rigidbody2D>();
+        SR = GetComponent<SpriteRenderer>();
+        mainCamera = Camera.main.GetComponent<CameraController>();
+        monster = FindObjectOfType(typeof(MonsterWave)) as MonsterWave;
+
+        shockWaveCollider.SetActive(false);
+
         foreach (var item in attackCollider)
         {
             item.SetActive(false);
@@ -184,7 +191,7 @@ public class Player : Entity
     void FenceController()
     {
         fenceCur += Time.deltaTime;
-        if(Input.GetKeyDown(KeyCode.S) && fenceCur >= fenceDelay)
+        if (Input.GetKeyDown(KeyCode.S) && fenceCur >= fenceDelay)
         {
             Quaternion temp_rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
             Instantiate(FencePrefab, FenceTransform.position, temp_rotation);
@@ -210,6 +217,7 @@ public class Player : Entity
             RB.velocity = transform.right * DashForce;
 
             CurrentDashTimer -= Time.deltaTime;
+
 
             if (CurrentDashTimer <= 0)
             {
@@ -297,6 +305,10 @@ public class Player : Entity
             CurrentDashTimer = StartDashTimer;
             RB.velocity = Vector2.zero;
             CurrentDashTimer -= Time.deltaTime;
+
+            int i_temp = direction == 1 ? 1 : 0;
+            dashParticle.GetComponent<ParticleSystemRenderer>().flip = new Vector3(i_temp, 0, 0);
+            dashParticle.Play();
         }
     }
 
