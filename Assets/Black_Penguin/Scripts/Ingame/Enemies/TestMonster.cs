@@ -66,7 +66,6 @@ public class TestMonster : Enemy
     protected override void Die()
     {
         base.Die();
-         gameObject.layer = 4;
         StartCoroutine(destroy());
     }
     IEnumerator destroy()

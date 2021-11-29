@@ -77,7 +77,7 @@ public class Slime : Enemy
 
     void bounce()
     {
-        if (!canJump || EntityState.DIE == entityState)
+        if (!canJump || EntityState.DIE == entityState || InGameUIManager.Instance.gameSuccess == true)
         {
             return;
         }
@@ -136,7 +136,7 @@ public class Slime : Enemy
     protected override void Hit()
     {
         base.Hit();
-        SoundManager.Instance.PlaySound(hitSounds[Random.Range(0, 2)]);
+        //SoundManager.Instance.PlaySound(hitSounds[Random.Range(0, 2)]);
         SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer>();
         StartCoroutine(hitevent(sprite));
     }

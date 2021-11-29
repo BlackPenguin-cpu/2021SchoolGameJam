@@ -5,16 +5,17 @@ using UnityEngine;
 public class MomSlime : Enemy
 {
     [SerializeField] GameObject babySlime;
-    float Movecooldown;
+    [SerializeField] Transform spawnPosition;
+    float cooltime;
     protected override void Start()
     {
         base.Start();
-        Movecooldown = -0.5f;
         entityState = EntityState.MOVING;
     }
     protected override void Update()
     {
         base.Update();
+        cooltime += Time.deltaTime;
     }
     IEnumerator hitevent(SpriteRenderer sprite)
     {
@@ -26,51 +27,44 @@ public class MomSlime : Enemy
     protected override void Attack()
     {
         base.Attack();
-        StartCoroutine(realAttack());
-    }
-    IEnumerator realAttack()
-    {
-        RaycastHit2D[] rayhit;
-        yield return new WaitForSeconds(0.9f);
-        if (player.transform.position.x > transform.position.x)
-        {
-            rayhit = Physics2D.RaycastAll(transform.position, Vector3.right, range);
-        }
-        else
-        {
-            rayhit = Physics2D.RaycastAll(transform.position, Vector3.left, range);
-        }
-        Debug.DrawRay(transform.position, Vector3.right * range);
-        foreach (var hit in rayhit)
-        {
-            if (hit.collider.gameObject.tag == "Player")
-            {
-                Debug.Log("플레이어 공격");
-                hit.collider.gameObject.GetComponent<Entity>()._hp -= Damage;
-            }
-            else
-            {
-                entityState = EntityState.MOVING;
-            }
-        }
     }
     protected override void Move()
     {
-        base.Move();
+        if (entityState == EntityState.DIE) return;
+        float x = player.transform.position.x;
+        distance = Mathf.Abs(gameObject.transform.position.x - x);
+        if (cooltime >= 8)
+        {
+            Debug.Log("공격시간!");
+            cooltime = 0;
+            entityState = EntityState.ATTACK;
+        }
+
+        if (gameObject.transform.position.x < x)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            transform.position += new Vector3(Speed * Time.deltaTime, 0, 0);
+        }
+        if (gameObject.transform.position.x > x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+            transform.position -= new Vector3(Speed * Time.deltaTime, 0, 0);
+        }
     }
     //소환 관련 함수 애니매이션
     void Summon()
     {
-        GetComponent<Rigidbody2D>().gravityScale = 0;
+        GameObject baby;
+       /* GetComponent<Rigidbody2D>().gravityScale = 0;
         GetComponent<Collider2D>().isTrigger = true;
-        GameObject baby = Instantiate(babySlime, transform.position, Quaternion.identity);
+*/
+        baby = Instantiate(babySlime, spawnPosition.position, Quaternion.identity);
+
         Entity BabySlime = baby.GetComponent<Entity>();
-        BabySlime.MaxHp = 80;
-    }
-    void summonEnd()
-    {
+        BabySlime.MaxHp = 120;
+        /*GetComponent<Collider2D>().isTrigger = false;
         GetComponent<Rigidbody2D>().gravityScale = 1;
-        GetComponent<Collider2D>().isTrigger = false;
+        */entityState = EntityState.MOVING;
     }
 
     private void OnCollisionStay2D(Collision2D collision)

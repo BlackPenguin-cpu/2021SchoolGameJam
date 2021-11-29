@@ -115,7 +115,7 @@ MonoBehaviour:
   AttackCooldown: 1
   range: 3
   AudioClip: {fileID: 0}
-  AttackDealy: 2
+  AttackDealy: 1.5
 --- !u!61 &5157306410533561572
 BoxCollider2D:
   m_ObjectHideFlags: 0
