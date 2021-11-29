@@ -53,17 +53,15 @@ public abstract class Enemy : Entity
     }
     protected override void Die()
     {
+        
         Debug.Log($"{gameObject}ÀÌ Á×À½");
         if (!deadEffected)
         {
+            player.GetComponent<Player>().killCount++;
             Deathparticle.Play();
             deadEffected = true;
         }
         entityState = EntityState.DIE;
-        Rigidbody2D rigid = GetComponent<Rigidbody2D>();
-        Collider2D collider = GetComponent<Collider2D>();
-        Destroy(rigid);
-        Destroy(collider);
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
         sprite.color = new Color(0.5f, 0.5f, 0.5f, 0.5f);
     }
