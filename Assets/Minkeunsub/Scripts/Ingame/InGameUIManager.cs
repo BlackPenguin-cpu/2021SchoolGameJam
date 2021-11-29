@@ -182,11 +182,13 @@ public class InGameUIManager : Singleton<InGameUIManager>
 
     public void Retry()
     {
+        SoundManager.Instance.Playbgm("인트로브금");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void Home()
     {
+        SoundManager.Instance.Playbgm("배경음악");
         SceneManager.LoadScene("TitleScene");
     }
 }
