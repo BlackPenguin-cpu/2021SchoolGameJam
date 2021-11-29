@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TitleUIManager : MonoBehaviour
 {
-
+    [Header("Objects")]
     [SerializeField] GameObject HowToPlayObj;
+
+    [Header("Checkbox")]
+    [SerializeField] Button checkboxButton;
+    [SerializeField] Image check;
 
     void Start()
     {
@@ -15,7 +20,7 @@ public class TitleUIManager : MonoBehaviour
 
     void Update()
     {
-
+        check.gameObject.SetActive(GameManager.Instance.CameraLookat);
     }
 
     public void Ingame()
@@ -31,6 +36,11 @@ public class TitleUIManager : MonoBehaviour
     public void CloseHowtoPlay()
     {
         HowToPlayObj.SetActive(false);
+    }
+
+    public void CheckBox()
+    {
+        GameManager.Instance.CameraLookat = !GameManager.Instance.CameraLookat;
     }
 
     public void ExitGame()

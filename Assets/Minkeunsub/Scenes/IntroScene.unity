@@ -166,8 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19637fcffd4be54cbd4fbeb3cbc4507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHp: 150
-  CameraLookat: 1
+  PlayerHp: 100
+  CameraLookat: 0
+  IsGameOver: 0
 --- !u!1 &377756840
 GameObject:
   m_ObjectHideFlags: 0
