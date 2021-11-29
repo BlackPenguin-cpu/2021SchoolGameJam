@@ -118,7 +118,8 @@ public class MonsterWave : MonoBehaviour
     {
         for (int i = 0; i < 50; i++)
         {
-            Instantiate(gameObjects[0], new Vector3(position, -2f, 0), Quaternion.identity);
+            Instantiate(gameObjects[0], new Vector3(left, -2f, 0), Quaternion.identity);
+            Instantiate(gameObjects[0], new Vector3(right, -2f, 0), Quaternion.identity);
             yield return new WaitForSeconds(2f);
         }
     }

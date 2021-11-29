@@ -33,6 +33,7 @@ public class TitleUIManager : MonoBehaviour
 
     public void Ingame()
     {
+        SoundManager.Instance.Playbgm("πË∞Ê¿Ωæ«");
         SoundManager.Instance.PlaySound(Button_Sound);
         SceneManager.LoadScene("InGameScene");
     }
