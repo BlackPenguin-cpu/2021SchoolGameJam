@@ -93,6 +93,8 @@ public class Player : Entity
     {
         base.Start();
 
+        GameManager.Instance.IsGameOver = false;
+
         shockWave.Stop();
         hitEffect.Stop();
         deadParticle.Stop();
