@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2957090b9b32a0f4f87d43be5a3a6a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 25
-  MaxHp: 100
+  Damage: 6
+  MaxHp: 200
   Speed: 10
   InvinsibleTime: 0
   hp: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
   distance: 0
   nowAttackCooldown: 0
   AttackCooldown: 1
-  range: 3
+  range: 4
   AudioClip: {fileID: 0}
   AttackDealy: 0.6
 --- !u!61 &5162352351561681491

@@ -84,7 +84,10 @@ public class Player : Entity
     protected override void Die()
     {
         if (!gameoverChk)
+        {
             deadParticle.Play();
+            SoundManager.Instance.PlaySound("Á×À½");
+        }
         playerState = PlayerState.Die;
         gameoverChk = true;
     }
@@ -184,6 +187,7 @@ public class Player : Entity
                     case PlayerAttackState.SHOCKWAVE:
                         if (shockCurDelay >= shockWaveDelay)
                         {
+                            SoundManager.Instance.PlaySound("ÆÄµ¿");
                             ShockWaveAnimation();
                             shockCurDelay = 0;
                             isCharged = true;
@@ -212,6 +216,7 @@ public class Player : Entity
         if (curFenceCount > maxFenceCount) curFenceCount = maxFenceCount;
         if (Input.GetKeyDown(KeyCode.S) && fenceCur >= fenceDelay && curFenceCount > 0)
         {
+            SoundManager.Instance.PlaySound("ÆÒ½º");
             Quaternion temp_rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
             Instantiate(FencePrefab, FenceTransform.position, temp_rotation);
             fenceParticle.transform.position = FenceTransform.position;
@@ -336,6 +341,7 @@ public class Player : Entity
 
         if (Input.GetKeyDown(KeyCode.C))
         {
+            SoundManager.Instance.PlaySound("´ë½¬");
             playerState = PlayerState.Dash;
             isDashing = true;
             CurrentDashTimer = StartDashTimer;

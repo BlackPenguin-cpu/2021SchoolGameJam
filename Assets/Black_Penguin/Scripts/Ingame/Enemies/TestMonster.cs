@@ -78,7 +78,8 @@ public class TestMonster : Enemy
     protected override void Hit()
     {
         base.Hit();
-        switch (Random.Range(1, 4))
+        int a = Random.Range(1, 4);
+        switch (a)
         {
             case 1:
         SoundManager.Instance.PlaySound("Å¸°ÝÀ½");

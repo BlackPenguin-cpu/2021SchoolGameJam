@@ -15,7 +15,11 @@ public class SoundManager : Singleton<SoundManager>
     float SEvolume = 1;
     protected SoundManager() { }
 
-    public void SoundSE(string name)
+    private void Start()
+    {
+         Playbgm("인트로브금");
+    }
+    public void Playbgm(string name)
     //사용법 Sound.Instance.ChangeClip("이름",루프 할껀지안할껀지(bool))
     {
         Clip find = clips.Find((o) => { return o.Name == name; });
