@@ -38,15 +38,15 @@ public abstract class Entity : MonoBehaviour
             if ((entityState == EntityState.ONDAMAGE && gameObject.tag == "Player"))
             {
                 return;
-                
+
             }
-                if (value < hp)
-                {
-                    StartCoroutine(Onhit());
-                    Hit();
-                }
-                hp = value;
-            
+            if (value < hp)
+            {
+                StartCoroutine(Onhit());
+                Hit();
+            }
+            hp = value;
+
         }
     }
 

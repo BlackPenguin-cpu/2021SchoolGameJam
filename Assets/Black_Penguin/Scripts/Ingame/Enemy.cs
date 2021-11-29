@@ -13,6 +13,7 @@ public abstract class Enemy : Entity
     [SerializeField] float nowAttackCooldown;
     public float AttackCooldown = 0;
     public float range;
+    public AudioClip AudioClip;
 
     protected override void Start()
     {
@@ -131,16 +132,13 @@ public abstract class Enemy : Entity
     protected override void Hit()
     {
         Hitparticle.Play();
-        Debug.Log($"{gameObject.name} 피격");
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log(collision.tag);
         if (entityState != EntityState.ONDAMAGE)
         {
             if (collision.gameObject.tag == "ShockWaveAttack")
             {
-                Debug.Log("충격파!");
                 _hp -= player.GetComponent<Player>().Damage * 1.5f / (Mathf.Abs(transform.position.x - player.transform.position.x) / 3);
                 OnKnockback(50 / Mathf.Abs(transform.position.x - player.transform.position.x), 5);
             }

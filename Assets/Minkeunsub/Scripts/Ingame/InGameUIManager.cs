@@ -20,7 +20,7 @@ public class InGameUIManager : Singleton<InGameUIManager>
     public Image[] gameover_successIcons;
     public Image[] gameover_failedIcons;
 
-    int stage;
+    public int stage;
     float lifeTime;
     float playerHp;
     float maxHp;

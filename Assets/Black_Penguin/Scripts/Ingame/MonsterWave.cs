@@ -15,11 +15,16 @@ public class MonsterWave : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            WaveLevel = 20;
+            WaveTime = 100;
+        }
         if (WaveTime >= 122)
         {
             StartCoroutine(Clear());
         }
-        if (WaveLevel < 20 && WaveTime >= 100)
+        if (WaveLevel <= 20 && WaveTime >= 100)
         {
             player._hp += 25;
             if (Random.Range(0, 2) == 1)

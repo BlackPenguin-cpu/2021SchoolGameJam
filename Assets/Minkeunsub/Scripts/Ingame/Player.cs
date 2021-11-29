@@ -20,7 +20,6 @@ public enum PlayerState
 
 public class Player : Entity
 {
-
     CameraController mainCamera;
 
     PlayerAttackState playerSkill;
@@ -274,6 +273,20 @@ public class Player : Entity
         if (attackAble)
         {
             int attack_index = Random.Range(0, 3);
+            switch (attack_index)
+            {
+                case 0:
+                    SoundManager.Instance.PlaySound("휘두르기1");
+                    break;
+                case 1:
+                    SoundManager.Instance.PlaySound("휘두르기2");
+                    break;
+                case 2:
+                    SoundManager.Instance.PlaySound("휘두르기3");
+                    break;
+                default:
+                    break;
+            }
             anim.SetInteger("AttackIndex", attack_index);
             attackAble = false;
         }
@@ -347,6 +360,7 @@ public class Player : Entity
     {
         if (playerState != PlayerState.Die)
         {
+            SoundManager.Instance.PlaySound("플레이어피격");
             mainCamera.ShakeForTime(0.3f);
             hitEffect.Play();
             playerState = PlayerState.OnDamaged;
