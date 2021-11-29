@@ -113,7 +113,7 @@ MonoBehaviour:
   distance: 0
   nowAttackCooldown: 0
   AttackCooldown: 1
-  range: 3
+  range: 2
   AudioClip: {fileID: 0}
   AttackDealy: 1
 --- !u!61 &1112667196253350954

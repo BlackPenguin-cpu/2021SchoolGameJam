@@ -57,6 +57,7 @@ public abstract class Enemy : Entity
     {
         if (!deadEffected)
         {
+            Hit();
             player.GetComponent<Player>().killCount++;
             Deathparticle.Play();
             deadEffected = true;

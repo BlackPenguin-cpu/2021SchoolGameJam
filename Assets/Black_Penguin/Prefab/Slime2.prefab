@@ -195,6 +195,8 @@ MonoBehaviour:
   AudioClip: {fileID: 0}
   babySlime: {fileID: 8468656338215727823, guid: c6e04bbcf7e84a042b6c86ff7ffd2cf0, type: 3}
   spawnPosition: {fileID: 2171856086136682254}
+  Clips:
+  - {fileID: 8300000, guid: c505539fd789d5348bf2fef3f46cf6d9, type: 3}
 --- !u!95 &2350629910250808904
 Animator:
   serializedVersion: 3

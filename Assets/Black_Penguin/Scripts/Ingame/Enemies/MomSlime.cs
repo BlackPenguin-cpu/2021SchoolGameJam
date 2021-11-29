@@ -6,6 +6,7 @@ public class MomSlime : Enemy
 {
     [SerializeField] GameObject babySlime;
     [SerializeField] Transform spawnPosition;
+    [SerializeField] AudioClip[] Clips;
     float cooltime;
     protected override void Start()
     {
@@ -35,7 +36,6 @@ public class MomSlime : Enemy
         distance = Mathf.Abs(gameObject.transform.position.x - x);
         if (cooltime >= 8)
         {
-            Debug.Log("공격시간!");
             cooltime = 0;
             entityState = EntityState.ATTACK;
         }
@@ -91,6 +91,7 @@ public class MomSlime : Enemy
     protected override void Hit()
     {
         base.Hit();
+        SoundManager.Instance.PlaySound(Clips[0]);
         SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer>();
         StartCoroutine(hitevent(sprite));
     }

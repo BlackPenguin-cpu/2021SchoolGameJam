@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2957090b9b32a0f4f87d43be5a3a6a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 6
+  Damage: 10
   MaxHp: 500
   Speed: 2
   InvinsibleTime: 0
@@ -113,9 +113,9 @@ MonoBehaviour:
   distance: 0
   nowAttackCooldown: 0
   AttackCooldown: 1
-  range: 3
+  range: 4
   AudioClip: {fileID: 0}
-  AttackDealy: 1.5
+  AttackDealy: 1.3
 --- !u!61 &5157306410533561572
 BoxCollider2D:
   m_ObjectHideFlags: 0

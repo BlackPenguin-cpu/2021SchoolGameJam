@@ -126,13 +126,13 @@ public class MonsterWave : MonoBehaviour
     {
         for (int i = 0; i < 30; i++)
         {
-            Instantiate(gameObjects[0], new Vector3(left, -2f, 0), Quaternion.identity);
+            Instantiate(gameObjects[1], new Vector3(left, -2f, 0), Quaternion.identity);
             Instantiate(gameObjects[0], new Vector3(right, -2f, 0), Quaternion.identity);
             yield return new WaitForSeconds(2);
         }
         for (int i = 0; i < 15; i++)
         {
-            Instantiate(gameObjects[1], new Vector3(position, -2f, 0), Quaternion.identity);
+            Instantiate(gameObjects[2], new Vector3(position, -2f, 0), Quaternion.identity);
             yield return new WaitForSeconds(2);
         }
         yield return new WaitForSeconds(1);
@@ -374,8 +374,8 @@ public class MonsterWave : MonoBehaviour
         {
             Instantiate(gameObjects[4], new Vector3(left, -2.4f, 0), Quaternion.identity);
             Instantiate(gameObjects[4], new Vector3(right, -2.4f, 0), Quaternion.identity);
-            Instantiate(gameObjects[3], new Vector3(left, -2.4f, 0), Quaternion.identity);
-            Instantiate(gameObjects[3], new Vector3(right, -2.4f, 0), Quaternion.identity);
+            Instantiate(gameObjects[1], new Vector3(left, -2.4f, 0), Quaternion.identity);
+            Instantiate(gameObjects[2], new Vector3(right, -2.4f, 0), Quaternion.identity);
             yield return new WaitForSeconds(12);
         }
         yield return new WaitForSeconds(1);

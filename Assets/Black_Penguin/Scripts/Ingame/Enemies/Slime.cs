@@ -7,10 +7,9 @@ public class Slime : Enemy
     float delay;
     bool canJump;
     bool isDead = false;
-    AudioClip[] clip;
     [SerializeField] Sprite[] deadSprites;
     SpriteRenderer sprite;
-    [SerializeField] AudioClip[] hitSounds;
+    [SerializeField] AudioClip[] clips;
     protected override void Start()
     {
         base.Start();
@@ -119,6 +118,7 @@ public class Slime : Enemy
         base.Die();
         if (!isDead)
         {
+            SoundManager.Instance.PlaySound(clips[1]);
             Collider2D collider = GetComponent<Collider2D>();
             collider.isTrigger = true;
             Animator animator = GetComponent<Animator>();
@@ -143,8 +143,7 @@ public class Slime : Enemy
         //SoundManager.Instance.PlaySound(hitSounds[Random.Range(0, 2)]);
         SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer>();
         StartCoroutine(hitevent(sprite));
-        SoundManager.Instance.PlaySound("슬라임피격");
-
+        SoundManager.Instance.PlaySound(clips[0]);
     }
 
 }
