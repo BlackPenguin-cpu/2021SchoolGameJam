@@ -41715,9 +41715,9 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 4bc7e37562939eb419099a7381e02bb9, type: 3}
   - Name: "\uC2AC\uB77C\uC784\uC8FD\uC74C"
     clip: {fileID: 8300000, guid: 99ffe558fc1c4d343b7713b5e4fe33ef, type: 3}
-  - Name: 
-    clip: {fileID: 8300000, guid: e522f7822b7b95f429468c87fbb43224, type: 3}
   - Name: "\uC2AC\uB77C\uC784"
+    clip: {fileID: 8300000, guid: e522f7822b7b95f429468c87fbb43224, type: 3}
+  - Name: "\uC880\uBE44"
     clip: {fileID: 8300000, guid: c8fdeef685c946b4fa62a4f8fb1f2fe5, type: 3}
   - Name: "\uD718\uB450\uB974\uAE301"
     clip: {fileID: 8300000, guid: 7f1b0f2441814af46970869f74de00e0, type: 3}
@@ -56793,7 +56793,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1e86494ff40cb894a9a49b2cf82d5fc2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.57
   m_Pitch: 1
   Loop: 1
   Mute: 0
