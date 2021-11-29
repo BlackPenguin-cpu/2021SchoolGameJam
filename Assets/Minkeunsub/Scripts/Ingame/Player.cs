@@ -54,6 +54,9 @@ public class Player : Entity
     bool isGround = true;
     bool isCharged = false;
 
+    public int maxFenceCount;
+    public int curFenceCount;
+
     [Header("Fence")]
     public Transform FenceTransform;
     public GameObject FencePrefab;
@@ -68,6 +71,7 @@ public class Player : Entity
     public ParticleSystem shockWaveCharge;
     public ParticleSystem deadParticle;
     public ParticleSystem dashParticle;
+    public ParticleSystem fenceParticle;
 
     MonsterWave monster;
 
@@ -89,12 +93,14 @@ public class Player : Entity
         hitEffect.Stop();
         deadParticle.Stop();
         dashParticle.Stop();
+        fenceParticle.Stop();
         enemySlashLeft.Stop();
         enemySlashRight.Stop();
         shockWaveCharge.Stop();
 
         _hp = MaxHp;
         fenceCur = fenceDelay;
+        curFenceCount = maxFenceCount;
         shockCurDelay = shockWaveDelay;
         MaxHp = GameManager.Instance.PlayerHp;
 
@@ -190,12 +196,16 @@ public class Player : Entity
 
     void FenceController()
     {
+        if (curFenceCount > maxFenceCount) curFenceCount = maxFenceCount;
         fenceCur += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.S) && fenceCur >= fenceDelay)
+        if (Input.GetKeyDown(KeyCode.S) && fenceCur >= fenceDelay && curFenceCount > 0)
         {
             Quaternion temp_rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
             Instantiate(FencePrefab, FenceTransform.position, temp_rotation);
+            fenceParticle.transform.position = FenceTransform.position;
+            fenceParticle.Play();
             fenceCur = 0;
+            curFenceCount--;
         }
     }
 

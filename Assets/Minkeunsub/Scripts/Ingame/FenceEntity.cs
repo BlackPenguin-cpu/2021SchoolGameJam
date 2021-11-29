@@ -8,6 +8,9 @@ public class FenceEntity : Entity
     Vector3[] originPos;
     public Transform[] shakeableObj;
     int alreadyDead;
+    Player player;
+    bool dead = false;
+
     protected override void Die()
     {
         Rigidbody2D[] childrenFence = gameObject.GetComponentsInChildren<Rigidbody2D>();
@@ -22,6 +25,11 @@ public class FenceEntity : Entity
                 rigid.AddForce(new Vector2(Random.Range(-2, 3), Random.Range(1, 2)), ForceMode2D.Impulse);
                 StartCoroutine(Dead(sprite));
             }
+        }
+        if(!dead)
+        {
+            player.curFenceCount++;
+            dead = true;
         }
     }
     IEnumerator Dead(SpriteRenderer sprite)
@@ -41,6 +49,7 @@ public class FenceEntity : Entity
 
     protected override void Start()
     {
+        player = FindObjectOfType(typeof(Player)) as Player;
         originPos = new Vector3[shakeableObj.Length];
         for (int i = 0; i < shakeableObj.Length; i++)
         {
