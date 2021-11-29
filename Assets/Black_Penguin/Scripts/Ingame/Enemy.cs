@@ -88,10 +88,32 @@ public abstract class Enemy : Entity
 
     protected virtual void Move()
     {
+        bool attack = false;
         if (entityState == EntityState.DIE) return;
         float x = player.transform.position.x;
         distance = Mathf.Abs(gameObject.transform.position.x - x);
-        if (distance <= range)
+        RaycastHit2D[] hit;
+        if (player.transform.position.x > transform.position.x)
+        {
+            hit = Physics2D.RaycastAll(transform.position, Vector3.right, range);
+        }
+        else
+        {
+            hit = Physics2D.RaycastAll(transform.position, Vector3.left, range);
+        }
+        foreach(RaycastHit2D player in hit)
+        {
+            if(player.collider.tag == "Player")
+            {
+                attack = true;
+                break;
+            }
+            else
+            {
+                attack = false;
+            }
+        }
+        if (distance <= range || attack == true)
         {
             entityState = EntityState.ATTACK;
         }
