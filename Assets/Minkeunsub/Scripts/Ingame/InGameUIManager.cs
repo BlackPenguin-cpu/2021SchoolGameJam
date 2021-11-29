@@ -91,6 +91,11 @@ public class InGameUIManager : Singleton<InGameUIManager>
         ingame_playerHpImg.fillAmount = playerHp / maxHp;
         ingame_stageTxt.text = "Stage: " + stage.ToString();
         ingame_lifetimeTxt.text = "Time: " + string.Format("{0:0.00}", lifeTime);
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Home();
+        }
     }
 
     IEnumerator GameResult()

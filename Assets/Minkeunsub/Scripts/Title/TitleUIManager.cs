@@ -21,6 +21,7 @@ public class TitleUIManager : MonoBehaviour
     void Update()
     {
         check.gameObject.SetActive(GameManager.Instance.CameraLookat);
+        if (Input.GetKeyDown(KeyCode.Escape)) HowToPlayObj.SetActive(false);
     }
 
     public void Ingame()

@@ -20580,6 +20580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 32392070}
+  clip: {fileID: 0}
 --- !u!1 &289756525
 GameObject:
   m_ObjectHideFlags: 0
@@ -30752,7 +30753,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &436555262
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -72001,6 +72002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 32392070}
+  clip: {fileID: 0}
 --- !u!1 &1288672000
 GameObject:
   m_ObjectHideFlags: 0
@@ -102075,6 +102077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 32392070}
+  clip: {fileID: 0}
 --- !u!1 &1623844943
 GameObject:
   m_ObjectHideFlags: 0
