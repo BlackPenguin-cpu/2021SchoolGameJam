@@ -1221,6 +1221,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HowToPlayObj: {fileID: 1521359340}
   check: {fileID: 852065727}
+  Button_Sound: {fileID: 8300000, guid: 60fadbad2c9ced348a72e131c2e89646, type: 3}
+  Exit_Button_Sound: {fileID: 8300000, guid: c52b34fed3a889b42becf4252d637ee9, type: 3}
 --- !u!1 &852065724
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,10 @@ public class TitleUIManager : MonoBehaviour
     [Header("Checkbox")]
     [SerializeField] Image check;
 
+    [Header("Sound")]
+    [SerializeField] AudioClip background_music;
+    [SerializeField] AudioClip Button_Sound;
+    [SerializeField] AudioClip Exit_Button_Sound;
 
     void Start()
     {
@@ -21,21 +25,27 @@ public class TitleUIManager : MonoBehaviour
     void Update()
     {
         check.gameObject.SetActive(GameManager.Instance.CameraLookat);
-        if (Input.GetKeyDown(KeyCode.Escape)) HowToPlayObj.SetActive(false);
+        if (Input.GetKeyDown(KeyCode.Escape) && HowToPlayObj.activeSelf)
+        {
+            CloseHowtoPlay();
+        }
     }
 
     public void Ingame()
     {
+        SoundManager.Instance.PlaySound(Button_Sound);
         SceneManager.LoadScene("InGameScene");
     }
 
     public void HowtoPlay()
     {
+        SoundManager.Instance.PlaySound(Button_Sound);
         HowToPlayObj.SetActive(true);
     }
 
     public void CloseHowtoPlay()
     {
+        SoundManager.Instance.PlaySound(Exit_Button_Sound);
         HowToPlayObj.SetActive(false);
     }
 
@@ -46,6 +56,7 @@ public class TitleUIManager : MonoBehaviour
 
     public void ExitGame()
     {
+        SoundManager.Instance.PlaySound(Button_Sound);
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
