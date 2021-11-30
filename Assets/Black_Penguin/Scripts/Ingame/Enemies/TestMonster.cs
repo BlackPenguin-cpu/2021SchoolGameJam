@@ -18,6 +18,10 @@ public class TestMonster : Enemy
         {
             entityState = EntityState.DIE;
         }
+        if(entityState == EntityState.ONDAMAGE && attack != null)
+        {
+            StopCoroutine(attack);
+        }
     }
     IEnumerator hitevent(SpriteRenderer sprite)
     {
