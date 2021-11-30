@@ -185,7 +185,7 @@ MonoBehaviour:
   - Name: "\uC8FD\uC74C"
     clip: {fileID: 8300000, guid: 096d41eeeffd2814ab33d3b885cd780e, type: 3}
   - Name: "\uB300\uC26C"
-    clip: {fileID: 8300000, guid: 36c3e8c6d1f1cc843b017d42c7c2297c, type: 3}
+    clip: {fileID: 8300000, guid: edf7cb8fbbb403a448fc55d34827bf5c, type: 3}
   - Name: "\uD32C\uC2A4"
     clip: {fileID: 8300000, guid: ba13cf5521ff33d4391b8fc095a854ed, type: 3}
   - Name: "\uC778\uD2B8\uB85C\uBE0C\uAE08"
