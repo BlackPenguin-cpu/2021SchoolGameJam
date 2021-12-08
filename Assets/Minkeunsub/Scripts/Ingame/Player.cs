@@ -137,13 +137,13 @@ public class Player : Entity
     {
         base.Update();
         anim.SetBool("IsGround", isGround);
+        InGameUIManager.Instance.SetValue(monster.WaveLevel, lifeTime, _hp, shockWaveDelay, shockCurDelay, killCount);
         anim.SetInteger("PlayerState", (int)playerState);
         UIController();
         if (playerState != PlayerState.Die)
         {
             fenceCur += Time.deltaTime;
             lifeTime += Time.deltaTime;
-            InGameUIManager.Instance.SetValue(monster.WaveLevel, lifeTime, _hp, shockWaveDelay, shockCurDelay, killCount);
             anim.SetBool("IsMove", isMoving);
             shockCurDelay += Time.deltaTime;
             hitEffect.transform.position = transform.position;
