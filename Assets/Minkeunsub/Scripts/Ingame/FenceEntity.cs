@@ -45,6 +45,7 @@ public class FenceEntity : Entity
     protected override void Hit()
     {
         StartCoroutine(Shake(0.2f, 0.5f));
+        SoundManager.Instance.PlaySound("ÆÒ½ºÇÇ°Ý");
     }
 
     protected override void Start()

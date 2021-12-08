@@ -179,7 +179,7 @@ MonoBehaviour:
   - Name: "\uD30C\uB3D9"
     clip: {fileID: 8300000, guid: ac5db2deff57a144c938206c9bdf929f, type: 3}
   - Name: "\uD50C\uB808\uC774\uC5B4\uD53C\uACA9"
-    clip: {fileID: 8300000, guid: c1d1b82c4622e1148a336be85fe327d4, type: 3}
+    clip: {fileID: 8300000, guid: 9a7254a3831b3a343915a5ab1b3c5855, type: 3}
   - Name: "\uC880\uBE44\uD53C\uACA9"
     clip: {fileID: 8300000, guid: 387929057deb2f5469a7f2aa5ac2f9c5, type: 3}
   - Name: "\uC8FD\uC74C"
@@ -190,6 +190,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: ba13cf5521ff33d4391b8fc095a854ed, type: 3}
   - Name: "\uC778\uD2B8\uB85C\uBE0C\uAE08"
     clip: {fileID: 8300000, guid: 50e0d91af0475ea47bbc1ee15342c369, type: 3}
+  - Name: "\uD32C\uC2A4\uD53C\uACA9"
+    clip: {fileID: 8300000, guid: 5f2ddc7689bfebe499b102edee39ab6c, type: 3}
 --- !u!4 &87412219
 Transform:
   m_ObjectHideFlags: 0
