@@ -17,7 +17,7 @@ public class SoundManager : Singleton<SoundManager>
 
     private void Start()
     {
-         Playbgm("인트로브금");
+         //Playbgm("인트로브금");
     }
     public void Playbgm(string name)
     //사용법 Sound.Instance.ChangeClip("이름",루프 할껀지안할껀지(bool))
